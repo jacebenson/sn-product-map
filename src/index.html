@@ -49,7 +49,10 @@ title: ServiceNow Capability Planner
             <div class="categories-grid">
                 {% for category in capabilities.categories %}
                 <div class="category-card">
-                    <h2 class="category-title">{{ category.name }}</h2>
+                    <div class="category-header">
+                        <h2 class="category-title">{{ category.name }}</h2>
+                        <button class="add-product-btn" data-category="{{ category.name }}" title="Add product to this category">+</button>
+                    </div>
                     <ul class="products-list">
                         {% for product in category.products %}
                         <li class="product-item" 
@@ -92,13 +95,13 @@ title: ServiceNow Capability Planner
             
             <div class="export-section">
                 <h3>Export</h3>
-                <p>Download your current capability adoption states as JSON:</p>
+                <p>Download capability adoption states (only includes products that have been changed from default "Not Licensed"):</p>
                 <button id="downloadJsonBtn" class="action-btn">Download JSON</button>
             </div>
             
             <div class="import-section">
                 <h3>Import</h3>
-                <p>Upload a previously saved JSON file to restore capability states:</p>
+                <p>Upload a previously saved JSON file to restore capability states. Products not in the current catalog will be preserved for future use.</p>
                 <input type="file" id="fileInput" accept=".json" style="display: none;">
                 <button id="importJsonBtn" class="action-btn">Choose File to Import</button>
                 <p id="importStatus" class="import-status"></p>
@@ -106,9 +109,56 @@ title: ServiceNow Capability Planner
             
             <div class="json-viewer-section">
                 <h3>Current State (JSON Preview)</h3>
+                <p id="unmatchedInfo" class="unmatched-info"></p>
                 <textarea id="jsonViewer" readonly></textarea>
                 <button id="copyJsonBtn" class="action-btn">Copy to Clipboard</button>
             </div>
+        </div>
+    </div>
+
+    <!-- Add Product Modal -->
+    <div id="addProductModal" class="modal">
+        <div class="modal-content">
+            <span class="close-add-product">&times;</span>
+            <h2>Add New Product</h2>
+            <form id="addProductForm">
+                <div class="form-group">
+                    <label for="addProductCategory">Category:</label>
+                    <input type="text" id="addProductCategory" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="addProductName">Product Name: <span class="required">*</span></label>
+                    <input type="text" id="addProductName" required placeholder="e.g., Custom Integration Tool">
+                </div>
+                <div class="form-group">
+                    <label for="addProductDescription">Description:</label>
+                    <input type="text" id="addProductDescription" placeholder="Brief description">
+                </div>
+                <div class="form-group">
+                    <label for="addProductTables">Tables:</label>
+                    <input type="text" id="addProductTables" placeholder="e.g., custom_table, sys_custom">
+                </div>
+                <div class="form-group">
+                    <label for="addProductURL">Product URL:</label>
+                    <input type="url" id="addProductURL" placeholder="https://...">
+                </div>
+                <div class="form-group">
+                    <label for="addProductState">Initial State:</label>
+                    <select id="addProductState">
+                        <option value="not-licensed">Not Licensed</option>
+                        <option value="plan-to-adopt">Plan to Adopt</option>
+                        <option value="licensed-high">Licensed - High Usage</option>
+                        <option value="licensed-medium">Licensed - Medium Usage</option>
+                        <option value="licensed-low">Licensed - Low Usage</option>
+                        <option value="licensed-not-used">Licensed - Not Used</option>
+                    </select>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="action-btn">Add Product</button>
+                    <button type="button" class="action-btn cancel-btn" id="cancelAddProduct">Cancel</button>
+                </div>
+                <p id="addProductStatus" class="form-status"></p>
+            </form>
         </div>
     </div>
 

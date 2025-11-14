@@ -149,13 +149,56 @@ h1 {
     min-height: 0;
 }
 
+.category-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
 .category-title {
     font-size: 0.9rem;
-    margin-bottom: 6px;
+    margin: 0;
     color: #2c3e50;
     border-bottom: 1px solid #3498db;
     padding-bottom: 4px;
     font-weight: 600;
+    flex: 1;
+}
+
+.add-product-btn {
+    background-color: #27ae60;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    width: 22px;
+    height: 22px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin-left: 6px;
+    transition: background-color 0.2s ease;
+    flex-shrink: 0;
+}
+
+.add-product-btn:hover {
+    background-color: #229954;
+}
+
+.category-card[data-imported="true"] .category-title {
+    border-bottom-color: #9b59b6;
+}
+
+.category-card[data-imported="true"] .category-title::after {
+    content: " (Imported)";
+    font-size: 0.7rem;
+    color: #9b59b6;
+    font-weight: normal;
+    font-style: italic;
 }
 
 .products-list {
@@ -455,5 +498,101 @@ h1 {
 }
 
 .import-status.error {
+    color: #e74c3c;
+}
+
+.unmatched-info {
+    margin-bottom: 8px;
+    font-size: 0.85rem;
+    color: #7f8c8d;
+    font-style: italic;
+}
+
+.unmatched-info:empty {
+    display: none;
+}
+
+/* Add Product Form Styles */
+.close-add-product {
+    color: #aaa;
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 16px;
+}
+
+.close-add-product:hover,
+.close-add-product:focus {
+    color: #000;
+}
+
+#addProductForm {
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: #2c3e50;
+}
+
+.form-group .required {
+    color: #e74c3c;
+}
+
+.form-group input[type="text"],
+.form-group input[type="url"],
+.form-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-family: inherit;
+}
+
+.form-group input[readonly] {
+    background-color: #f5f5f5;
+    color: #7f8c8d;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+.form-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.cancel-btn {
+    background-color: #95a5a6;
+}
+
+.cancel-btn:hover {
+    background-color: #7f8c8d;
+}
+
+.form-status {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.form-status.success {
+    color: #27ae60;
+}
+
+.form-status.error {
     color: #e74c3c;
 }
