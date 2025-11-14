@@ -14,7 +14,7 @@ title: ServiceNow Capability Planner
         <header>
             <div class="header-row">
                 <h1>SN Capability Planner</h1>
-                <button id="exportImportBtn" class="export-import-btn">Export / Import</button>
+                <button id="settingsBtn" class="settings-btn">Settings</button>
             </div>
             <div class="legend">
                 <div class="legend-item active" data-filter="licensed-high">
@@ -41,6 +41,10 @@ title: ServiceNow Capability Planner
                     <span class="legend-box state-not-licensed"></span>
                     <span>Not Licensed</span>
                 </div>
+                <div class="search-filter">
+                    <input type="text" id="searchInput" placeholder="Search categories & products..." />
+                    <span id="searchClear" class="search-clear" title="Clear search">×</span>
+                </div>
             </div>
         </header>
 
@@ -59,10 +63,11 @@ title: ServiceNow Capability Planner
                             data-state="not-licensed"
                             data-product="{{ product.name }}"
                             data-category="{{ category.name }}"
-                            data-tables="{{ product.tables | join(', ') }}"
+                            data-tables='{{ product.tables | dump | safe }}'
                             data-description="{{ product.description }}"
                             data-product-url="{{ product.productURL }}">
                             <span class="product-name">{{ product.name }}</span>
+                            <button class="product-info-btn" title="View details">ℹ</button>
                         </li>
                         {% endfor %}
                     </ul>
@@ -80,6 +85,9 @@ title: ServiceNow Capability Planner
             <p id="modalCategory"></p>
             <p id="modalDescription"></p>
             <p id="modalProductURL"></p>
+            <div id="modalInstanceLinks" class="instance-links-section">
+                <!-- Instance links will be dynamically added here -->
+            </div>
             <div id="modalTables">
                 <h3>Related Tables:</h3>
                 <ul id="tablesList"></ul>
@@ -87,31 +95,79 @@ title: ServiceNow Capability Planner
         </div>
     </div>
 
-    <!-- Export/Import Modal -->
-    <div id="exportImportModal" class="modal">
+    <!-- Settings Modal -->
+    <div id="settingsModal" class="modal">
         <div class="modal-content modal-large">
-            <span class="close-export">&times;</span>
-            <h2>Export / Import Capability States</h2>
+            <span class="close-settings">&times;</span>
+            <h2>Settings</h2>
             
-            <div class="export-section">
-                <h3>Export</h3>
-                <p>Download capability adoption states (only includes products that have been changed from default "Not Licensed"):</p>
-                <button id="downloadJsonBtn" class="action-btn">Download JSON</button>
+            <!-- Tab Navigation -->
+            <div class="tab-navigation">
+                <button class="tab-btn active" data-tab="export-import">Export / Import</button>
+                <button class="tab-btn" data-tab="instance">Instance</button>
             </div>
             
-            <div class="import-section">
-                <h3>Import</h3>
-                <p>Upload a previously saved JSON file to restore capability states. Products not in the current catalog will be preserved for future use.</p>
-                <input type="file" id="fileInput" accept=".json" style="display: none;">
-                <button id="importJsonBtn" class="action-btn">Choose File to Import</button>
-                <p id="importStatus" class="import-status"></p>
+            <!-- Export/Import Tab -->
+            <div id="export-import-tab" class="tab-content active">
+                <div class="export-section">
+                    <h3>Export</h3>
+                    <p>Download capability adoption states (only includes products that have been changed from default "Not Licensed"):</p>
+                    <button id="downloadJsonBtn" class="action-btn">Download JSON</button>
+                </div>
+                
+                <div class="import-section">
+                    <h3>Import</h3>
+                    <p>Upload a previously saved JSON file to restore capability states. Products not in the current catalog will be preserved for future use.</p>
+                    <input type="file" id="fileInput" accept=".json" style="display: none;">
+                    <button id="importJsonBtn" class="action-btn">Choose File to Import</button>
+                    <p id="importStatus" class="import-status"></p>
+                </div>
+                
+                <div class="json-viewer-section">
+                    <h3>Current State (JSON Preview)</h3>
+                    <p id="unmatchedInfo" class="unmatched-info"></p>
+                    <textarea id="jsonViewer" readonly></textarea>
+                    <button id="copyJsonBtn" class="action-btn">Copy to Clipboard</button>
+                </div>
             </div>
             
-            <div class="json-viewer-section">
-                <h3>Current State (JSON Preview)</h3>
-                <p id="unmatchedInfo" class="unmatched-info"></p>
-                <textarea id="jsonViewer" readonly></textarea>
-                <button id="copyJsonBtn" class="action-btn">Copy to Clipboard</button>
+            <!-- Instance Tab -->
+            <div id="instance-tab" class="tab-content">
+                <div class="instance-section">
+                    <h3>ServiceNow Instance Configuration</h3>
+                    <p>Configure your ServiceNow instance URL to enable direct links to tables and records from product details.</p>
+                    
+                    <div class="form-group">
+                        <label for="instanceUrl">Instance URL:</label>
+                        <input type="text" id="instanceUrl" placeholder="e.g., dev12345 or acme.service-now.com">
+                        <small class="help-text">Enter your instance name or URL - we'll figure out the rest!</small>
+                        <p id="urlPreview" class="url-preview"></p>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button id="saveInstanceBtn" class="action-btn">Save Instance</button>
+                        <button id="clearInstanceBtn" class="action-btn cancel-btn">Clear</button>
+                    </div>
+                    
+                    <p id="instanceStatus" class="form-status"></p>
+                    
+                    <div class="instance-info">
+                        <h4>Current Instance:</h4>
+                        <p id="currentInstance" class="current-instance-display">Not configured</p>
+                    </div>
+                    
+                    <div class="instance-help">
+                        <h4>Supported Formats (all work the same):</h4>
+                        <ul>
+                            <li><code>dev12345</code> → https://dev12345.service-now.com</li>
+                            <li><code>dev12345.service-now.com</code> → https://dev12345.service-now.com</li>
+                            <li><code>https://dev12345.service-now.com</code> → https://dev12345.service-now.com</li>
+                            <li><code>http://dev12345.service-now.com</code> → https://dev12345.service-now.com</li>
+                            <li><code>acme.servicenowservices.com</code> → https://acme.servicenowservices.com</li>
+                            <li><code>www.acme.service-now.com</code> → https://acme.service-now.com</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

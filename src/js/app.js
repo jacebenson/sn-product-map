@@ -11,6 +11,9 @@ const states = [
 // Active filters - all states visible by default
 let activeFilters = new Set(states);
 
+// Search filter text
+let searchText = '';
+
 // Initialize the application
 document.addEventListener('DOMContentLoaded', function() {
     const productItems = document.querySelectorAll('.product-item');
@@ -18,10 +21,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const closeBtn = document.querySelector('.close');
     const legendItems = document.querySelectorAll('.legend-item');
     
-    // Export/Import modal elements
-    const exportImportBtn = document.getElementById('exportImportBtn');
-    const exportImportModal = document.getElementById('exportImportModal');
-    const closeExportBtn = document.querySelector('.close-export');
+    // Settings modal elements
+    const settingsBtn = document.getElementById('settingsBtn');
+    const settingsModal = document.getElementById('settingsModal');
+    const closeSettingsBtn = document.querySelector('.close-settings');
     const downloadJsonBtn = document.getElementById('downloadJsonBtn');
     const importJsonBtn = document.getElementById('importJsonBtn');
     const fileInput = document.getElementById('fileInput');
@@ -29,11 +32,23 @@ document.addEventListener('DOMContentLoaded', function() {
     const jsonViewer = document.getElementById('jsonViewer');
     const importStatus = document.getElementById('importStatus');
     
+    // Instance configuration elements
+    const instanceUrlInput = document.getElementById('instanceUrl');
+    const saveInstanceBtn = document.getElementById('saveInstanceBtn');
+    const clearInstanceBtn = document.getElementById('clearInstanceBtn');
+    const instanceStatus = document.getElementById('instanceStatus');
+    const currentInstanceDisplay = document.getElementById('currentInstance');
+    const urlPreview = document.getElementById('urlPreview');
+    
     // Add Product modal elements
     const addProductModal = document.getElementById('addProductModal');
     const closeAddProductBtn = document.querySelector('.close-add-product');
     const addProductForm = document.getElementById('addProductForm');
     const cancelAddProductBtn = document.getElementById('cancelAddProduct');
+    
+    // Search filter elements
+    const searchInput = document.getElementById('searchInput');
+    const searchClear = document.getElementById('searchClear');
     
     // Load saved states from localStorage
     loadStates();
@@ -44,22 +59,28 @@ document.addEventListener('DOMContentLoaded', function() {
     // Render unmatched products
     renderUnmatchedProducts();
     
+    // Load instance configuration
+    loadInstanceConfig();
+    
     // Add click handlers to [+] buttons
     attachAddProductHandlers();
     
-    // Add click handler to export/import button
-    exportImportBtn.addEventListener('click', function() {
-        openExportImportModal();
+    // Setup tab navigation
+    setupTabs();
+    
+    // Add click handler to settings button
+    settingsBtn.addEventListener('click', function() {
+        openSettingsModal();
     });
     
-    // Close export/import modal handlers
-    closeExportBtn.addEventListener('click', function() {
-        exportImportModal.style.display = 'none';
+    // Close settings modal handlers
+    closeSettingsBtn.addEventListener('click', function() {
+        settingsModal.style.display = 'none';
     });
     
     window.addEventListener('click', function(e) {
-        if (e.target === exportImportModal) {
-            exportImportModal.style.display = 'none';
+        if (e.target === settingsModal) {
+            settingsModal.style.display = 'none';
         }
     });
     
@@ -92,6 +113,20 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 2000);
     });
     
+    // Instance configuration handlers
+    saveInstanceBtn.addEventListener('click', function() {
+        saveInstanceConfig();
+    });
+    
+    clearInstanceBtn.addEventListener('click', function() {
+        clearInstanceConfig();
+    });
+    
+    // Instance URL input preview
+    instanceUrlInput.addEventListener('input', function() {
+        updateUrlPreview();
+    });
+    
     // Add Product modal handlers
     closeAddProductBtn.addEventListener('click', function() {
         addProductModal.style.display = 'none';
@@ -112,6 +147,27 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
+    // Search filter handlers
+    searchInput.addEventListener('input', function() {
+        searchText = this.value.toLowerCase().trim();
+        
+        // Show/hide clear button
+        if (searchText) {
+            searchClear.style.display = 'block';
+        } else {
+            searchClear.style.display = 'none';
+        }
+        
+        applyFilters();
+    });
+    
+    searchClear.addEventListener('click', function() {
+        searchInput.value = '';
+        searchText = '';
+        searchClear.style.display = 'none';
+        applyFilters();
+    });
+    
     // Add click handlers to legend items for filtering
     legendItems.forEach(item => {
         item.addEventListener('click', function() {
@@ -121,27 +177,30 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Add click handlers to product items
     productItems.forEach(item => {
+        // Click on product name cycles state
+        const productName = item.querySelector('.product-name');
+        if (productName) {
+            productName.addEventListener('click', function(e) {
+                e.stopPropagation();
+                cycleState(item);
+            });
+        }
+        
+        // Click on info button opens modal
+        const infoBtn = item.querySelector('.product-info-btn');
+        if (infoBtn) {
+            infoBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                showModal(item);
+            });
+        }
+        
+        // Click on the item itself cycles state (fallback)
         item.addEventListener('click', function(e) {
-            // Check if it's a right-click or ctrl+click to show modal
-            if (e.button === 2 || e.ctrlKey || e.metaKey) {
-                e.preventDefault();
-                showModal(this);
-            } else {
-                // Left-click cycles through states
+            // Only if not clicking on a button
+            if (!e.target.classList.contains('product-info-btn')) {
                 cycleState(this);
             }
-        });
-        
-        // Add context menu handler
-        item.addEventListener('contextmenu', function(e) {
-            e.preventDefault();
-            showModal(this);
-        });
-        
-        // Add double-click handler for modal
-        item.addEventListener('dblclick', function(e) {
-            e.preventDefault();
-            showModal(this);
         });
     });
     
@@ -162,8 +221,8 @@ document.addEventListener('DOMContentLoaded', function() {
             if (modal.style.display === 'block') {
                 modal.style.display = 'none';
             }
-            if (exportImportModal.style.display === 'block') {
-                exportImportModal.style.display = 'none';
+            if (settingsModal.style.display === 'block') {
+                settingsModal.style.display = 'none';
             }
             if (addProductModal.style.display === 'block') {
                 addProductModal.style.display = 'none';
@@ -198,7 +257,16 @@ function applyFilters() {
     
     productItems.forEach(item => {
         const itemState = item.getAttribute('data-state');
-        if (activeFilters.has(itemState)) {
+        const productName = item.getAttribute('data-product').toLowerCase();
+        
+        // Check state filter
+        const stateMatches = activeFilters.has(itemState);
+        
+        // Check search filter
+        const searchMatches = !searchText || productName.includes(searchText);
+        
+        // Show only if both filters pass
+        if (stateMatches && searchMatches) {
             item.style.display = '';
         } else {
             item.style.display = 'none';
@@ -207,11 +275,18 @@ function applyFilters() {
     
     // Hide category cards that have no visible products
     categoryCards.forEach(card => {
+        const categoryTitle = card.querySelector('.category-title');
+        const categoryName = categoryTitle ? categoryTitle.textContent.toLowerCase() : '';
         const visibleProducts = card.querySelectorAll('.product-item:not([style*="display: none"])');
-        if (visibleProducts.length === 0) {
-            card.style.display = 'none';
-        } else {
+        
+        // Check if category name matches search (if searching)
+        const categoryMatches = !searchText || categoryName.includes(searchText);
+        
+        // Show category if it has visible products OR if category name matches search
+        if (visibleProducts.length > 0 || (searchText && categoryMatches && visibleProducts.length === 0)) {
             card.style.display = '';
+        } else {
+            card.style.display = 'none';
         }
     });
 }
@@ -253,17 +328,65 @@ function showModal(element) {
         modalProductURL.textContent = '';
     }
     
+    // Populate instance links
+    const modalInstanceLinks = document.getElementById('modalInstanceLinks');
+    const instanceLinks = generateInstanceLinks(tables);
+    
+    if (instanceLinks && instanceLinks.length > 0) {
+        modalInstanceLinks.classList.remove('hidden');
+        let linksHTML = '<h3>Instance Links:</h3>';
+        instanceLinks.forEach(link => {
+            linksHTML += `<a href="${link.url}" target="_blank" rel="noopener noreferrer">${link.table}</a> `;
+        });
+        modalInstanceLinks.innerHTML = linksHTML;
+    } else {
+        modalInstanceLinks.classList.add('hidden');
+        modalInstanceLinks.innerHTML = '';
+    }
+    
     // Populate tables list
     const tablesList = document.getElementById('tablesList');
     tablesList.innerHTML = '';
     
     if (tables && tables.trim() !== '') {
-        const tablesArray = tables.split(',').map(t => t.trim());
-        tablesArray.forEach(table => {
-            const li = document.createElement('li');
-            li.textContent = table;
-            tablesList.appendChild(li);
-        });
+        try {
+            // Try to parse as JSON (new format)
+            const tablesArray = JSON.parse(tables);
+            
+            if (Array.isArray(tablesArray) && tablesArray.length > 0) {
+                tablesArray.forEach(tableItem => {
+                    const li = document.createElement('li');
+                    
+                    if (typeof tableItem === 'object' && tableItem !== null) {
+                        // New format: { "table_name": "query" }
+                        Object.entries(tableItem).forEach(([tableName, query]) => {
+                            li.textContent = tableName;
+                            if (query) {
+                                li.title = `Query: ${query}`;
+                            }
+                        });
+                    } else if (typeof tableItem === 'string') {
+                        // Old format: "table_name"
+                        li.textContent = tableItem;
+                    }
+                    
+                    tablesList.appendChild(li);
+                });
+            } else {
+                const li = document.createElement('li');
+                li.textContent = 'No specific tables defined';
+                li.style.fontStyle = 'italic';
+                tablesList.appendChild(li);
+            }
+        } catch (e) {
+            // Fallback for old comma-separated format
+            const tablesArray = tables.split(',').map(t => t.trim());
+            tablesArray.forEach(table => {
+                const li = document.createElement('li');
+                li.textContent = table;
+                tablesList.appendChild(li);
+            });
+        }
     } else {
         const li = document.createElement('li');
         li.textContent = 'No specific tables defined';
@@ -441,7 +564,14 @@ function createProductItem(product) {
     li.setAttribute('data-state', product.state || 'not-licensed');
     li.setAttribute('data-product', product.product);
     li.setAttribute('data-category', product.category);
-    li.setAttribute('data-tables', product.tables || '');
+    
+    // Handle tables - could be string or array/object
+    let tablesValue = product.tables || '';
+    if (typeof tablesValue === 'object') {
+        tablesValue = JSON.stringify(tablesValue);
+    }
+    li.setAttribute('data-tables', tablesValue);
+    
     li.setAttribute('data-description', product.description || '');
     li.setAttribute('data-product-url', product.productURL || '');
     
@@ -449,30 +579,43 @@ function createProductItem(product) {
     span.className = 'product-name';
     span.textContent = product.product;
     
+    const infoBtn = document.createElement('button');
+    infoBtn.className = 'product-info-btn';
+    infoBtn.textContent = 'ℹ';
+    infoBtn.title = 'View details';
+    
     li.appendChild(span);
+    li.appendChild(infoBtn);
     
     return li;
 }
 
 // Helper: Attach handlers to product item
 function attachProductItemHandlers(item) {
+    // Click on product name cycles state
+    const productName = item.querySelector('.product-name');
+    if (productName) {
+        productName.addEventListener('click', function(e) {
+            e.stopPropagation();
+            cycleState(item);
+        });
+    }
+    
+    // Click on info button opens modal
+    const infoBtn = item.querySelector('.product-info-btn');
+    if (infoBtn) {
+        infoBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            showModal(item);
+        });
+    }
+    
+    // Click on the item itself cycles state (fallback)
     item.addEventListener('click', function(e) {
-        if (e.button === 2 || e.ctrlKey || e.metaKey) {
-            e.preventDefault();
-            showModal(this);
-        } else {
+        // Only if not clicking on a button
+        if (!e.target.classList.contains('product-info-btn')) {
             cycleState(this);
         }
-    });
-    
-    item.addEventListener('contextmenu', function(e) {
-        e.preventDefault();
-        showModal(this);
-    });
-    
-    item.addEventListener('dblclick', function(e) {
-        e.preventDefault();
-        showModal(this);
     });
 }
 
@@ -661,9 +804,9 @@ function exportData() {
     return data;
 }
 
-// Open Export/Import Modal
-function openExportImportModal() {
-    const exportImportModal = document.getElementById('exportImportModal');
+// Open Settings Modal
+function openSettingsModal() {
+    const settingsModal = document.getElementById('settingsModal');
     const jsonViewer = document.getElementById('jsonViewer');
     const importStatus = document.getElementById('importStatus');
     const unmatchedInfo = document.getElementById('unmatchedInfo');
@@ -693,7 +836,248 @@ function openExportImportModal() {
         unmatchedInfo.textContent = '';
     }
     
-    exportImportModal.style.display = 'block';
+    settingsModal.style.display = 'block';
+}
+
+// Setup tab navigation
+function setupTabs() {
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    
+    tabBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const targetTab = this.getAttribute('data-tab');
+            
+            // Remove active class from all tabs and buttons
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+            
+            // Add active class to clicked button and target tab
+            this.classList.add('active');
+            document.getElementById(targetTab + '-tab').classList.add('active');
+        });
+    });
+}
+
+// Parse and normalize instance URL
+// Handles various input formats intelligently:
+// - "dev12345" → https://dev12345.service-now.com
+// - "dev12345.service-now.com" → https://dev12345.service-now.com
+// - "https://dev12345.service-now.com" → https://dev12345.service-now.com
+// - "acme.servicenowservices.com" → https://acme.servicenowservices.com
+// - "http://test.com" → https://test.com (upgrades to https)
+function parseInstanceUrl(input) {
+    if (!input) return null;
+    
+    // Trim and convert to lowercase for easier parsing
+    input = input.trim().toLowerCase();
+    
+    // Remove trailing slashes
+    input = input.replace(/\/+$/, '');
+    
+    // Remove any protocol prefix if present
+    let hasProtocol = false;
+    let protocol = 'https://';
+    
+    if (input.startsWith('https://')) {
+        input = input.substring(8);
+        hasProtocol = true;
+        protocol = 'https://';
+    } else if (input.startsWith('http://')) {
+        input = input.substring(7);
+        hasProtocol = true;
+        protocol = 'https://'; // Always upgrade to https
+    }
+    
+    // Remove 'www.' prefix if present
+    if (input.startsWith('www.')) {
+        input = input.substring(4);
+    }
+    
+    // Now input should be just the hostname/instance name
+    
+    // Check if it's already a fully qualified domain
+    // (contains a dot and looks like a valid domain)
+    if (input.includes('.')) {
+        // It's a domain name
+        // Check if it's a ServiceNow domain or custom domain
+        
+        // Common ServiceNow domain patterns:
+        // - instance.service-now.com
+        // - instance.servicenowservices.com
+        // - custom.domain.com
+        
+        try {
+            // Validate it's a valid hostname
+            const url = new URL(protocol + input);
+            return url.origin;
+        } catch (e) {
+            // Invalid URL format
+            return null;
+        }
+    } else {
+        // It's just an instance name (e.g., "dev12345", "acme")
+        // Validate instance name (alphanumeric, hyphens, underscores)
+        if (!/^[a-z0-9_-]+$/i.test(input)) {
+            return null; // Invalid instance name
+        }
+        
+        // Default to .service-now.com domain
+        return `https://${input}.service-now.com`;
+    }
+}
+
+// Load instance configuration
+function loadInstanceConfig() {
+    const instanceUrl = localStorage.getItem('instanceUrl');
+    const currentInstanceDisplay = document.getElementById('currentInstance');
+    
+    if (instanceUrl) {
+        currentInstanceDisplay.textContent = instanceUrl;
+        currentInstanceDisplay.style.color = '#27ae60';
+    } else {
+        currentInstanceDisplay.textContent = 'Not configured';
+        currentInstanceDisplay.style.color = '#7f8c8d';
+    }
+}
+
+// Save instance configuration
+function saveInstanceConfig() {
+    const instanceUrlInput = document.getElementById('instanceUrl');
+    const instanceStatus = document.getElementById('instanceStatus');
+    const currentInstanceDisplay = document.getElementById('currentInstance');
+    const input = instanceUrlInput.value.trim();
+    
+    if (!input) {
+        instanceStatus.textContent = 'Please enter an instance URL';
+        instanceStatus.className = 'form-status error';
+        return;
+    }
+    
+    const parsedUrl = parseInstanceUrl(input);
+    
+    if (!parsedUrl) {
+        instanceStatus.textContent = 'Invalid URL format';
+        instanceStatus.className = 'form-status error';
+        return;
+    }
+    
+    // Save to localStorage
+    localStorage.setItem('instanceUrl', parsedUrl);
+    
+    // Update display
+    currentInstanceDisplay.textContent = parsedUrl;
+    currentInstanceDisplay.style.color = '#27ae60';
+    
+    // Show success
+    instanceStatus.textContent = 'Instance URL saved successfully!';
+    instanceStatus.className = 'form-status success';
+    
+    // Clear after 2 seconds
+    setTimeout(() => {
+        instanceStatus.textContent = '';
+    }, 2000);
+}
+
+// Clear instance configuration
+function clearInstanceConfig() {
+    const instanceUrlInput = document.getElementById('instanceUrl');
+    const instanceStatus = document.getElementById('instanceStatus');
+    const currentInstanceDisplay = document.getElementById('currentInstance');
+    
+    // Clear from localStorage
+    localStorage.removeItem('instanceUrl');
+    
+    // Clear input
+    instanceUrlInput.value = '';
+    
+    // Update display
+    currentInstanceDisplay.textContent = 'Not configured';
+    currentInstanceDisplay.style.color = '#7f8c8d';
+    
+    // Show success
+    instanceStatus.textContent = 'Instance URL cleared';
+    instanceStatus.className = 'form-status success';
+    
+    // Clear after 2 seconds
+    setTimeout(() => {
+        instanceStatus.textContent = '';
+    }, 2000);
+    
+    // Clear preview
+    updateUrlPreview();
+}
+
+// Update URL preview as user types
+function updateUrlPreview() {
+    const instanceUrlInput = document.getElementById('instanceUrl');
+    const urlPreview = document.getElementById('urlPreview');
+    const input = instanceUrlInput.value.trim();
+    
+    if (!input) {
+        urlPreview.textContent = '';
+        urlPreview.className = 'url-preview';
+        return;
+    }
+    
+    const parsedUrl = parseInstanceUrl(input);
+    
+    if (parsedUrl) {
+        urlPreview.textContent = `✓ Will be saved as: ${parsedUrl}`;
+        urlPreview.className = 'url-preview';
+    } else {
+        urlPreview.textContent = `✗ Invalid URL format`;
+        urlPreview.className = 'url-preview error';
+    }
+}
+
+// Generate instance links for a product
+function generateInstanceLinks(tablesData) {
+    const instanceUrl = localStorage.getItem('instanceUrl');
+    if (!instanceUrl || !tablesData) return null;
+    
+    try {
+        // Parse the tables data (it's now JSON)
+        const tables = JSON.parse(tablesData);
+        
+        if (!Array.isArray(tables) || tables.length === 0) return null;
+        
+        const links = [];
+        
+        tables.forEach(tableItem => {
+            if (typeof tableItem === 'object' && tableItem !== null) {
+                // New format: { "table_name": "query" }
+                Object.entries(tableItem).forEach(([tableName, query]) => {
+                    const url = query 
+                        ? `${instanceUrl}/${tableName}_list.do?sysparm_query=${encodeURIComponent(query)}`
+                        : `${instanceUrl}/nav_to.do?uri=${tableName}_list.do`;
+                    
+                    links.push({
+                        table: tableName,
+                        url: url
+                    });
+                });
+            } else if (typeof tableItem === 'string') {
+                // Old format: "table_name"
+                links.push({
+                    table: tableItem,
+                    url: `${instanceUrl}/nav_to.do?uri=${tableItem}_list.do`
+                });
+            }
+        });
+        
+        return links.length > 0 ? links : null;
+    } catch (e) {
+        // Fallback for old comma-separated format
+        const tableArray = tablesData.split(',').map(t => t.trim()).filter(t => t);
+        if (tableArray.length === 0) return null;
+        
+        const links = tableArray.map(table => ({
+            table: table,
+            url: `${instanceUrl}/nav_to.do?uri=${table}_list.do`
+        }));
+        
+        return links;
+    }
 }
 
 // Download state as JSON file
@@ -826,10 +1210,10 @@ function resetAllStates() {
     }
 }
 
-// Add keyboard shortcut for export/import modal (Ctrl+E)
+// Add keyboard shortcut for settings modal (Ctrl+E)
 document.addEventListener('keydown', function(e) {
     if ((e.ctrlKey || e.metaKey) && e.key === 'e') {
         e.preventDefault();
-        openExportImportModal();
+        openSettingsModal();
     }
 });
