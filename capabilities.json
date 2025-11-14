@@ -1,0 +1,397 @@
+{
+  "categories": [
+    {
+      "name": "Customer Service Mgmt",
+      "products": [
+        {"name": "Customer Case Mgmt", "tables": ["sn_customerservice_case"], "description": "Manage customer cases efficiently"},
+        {"name": "IT Service Mgmt", "tables": ["incident", "problem", "change_request"], "description": "Core ITSM capabilities"},
+        {"name": "Targeted Communications", "tables": ["sn_csm_targeted_communication"], "description": "Send targeted communications to customers"},
+        {"name": "Communities", "tables": ["kb_knowledge", "kb_submission"], "description": "Build customer communities"},
+        {"name": "Knowledge Mgmt", "tables": ["kb_knowledge", "kb_knowledge_base"], "description": "Manage knowledge articles"},
+        {"name": "Playbook for CSM", "tables": ["sn_csm_playbook"], "description": "Standardize service processes"},
+        {"name": "Workforce Optimization", "tables": ["sn_csm_wfo"], "description": "Optimize workforce scheduling"},
+        {"name": "Now Assist for CSM", "tables": ["sys_ai_assist"], "description": "AI-powered assistance"}
+      ]
+    },
+    {
+      "name": "Telecom, Media & Technology",
+      "products": [
+        {"name": "Telco & Tech Provider Service Mgmt", "tables": ["sn_ind_tmt_case"], "description": "Industry-specific service management"},
+        {"name": "Service Bridge", "tables": ["sn_bridge"], "description": "Bridge to external systems"},
+        {"name": "Assurance Workflow", "tables": ["sn_ind_tmt_assurance"], "description": "Network assurance workflows"}
+      ]
+    },
+    {
+      "name": "Sales and Order Mgmt",
+      "products": [
+        {"name": "Opportunity Mgmt", "tables": ["opportunity"], "description": "Manage sales opportunities"},
+        {"name": "Quote Mgmt", "tables": ["quote"], "description": "Create and manage quotes"},
+        {"name": "Order Fulfillment", "tables": ["order", "order_line"], "description": "Fulfill customer orders"}
+      ]
+    },
+    {
+      "name": "Field Service Mgmt",
+      "products": [
+        {"name": "Work Order Mgmt", "tables": ["wm_order", "wm_task"], "description": "Manage field service work orders"},
+        {"name": "Dynamic Scheduling and Dispatch", "tables": ["wm_dispatch_schedule"], "description": "Optimize field technician scheduling"},
+        {"name": "Planned Work Mgmt", "tables": ["wm_planned_work"], "description": "Plan maintenance work"},
+        {"name": "Territory Mgmt", "tables": ["wm_territory"], "description": "Define service territories"},
+        {"name": "Field Service Contractor Mgmt", "tables": ["wm_contractor"], "description": "Manage contractors"},
+        {"name": "Dispatcher Workspace", "tables": ["wm_dispatch"], "description": "Dispatcher console"},
+        {"name": "Site Mapping", "tables": ["wm_site_map"], "description": "Map service sites"},
+        {"name": "Linear Asset Support", "tables": ["wm_linear_asset"], "description": "Manage linear assets"},
+        {"name": "Now Assist for FSM", "tables": ["sys_ai_assist"], "description": "AI assistance for field service"}
+      ]
+    },
+    {
+      "name": "Healthcare & Life Sciences",
+      "products": [
+        {"name": "Healthcare Data Model", "tables": ["sn_hls_patient", "sn_hls_provider"], "description": "Healthcare-specific data model"},
+        {"name": "Patient Support Services", "tables": ["sn_hls_patient_case"], "description": "Support patient services"},
+        {"name": "Pre-visit Mgmt", "tables": ["sn_hls_pre_visit"], "description": "Manage pre-visit processes"},
+        {"name": "EMR Help", "tables": ["sn_hls_emr"], "description": "Electronic medical record support"},
+        {"name": "Clinical Device Mgmt", "tables": ["sn_hls_clinical_device"], "description": "Manage clinical devices"}
+      ]
+    },
+    {
+      "name": "Financial Services Ops",
+      "products": [
+        {"name": "Financial Service Data Model", "tables": ["sn_fin_account", "sn_fin_customer"], "description": "Financial services data model"},
+        {"name": "Payment Operations", "tables": ["sn_fin_payment"], "description": "Manage payment operations"},
+        {"name": "Card Operations", "tables": ["sn_fin_card"], "description": "Card management operations"},
+        {"name": "Document Processing", "tables": ["sn_fin_document"], "description": "Process financial documents"},
+        {"name": "Loan Operations", "tables": ["sn_fin_loan"], "description": "Loan management"},
+        {"name": "Deposit Operations", "tables": ["sn_fin_deposit"], "description": "Deposit operations"}
+      ]
+    },
+    {
+      "name": "Manufacturing",
+      "products": [
+        {"name": "OT Manager", "tables": ["sn_mfg_ot_asset"], "description": "Operational technology management"},
+        {"name": "Manufacturing Processing Manager", "tables": ["sn_mfg_process"], "description": "Manufacturing process management"}
+      ]
+    },
+    {
+      "name": "Public Sector",
+      "products": [
+        {"name": "Public Sector Core", "tables": ["sn_ps_case"], "description": "Core public sector capabilities"},
+        {"name": "Constituent Experience", "tables": ["sn_ps_constituent"], "description": "Manage constituent interactions"},
+        {"name": "Government agent experience", "tables": ["sn_ps_agent"], "description": "Government agent tools"}
+      ]
+    },
+    {
+      "name": "Retail Service Mgmt",
+      "products": [
+        {"name": "Retail Core", "tables": ["sn_retail_case"], "description": "Retail service management"}
+      ]
+    },
+    {
+      "name": "IT Service Mgmt",
+      "products": [
+        {"name": "Incident Mgmt", "tables": ["incident"], "description": "Manage IT incidents"},
+        {"name": "Problem Mgmt", "tables": ["problem", "problem_task"], "description": "Root cause analysis"},
+        {"name": "Change Mgmt", "tables": ["change_request"], "description": "Manage IT changes"},
+        {"name": "Release Mgmt", "tables": ["rm_release"], "description": "Plan software releases"},
+        {"name": "Request Mgmt", "tables": ["sc_request", "sc_req_item"], "description": "Service requests"},
+        {"name": "Asset and Cost Mgmt", "tables": ["alm_asset", "fm_expense_line"], "description": "Asset lifecycle management"},
+        {"name": "Continual Improvement", "tables": ["sn_itsm_improvement"], "description": "ITSM improvement tracking"},
+        {"name": "Digital Portfolio Mgmt", "tables": ["pm_project"], "description": "IT portfolio management"},
+        {"name": "DevOps Change Velocity", "tables": ["sn_devops_change"], "description": "DevOps integration"},
+        {"name": "ITSM Success Dashboard", "tables": ["pa_dashboards"], "description": "ITSM metrics dashboard"},
+        {"name": "Digital End-User Experience", "tables": ["sn_deu_experience"], "description": "Monitor end-user experience"},
+        {"name": "Now Assist for ITSM", "tables": ["sys_ai_assist"], "description": "AI for ITSM"}
+      ]
+    },
+    {
+      "name": "IT Operations Mgmt",
+      "products": [
+        {"name": "Discovery", "tables": ["cmdb_ci"], "description": "Discover IT infrastructure"},
+        {"name": "Service Mapping", "tables": ["cmdb_ci_service"], "description": "Map business services"},
+        {"name": "Service Graph Connectors", "tables": ["sn_cfg_sgc"], "description": "Connect to service graphs"},
+        {"name": "Firewall Audit", "tables": ["sn_itom_firewall_rule"], "description": "Audit firewall rules"},
+        {"name": "Certificate Mgmt", "tables": ["sn_itom_certificate"], "description": "Manage SSL certificates"},
+        {"name": "Tag Governance", "tables": ["sn_itom_tag"], "description": "Govern cloud tags"},
+        {"name": "Agent Client Connector", "tables": ["sn_itom_acc"], "description": "Agent-based monitoring"},
+        {"name": "Event Mgmt", "tables": ["em_event"], "description": "Manage IT events"},
+        {"name": "Metric Intelligence", "tables": ["sn_itom_metric"], "description": "Metric analysis"},
+        {"name": "Predictive AIOps", "tables": ["sn_aiops_alert"], "description": "AI-powered operations"},
+        {"name": "Health Log Analytics", "tables": ["sn_itom_log"], "description": "Log analytics"},
+        {"name": "Site Reliablility Mgmt", "tables": ["sn_itom_srm"], "description": "Site reliability engineering"},
+        {"name": "Intellegent CMDB Search", "tables": ["cmdb_ci"], "description": "AI-powered CMDB search"},
+        {"name": "Cloud Migration Assessment", "tables": ["sn_itom_cloud_assessment"], "description": "Assess cloud migrations"},
+        {"name": "Cloud Service Catalog", "tables": ["sn_itom_cloud_service"], "description": "Cloud service catalog"},
+        {"name": "Cloud Account Mgmt", "tables": ["sn_itom_cloud_account"], "description": "Manage cloud accounts"},
+        {"name": "Now Assist for ITOM", "tables": ["sys_ai_assist"], "description": "AI for IT operations"}
+      ]
+    },
+    {
+      "name": "IT Asset Mgmt",
+      "products": [
+        {"name": "Software Asset Mgmt", "tables": ["alm_license"], "description": "Manage software licenses"},
+        {"name": "Content Library & Service", "tables": ["sn_sam_content"], "description": "Software content library"},
+        {"name": "SaaS License Mgmt", "tables": ["sn_sam_saas_license"], "description": "Manage SaaS licenses"},
+        {"name": "Software Spend Mgmt", "tables": ["sn_sam_spend"], "description": "Track software spending"},
+        {"name": "License cloud cost simulator", "tables": ["sn_sam_cost_sim"], "description": "Simulate license costs"},
+        {"name": "SAM Success Tracking", "tables": ["sn_sam_metric"], "description": "Track SAM metrics"},
+        {"name": "Hardware Asset Mgmt", "tables": ["alm_hardware"], "description": "Manage hardware assets"},
+        {"name": "Hardware Asset Lifecycle Mgmt", "tables": ["alm_hardware"], "description": "Hardware lifecycle"},
+        {"name": "Hardware Asset Reservation", "tables": ["alm_reservation"], "description": "Reserve hardware assets"},
+        {"name": "Indoor Mapping for Asset", "tables": ["sn_spm_map"], "description": "Map assets indoors"}
+      ]
+    },
+    {
+      "name": "Operational Technology",
+      "products": [
+        {"name": "OT Visibility", "tables": ["sn_ot_asset"], "description": "OT asset visibility"},
+        {"name": "OT Vulnerability Response", "tables": ["sn_ot_vulnerability"], "description": "OT vulnerability management"},
+        {"name": "OT Service Mgmt", "tables": ["sn_ot_case"], "description": "OT service management"},
+        {"name": "OT Asset Mgmt", "tables": ["sn_ot_asset"], "description": "Manage OT assets"}
+      ]
+    },
+    {
+      "name": "Enterprise Asset Mgmt",
+      "products": [
+        {"name": "Enterprise Asset Mgmt", "tables": ["alm_asset"], "description": "Enterprise-wide asset management"},
+        {"name": "Enterprise Asset Lifecycle Mgmt", "tables": ["alm_asset"], "description": "Asset lifecycle"},
+        {"name": "Enterprise Asset Inventory Mgmt", "tables": ["alm_stockroom"], "description": "Asset inventory"},
+        {"name": "Indoor Mapping for Asset", "tables": ["sn_spm_map"], "description": "Indoor asset mapping"}
+      ]
+    },
+    {
+      "name": "Security Operations",
+      "products": [
+        {"name": "Security Incident Response", "tables": ["sn_si_incident"], "description": "Respond to security incidents"},
+        {"name": "Vulnerability Response", "tables": ["sn_vul_vulnerable_item"], "description": "Manage vulnerabilities"},
+        {"name": "VR Patch Orchestration", "tables": ["sn_vul_patch"], "description": "Orchestrate patching"},
+        {"name": "Data Loss Prevention Incident Response", "tables": ["sn_si_dlp_incident"], "description": "DLP incident management"},
+        {"name": "Security Posture Control", "tables": ["sn_sec_posture"], "description": "Control security posture"}
+      ]
+    },
+    {
+      "name": "HR Service Delivery",
+      "products": [
+        {"name": "HR Case Mgmt", "tables": ["sn_hr_core_case"], "description": "Manage HR cases"},
+        {"name": "Campaign Automation", "tables": ["sn_hr_campaign"], "description": "Automate HR campaigns"},
+        {"name": "Enterprise Onboarding and Transitions", "tables": ["sn_hr_onboarding"], "description": "Employee onboarding"},
+        {"name": "Employee Journey Mgmt", "tables": ["sn_hr_journey"], "description": "Manage employee journeys"},
+        {"name": "Employee Document Mgmt", "tables": ["sn_hr_document"], "description": "Manage employee documents"},
+        {"name": "Listening Posts", "tables": ["sn_hr_listening_post"], "description": "Employee feedback"},
+        {"name": "Now Assist for HRSD", "tables": ["sys_ai_assist"], "description": "AI for HR"}
+      ]
+    },
+    {
+      "name": "Health & Safety",
+      "products": [
+        {"name": "Contact Tracing", "tables": ["sn_safe_contact_trace"], "description": "Contact tracing"},
+        {"name": "Employee Health Screening", "tables": ["sn_safe_health_screen"], "description": "Health screening"},
+        {"name": "Employee Travel Safety Mgmt", "tables": ["sn_safe_travel"], "description": "Travel safety"},
+        {"name": "Health and Safety Dashboard", "tables": ["pa_dashboards"], "description": "Safety metrics"},
+        {"name": "Workplace Safety Mgmt", "tables": ["sn_safe_workplace"], "description": "Workplace safety"},
+        {"name": "Health and Safety Testing", "tables": ["sn_safe_test"], "description": "Safety testing"}
+      ]
+    },
+    {
+      "name": "Workspace Service Delivery",
+      "products": [
+        {"name": "Workplace Case Mgmt", "tables": ["sn_workplace_case"], "description": "Manage workplace cases"},
+        {"name": "Workplace Reservation", "tables": ["sn_workplace_reservation"], "description": "Reserve workspace"},
+        {"name": "Workplace Space Mgmt", "tables": ["sn_workplace_space"], "description": "Manage workspace"},
+        {"name": "Workplace Visitor Mgmt", "tables": ["sn_workplace_visitor"], "description": "Manage visitors"},
+        {"name": "Indoor Mapping", "tables": ["sn_spm_map"], "description": "Indoor mapping"}
+      ]
+    },
+    {
+      "name": "Legal Service Delivery",
+      "products": [
+        {"name": "Legal Request Mgmt", "tables": ["sn_legal_request"], "description": "Manage legal requests"},
+        {"name": "Legal Matter Mgmt", "tables": ["sn_legal_matter"], "description": "Manage legal matters"},
+        {"name": "Legal Counsel Center", "tables": ["sn_legal_counsel"], "description": "Legal counsel workspace"}
+      ]
+    },
+    {
+      "name": "Talent Development",
+      "products": [
+        {"name": "Learning", "tables": ["sn_learning_enrollment"], "description": "Learning management"},
+        {"name": "Manager Hub", "tables": ["sn_hr_manager_hub"], "description": "Manager workspace"},
+        {"name": "Career Conversation", "tables": ["sn_hr_career"], "description": "Career development"},
+        {"name": "Mentoring", "tables": ["sn_hr_mentoring"], "description": "Mentoring programs"},
+        {"name": "Opportunity Marketplace", "tables": ["sn_hr_opportunity"], "description": "Internal opportunities"},
+        {"name": "Skills Intelligence Workspace", "tables": ["sn_hr_skills"], "description": "Skills management"}
+      ]
+    },
+    {
+      "name": "Integrated Risk Mgmt",
+      "products": [
+        {"name": "Policy & Compliance Mgmt", "tables": ["sn_compliance_policy"], "description": "Manage policies"},
+        {"name": "Risk Mgmt", "tables": ["sn_risk_risk"], "description": "Risk management"},
+        {"name": "Audit Mgmt", "tables": ["sn_audit_entity"], "description": "Audit management"}
+      ]
+    },
+    {
+      "name": "Privacy Mgmt",
+      "products": [
+        {"name": "Privacy Case Mgmt", "tables": ["sn_privacy_case"], "description": "Privacy cases"},
+        {"name": "Privacy Impact Assessment", "tables": ["sn_privacy_pia"], "description": "Privacy assessments"},
+        {"name": "Breach Assessment Workflow", "tables": ["sn_privacy_breach"], "description": "Breach assessment"}
+      ]
+    },
+    {
+      "name": "Third-Party Risk Mgmt",
+      "products": [
+        {"name": "Vendor Risk Mgmt", "tables": ["sn_vdr_risk_vendor"], "description": "Manage vendor risk"},
+        {"name": "Third-Party Risk Mgmt", "tables": ["sn_vdr_risk_third_party"], "description": "Third-party risk"}
+      ]
+    },
+    {
+      "name": "Enterprise Architecture",
+      "products": [
+        {"name": "Business Application Inventory", "tables": ["cmdb_ci_appl"], "description": "Application inventory"},
+        {"name": "Application Rationalization", "tables": ["sn_ea_app_rationalization"], "description": "Rationalize applications"},
+        {"name": "Technology Portfolio Mgmt", "tables": ["sn_ea_tech_portfolio"], "description": "Technology portfolio"}
+      ]
+    },
+    {
+      "name": "Business Continuity Mgmt",
+      "products": [
+        {"name": "Business Continuity Mgmt", "tables": ["sn_bcm_plan"], "description": "Continuity planning"},
+        {"name": "Business Impact Analysis (BIA)", "tables": ["sn_bcm_bia"], "description": "Impact analysis"},
+        {"name": "Crisis Mgmt", "tables": ["sn_bcm_crisis"], "description": "Crisis management"}
+      ]
+    },
+    {
+      "name": "ESG Mgmt",
+      "products": [
+        {"name": "ESG Mgmt", "tables": ["sn_esg_metric"], "description": "ESG management"},
+        {"name": "ESG Metric Definition", "tables": ["sn_esg_metric_def"], "description": "Define ESG metrics"},
+        {"name": "ESG Workspace", "tables": ["sn_esg_workspace"], "description": "ESG workspace"}
+      ]
+    },
+    {
+      "name": "Strategic Portfolio Mgmt (SPM)",
+      "products": [
+        {"name": "Demand Mgmt", "tables": ["dm_demand"], "description": "Manage demand"},
+        {"name": "Project & Portfolio Mgmt", "tables": ["pm_project"], "description": "Project management"},
+        {"name": "Resource Mgmt", "tables": ["resource_plan"], "description": "Resource planning"},
+        {"name": "Investment Funding", "tables": ["pm_investment"], "description": "Investment tracking"},
+        {"name": "Roadmap Planning", "tables": ["pm_roadmap"], "description": "Product roadmaps"},
+        {"name": "Agile Dev & Test", "tables": ["rm_story"], "description": "Agile development"},
+        {"name": "Scenario Planning", "tables": ["pm_scenario"], "description": "Scenario planning"},
+        {"name": "Timecards", "tables": ["time_card"], "description": "Time tracking"},
+        {"name": "Now Assist for SPM", "tables": ["sys_ai_assist"], "description": "AI for portfolio management"}
+      ]
+    },
+    {
+      "name": "App Engine",
+      "products": [
+        {"name": "App Engine Studio", "tables": ["sys_app"], "description": "Low-code app builder"},
+        {"name": "App Template", "tables": ["sys_app_template"], "description": "App templates"},
+        {"name": "Unlimited Custom Apps and Tables", "tables": ["sys_db_object"], "description": "Custom development"},
+        {"name": "App Engine Mgmt Center", "tables": ["sys_app_mgmt"], "description": "App management"},
+        {"name": "Now Assist for Creator", "tables": ["sys_ai_assist"], "description": "AI for creators"}
+      ]
+    },
+    {
+      "name": "App Engine for ERP",
+      "products": [
+        {"name": "ERP Customization Mining", "tables": ["sn_erp_custom"], "description": "Mine ERP customizations"},
+        {"name": "ERP Canvas", "tables": ["sn_erp_canvas"], "description": "ERP integration canvas"}
+      ]
+    },
+    {
+      "name": "Automation Engine",
+      "products": [
+        {"name": "Integration Hub", "tables": ["sys_hub_action_instance"], "description": "Integration automation"},
+        {"name": "RPA Hub", "tables": ["sn_rpa_hub"], "description": "RPA management"},
+        {"name": "Unattended Robots", "tables": ["sn_rpa_robot"], "description": "Unattended automation"},
+        {"name": "Attended Robots", "tables": ["sn_rpa_robot"], "description": "Attended automation"},
+        {"name": "Document Intelligence", "tables": ["sn_doc_intelligence"], "description": "Document AI"},
+        {"name": "Automation Center", "tables": ["sn_automation_center"], "description": "Automation dashboard"},
+        {"name": "Stream Connect for Apache Kafka", "tables": ["sn_stream_connect"], "description": "Kafka integration"}
+      ]
+    },
+    {
+      "name": "Finance and Supply Chain Operations",
+      "products": [
+        {"name": "Procurement Case Mgmt", "tables": ["sn_procurement_case"], "description": "Procurement cases"},
+        {"name": "Procurement Workspace", "tables": ["sn_procurement_workspace"], "description": "Procurement workspace"},
+        {"name": "ShoppingHub", "tables": ["sn_shopping_hub"], "description": "Shopping experience"},
+        {"name": "Purchase & Receipt Automation", "tables": ["sn_procurement_automation"], "description": "Automate P2P"},
+        {"name": "Accounts Payable Invoice Processing", "tables": ["sn_ap_invoice"], "description": "Invoice processing"},
+        {"name": "Supplier Mgmt Workspace", "tables": ["sn_supplier_workspace"], "description": "Supplier management"},
+        {"name": "Supplier Onboarding", "tables": ["sn_supplier_onboarding"], "description": "Onboard suppliers"},
+        {"name": "Supplier Intelligence", "tables": ["sn_supplier_intelligence"], "description": "Supplier insights"},
+        {"name": "Exception Workspace", "tables": ["sn_supply_exception"], "description": "Supply chain exceptions"}
+      ]
+    },
+    {
+      "name": "Core Services",
+      "products": [
+        {"name": "Service Catalog", "tables": ["sc_catalog"], "description": "Service catalog"},
+        {"name": "Knowledge Management", "tables": ["kb_knowledge"], "description": "Knowledge base"},
+        {"name": "Service Level Mgmt", "tables": ["sla"], "description": "SLA management"},
+        {"name": "CMDB", "tables": ["cmdb_ci"], "description": "Configuration management"},
+        {"name": "Common Service Data Model", "tables": ["cmdb_ci"], "description": "Service data model"},
+        {"name": "AI Search", "tables": ["sys_ai_search"], "description": "AI-powered search"},
+        {"name": "Visual Task Board", "tables": ["vtb_board"], "description": "Visual task boards"},
+        {"name": "Survey and Assessments", "tables": ["asmt_assessment_instance"], "description": "Surveys and assessments"}
+      ]
+    },
+    {
+      "name": "Intelligence & GenAI",
+      "products": [
+        {"name": "Performance / Platform Analytics", "tables": ["pa_dashboards"], "description": "Analytics platform"},
+        {"name": "Predictive Intelligence", "tables": ["ml_capability"], "description": "Predictive ML"},
+        {"name": "Process Mining", "tables": ["sn_process_mining"], "description": "Process mining"},
+        {"name": "Now Assist for Search", "tables": ["sys_ai_assist"], "description": "AI search"},
+        {"name": "Now Assist for Virtual Agent", "tables": ["sys_ai_assist"], "description": "AI chatbot"},
+        {"name": "Now Assist Panel", "tables": ["sys_ai_assist"], "description": "AI panel"},
+        {"name": "Generative AI Controller", "tables": ["sys_ai_controller"], "description": "GenAI control"},
+        {"name": "Now Assist Skill Kit", "tables": ["sys_ai_skill"], "description": "AI skills"},
+        {"name": "AI Agents", "tables": ["sys_ai_agent"], "description": "AI agents"}
+      ]
+    },
+    {
+      "name": "Admin & Config",
+      "products": [
+        {"name": "Admin Center", "tables": ["sys_properties"], "description": "Admin console"},
+        {"name": "Web UI & Mobile Builder", "tables": ["sys_ux_page"], "description": "UI builder"},
+        {"name": "ServiceNow IDE", "tables": ["sys_script"], "description": "Development IDE"},
+        {"name": "Workflow Studio", "tables": ["wf_workflow"], "description": "Workflow designer"},
+        {"name": "Advanced Work Assignment", "tables": ["awa_assignment"], "description": "Work assignment"},
+        {"name": "Automated Test Framework", "tables": ["sys_atf_test"], "description": "Test automation"},
+        {"name": "Seamless upgrades", "tables": ["sys_update_xml"], "description": "Upgrade management"},
+        {"name": "Domain Separation", "tables": ["domain"], "description": "Multi-tenancy"}
+      ]
+    },
+    {
+      "name": "Integration Services",
+      "products": [
+        {"name": "Web Services", "tables": ["sys_web_service"], "description": "Web service APIs"},
+        {"name": "Import & Export", "tables": ["sys_import_set"], "description": "Data import/export"},
+        {"name": "Inbound Email", "tables": ["sys_email"], "description": "Email integration"},
+        {"name": "Embedded Integrations", "tables": ["sys_integration"], "description": "Pre-built integrations"},
+        {"name": "IntegrationHub", "tables": ["sys_hub_action_instance"], "description": "Integration hub"},
+        {"name": "Instance Data Replication", "tables": ["sys_replication"], "description": "Data replication"}
+      ]
+    },
+    {
+      "name": "Security & Compliance",
+      "products": [
+        {"name": "ACLs & Roles", "tables": ["sys_security_acl"], "description": "Access control"},
+        {"name": "LDAP Integration", "tables": ["ldap_server_config"], "description": "LDAP authentication"},
+        {"name": "ServiceNow Security Center", "tables": ["sys_security_center"], "description": "Security dashboard"},
+        {"name": "Multi-Factor Authentication", "tables": ["sys_mfa"], "description": "MFA authentication"},
+        {"name": "Antivirus Scanning", "tables": ["sys_attachment"], "description": "Virus scanning"},
+        {"name": "Deny Unless ACLs", "tables": ["sys_security_acl"], "description": "Strict ACLs"},
+        {"name": "Subscription Mgmt", "tables": ["sys_subscription"], "description": "Subscriptions"},
+        {"name": "Database Encryption", "tables": ["sys_encryption"], "description": "Database encryption"},
+        {"name": "Cloud Encryption", "tables": ["sys_encryption"], "description": "Cloud encryption"},
+        {"name": "Column Encryption", "tables": ["sys_encryption_context"], "description": "Column-level encryption"},
+        {"name": "Full Disk Encryption", "tables": ["sys_encryption"], "description": "Disk encryption"},
+        {"name": "CLE Enterprise Key Mgmt Framework (KMF)", "tables": ["sys_encryption_key"], "description": "Key management"},
+        {"name": "Vault", "tables": ["sys_vault"], "description": "Secret vault"},
+        {"name": "FEDRAMP / GCC", "tables": ["sys_compliance"], "description": "Federal compliance"}
+      ]
+    }
+  ]
+}

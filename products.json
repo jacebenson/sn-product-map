@@ -1,0 +1,186 @@
+{
+  "categories": [
+    {
+      "category": "IT",
+      "products": [
+        {
+          "name": "Enterprise Architecture",
+          "description": "Build a bridge between business processes and IT architecture."
+        },
+        {
+          "name": "Service Operations Workspace",
+          "description": "Predict, prevent, and resolve incidents proactively from a single workspace."
+        },
+        {
+          "name": "Cloud Governance Suite",
+          "description": "Automate cloud governance for better compliance, security, and costs."
+        },
+        {
+          "name": "Operational Technology Management",
+          "description": "Protect your OT environment and improve uptime."
+        },
+        {
+          "name": "IT Asset Management",
+          "description": "Control&nbsp;costs and minimize risks across the IT asset lifecycle."
+        },
+        {
+          "name": "IT Operations Management",
+          "description": "Deliver proactive digital operations with AIOps."
+        },
+        {
+          "name": "IT Service Management",
+          "description": "Transform service management to boost productivity and maximize ROI."
+        },
+        {
+          "name": "ServiceNow Cloud Observability",
+          "description": "Gain insights to detect and respond to changes in cloud-native apps."
+        },
+        {
+          "name": "Strategic Portfolio Management",
+          "description": "Gain insights to move from strategy to business outcomes."
+        },
+        {
+          "name": "Digital End-user Experience",
+          "description": "Improve your employees' endpoint technology experience."
+        }
+      ]
+    },
+    {
+      "category": "CRM",
+      "products": [
+        {
+          "name": "Customer Service Management",
+          "description": "Empower self-service, boost agent productivity, and speed up resolution."
+        },
+        {
+          "name": "Field Service Management",
+          "description": "Optimize scheduling, empower technicians, and reduce unneeded visits."
+        },
+        {
+          "name": "Sales and Order Management",
+          "description": "Accelerate the lead-to-cash cycle and boost revenue."
+        },
+        {
+          "name": "Configure, Price, Quote",
+          "description": "Use AI to simplify and accelerate sales across all channels."
+        },
+        {
+          "name": "Financial Services Operations",
+          "description": "Provide resilient financial services operations for enhanced experiences."
+        },
+        {
+          "name": "Healthcare and Life Sciences Service Management",
+          "description": "Create consumer-grade healthcare experiences and improve operational performance."
+        },
+        {
+          "name": "Sales and Order Management for Technology Providers",
+          "description": "Fuel XaaS revenue with AI-powered experiences across sales and order lifecycles."
+        },
+        {
+          "name": "Sales and Order Management for Telecommunications",
+          "description": "Grow revenue with AI-powered experiences across sales, fulfillment, and services."
+        },
+        {
+          "name": "Public Sector Digital Services",
+          "description": "Modernize and speed up the delivery of government services."
+        },
+        {
+          "name": "Telecommunications Service Management",
+          "description": "Unlock growth with AI-powered experiences across customer service and network operations."
+        },
+        {
+          "name": "Technology Provider Service Management",
+          "description": "Promote speed and growth for your XaaS business with AI-powered experiences."
+        }
+      ]
+    },
+    {
+      "category": "Risk and Security",
+      "products": [
+        {
+          "name": "Security Operations",
+          "description": "Mount an effective defense against security threats and attacks."
+        },
+        {
+          "name": "Security Incident Response",
+          "description": "Respond fast to evolving threats while optimizing security operations."
+        },
+        {
+          "name": "Vulnerability Response",
+          "description": "Identify, prioritize, and remediate vulnerabilities across the business."
+        },
+        {
+          "name": "Threat Intelligence Security Center",
+          "description": "Gain advanced threat hunting, modeling, and analysis on the ServiceNow AI Platform."
+        },
+        {
+          "name": "Integrated Risk Management",
+          "description": "Make risk-informed decisions while improving efficiency and resilience."
+        },
+        {
+          "name": "Third-party Risk Management",
+          "description": "Reduce third-party risk while improving resilience and compliance."
+        },
+        {
+          "name": "Security Posture Control",
+          "description": "Manage the security of enterprise assets on premises and in the cloud."
+        },
+        {
+          "name": "Privacy Management",
+          "description": "Manage data privacy in real time as part of a holistic enterprise risk program."
+        }
+      ]
+    },
+    {
+      "category": "Human Resources",
+      "products": [
+        {
+          "name": "HR Service Delivery",
+          "description": "Give employees instant answers, guidance, and fast issue resolution."
+        },
+        {
+          "name": "Talent Development",
+          "description": "Make AI and skills-driven talent planning and development decisions."
+        },
+        {
+          "name": "Legal Service Delivery",
+          "description": "Modernize operations to make faster decisions and grow productivity."
+        },
+        {
+          "name": "Workplace Service Delivery",
+          "description": "Automate desk bookings, manage facilities, and optimize operations."
+        }
+      ]
+    },
+    {
+      "category": "App Development",
+      "products": [
+        {
+          "name": "App Engine",
+          "description": "Build apps that automate manual work and modernize legacy processes."
+        },
+        {
+          "name": "Integration Hub",
+          "description": "Reduce cost and complexity for ServiceNow integrations."
+        }
+      ]
+    },
+    {
+      "category": "Finance and Supply Chain",
+      "products": [
+        {
+          "name": "Accounts Payable Operations",
+          "description": "Automate invoice ingestion and pay suppliers accurately."
+        },
+        {
+          "name": "Sourcing and Procurement Operations",
+          "description": "Deploy easy-to-follow procurement processes."
+        },
+        {
+          "name": "Supplier Lifecycle Operations",
+          "description": "Streamline supplier onboarding, collaboration, and performance management."
+        }
+      ]
+    }
+  ]
+}

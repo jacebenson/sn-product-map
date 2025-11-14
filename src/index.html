@@ -1,0 +1,117 @@
+---
+title: ServiceNow Capability Planner
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-row">
+                <h1>SN Capability Planner</h1>
+                <button id="exportImportBtn" class="export-import-btn">Export / Import</button>
+            </div>
+            <div class="legend">
+                <div class="legend-item active" data-filter="licensed-high">
+                    <span class="legend-box state-licensed-high"></span>
+                    <span>High</span>
+                </div>
+                <div class="legend-item active" data-filter="licensed-medium">
+                    <span class="legend-box state-licensed-medium"></span>
+                    <span>Medium</span>
+                </div>
+                <div class="legend-item active" data-filter="licensed-low">
+                    <span class="legend-box state-licensed-low"></span>
+                    <span>Low</span>
+                </div>
+                <div class="legend-item active" data-filter="licensed-not-used">
+                    <span class="legend-box state-licensed-not-used"></span>
+                    <span>Not Used</span>
+                </div>
+                <div class="legend-item active" data-filter="plan-to-adopt">
+                    <span class="legend-box state-plan-to-adopt"></span>
+                    <span>Plan</span>
+                </div>
+                <div class="legend-item active" data-filter="not-licensed">
+                    <span class="legend-box state-not-licensed"></span>
+                    <span>Not Licensed</span>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            {% set capabilities = capabilities or [] %}
+            <div class="categories-grid">
+                {% for category in capabilities.categories %}
+                <div class="category-card">
+                    <h2 class="category-title">{{ category.name }}</h2>
+                    <ul class="products-list">
+                        {% for product in category.products %}
+                        <li class="product-item" 
+                            data-state="not-licensed"
+                            data-product="{{ product.name }}"
+                            data-category="{{ category.name }}"
+                            data-tables="{{ product.tables | join(', ') }}"
+                            data-description="{{ product.description }}"
+                            data-product-url="{{ product.productURL }}">
+                            <span class="product-name">{{ product.name }}</span>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endfor %}
+            </div>
+        </main>
+    </div>
+
+    <!-- Product Details Modal -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalProductName"></h2>
+            <p id="modalCategory"></p>
+            <p id="modalDescription"></p>
+            <p id="modalProductURL"></p>
+            <div id="modalTables">
+                <h3>Related Tables:</h3>
+                <ul id="tablesList"></ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Export/Import Modal -->
+    <div id="exportImportModal" class="modal">
+        <div class="modal-content modal-large">
+            <span class="close-export">&times;</span>
+            <h2>Export / Import Capability States</h2>
+            
+            <div class="export-section">
+                <h3>Export</h3>
+                <p>Download your current capability adoption states as JSON:</p>
+                <button id="downloadJsonBtn" class="action-btn">Download JSON</button>
+            </div>
+            
+            <div class="import-section">
+                <h3>Import</h3>
+                <p>Upload a previously saved JSON file to restore capability states:</p>
+                <input type="file" id="fileInput" accept=".json" style="display: none;">
+                <button id="importJsonBtn" class="action-btn">Choose File to Import</button>
+                <p id="importStatus" class="import-status"></p>
+            </div>
+            
+            <div class="json-viewer-section">
+                <h3>Current State (JSON Preview)</h3>
+                <textarea id="jsonViewer" readonly></textarea>
+                <button id="copyJsonBtn" class="action-btn">Copy to Clipboard</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/app.js"></script>
+</body>
+</html>

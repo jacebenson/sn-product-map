@@ -1,0 +1,459 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.3;
+    font-size: 13px;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0;
+    padding: 8px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #fff;
+    padding: 8px 12px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+}
+
+.header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+h1 {
+    font-size: 1.3rem;
+    margin-bottom: 0;
+    color: #1a1a1a;
+    display: inline-block;
+}
+
+.export-import-btn {
+    padding: 6px 12px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+.export-import-btn:hover {
+    background-color: #2980b9;
+}
+
+.legend {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 11px;
+    cursor: pointer;
+    padding: 3px 6px;
+    border-radius: 3px;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+    user-select: none;
+}
+
+.legend-item:hover {
+    background-color: #f0f0f0;
+}
+
+.legend-item.active {
+    border-color: #999;
+    background-color: #fff;
+}
+
+.legend-item:not(.active) {
+    opacity: 0.4;
+}
+
+.legend-item:not(.active) .legend-box {
+    opacity: 0.5;
+}
+
+.legend-box {
+    width: 14px;
+    height: 14px;
+    border-radius: 2px;
+    border: 1px solid #ddd;
+    flex-shrink: 0;
+}
+
+/* State Colors */
+.state-licensed-high {
+    background-color: #2ecc71;
+}
+
+.state-licensed-medium {
+    background-color: #f1c40f;
+}
+
+.state-licensed-low {
+    background-color: #e74c3c;
+}
+
+.state-licensed-not-used {
+    background-color: #95a5a6;
+}
+
+.state-plan-to-adopt {
+    background-color: #3498db;
+}
+
+.state-not-licensed {
+    background-color: #2c3e50;
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 6px;
+    flex: 1;
+    overflow-y: auto;
+    padding: 2px;
+}
+
+.category-card {
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 8px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+}
+
+.category-title {
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+    color: #2c3e50;
+    border-bottom: 1px solid #3498db;
+    padding-bottom: 4px;
+    font-weight: 600;
+}
+
+.products-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.product-item {
+    padding: 4px 6px;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+    font-size: 11px;
+}
+
+.product-item:hover {
+    transform: translateX(2px);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
+
+.product-item[data-state="licensed-high"] {
+    background-color: #2ecc71;
+    color: #fff;
+}
+
+.product-item[data-state="licensed-medium"] {
+    background-color: #f1c40f;
+    color: #333;
+}
+
+.product-item[data-state="licensed-low"] {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+.product-item[data-state="licensed-not-used"] {
+    background-color: #95a5a6;
+    color: #fff;
+}
+
+.product-item[data-state="plan-to-adopt"] {
+    background-color: #3498db;
+    color: #fff;
+}
+
+.product-item[data-state="not-licensed"] {
+    background-color: #2c3e50;
+    color: #fff;
+}
+
+.product-name {
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 4px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    animation: slideDown 0.2s ease;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 16px;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+}
+
+#modalProductName {
+    color: #2c3e50;
+    margin-bottom: 8px;
+    margin-top: 0;
+    font-size: 1.2rem;
+}
+
+#modalCategory {
+    color: #7f8c8d;
+    font-style: italic;
+    margin-bottom: 12px;
+    font-size: 0.9rem;
+}
+
+#modalDescription {
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+#modalTables h3 {
+    color: #34495e;
+    margin-bottom: 8px;
+    font-size: 1rem;
+}
+
+#tablesList {
+    list-style: none;
+    padding-left: 0;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+#tablesList li {
+    background-color: #ecf0f1;
+    padding: 5px 8px;
+    margin-bottom: 3px;
+    border-radius: 2px;
+    font-family: 'Courier New', monospace;
+    color: #2c3e50;
+    font-size: 11px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .categories-grid {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .categories-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+
+    h1 {
+        font-size: 1.1rem;
+    }
+
+    .header-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .legend {
+        display: flex;
+        gap: 8px;
+    }
+
+    .legend-item {
+        font-size: 10px;
+    }
+
+    .modal-content {
+        width: 95%;
+        margin: 10% auto;
+        padding: 15px;
+    }
+}
+
+/* Export/Import Modal Styles */
+.modal-large {
+    max-width: 700px;
+}
+
+.close-export {
+    color: #aaa;
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 16px;
+}
+
+.close-export:hover,
+.close-export:focus {
+    color: #000;
+}
+
+.export-section,
+.import-section,
+.json-viewer-section {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    border: 1px solid #e9ecef;
+}
+
+.export-section h3,
+.import-section h3,
+.json-viewer-section h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.export-section p,
+.import-section p {
+    margin-bottom: 12px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.action-btn {
+    padding: 8px 16px;
+    background-color: #27ae60;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+.action-btn:hover {
+    background-color: #229954;
+}
+
+#importJsonBtn {
+    background-color: #e67e22;
+}
+
+#importJsonBtn:hover {
+    background-color: #d35400;
+}
+
+#copyJsonBtn {
+    background-color: #9b59b6;
+    margin-top: 10px;
+}
+
+#copyJsonBtn:hover {
+    background-color: #8e44ad;
+}
+
+#jsonViewer {
+    width: 100%;
+    min-height: 200px;
+    max-height: 300px;
+    padding: 10px;
+    font-family: 'Courier New', monospace;
+    font-size: 11px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+    resize: vertical;
+}
+
+.import-status {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.import-status.success {
+    color: #27ae60;
+}
+
+.import-status.error {
+    color: #e74c3c;
+}

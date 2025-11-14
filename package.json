@@ -1,0 +1,15 @@
+{
+  "name": "servicenow-capability-planner",
+  "version": "1.0.0",
+  "description": "ServiceNow Capability Planner - Interactive capability planning tool",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "keywords": ["servicenow", "capability", "planner", "11ty"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}
