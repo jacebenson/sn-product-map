@@ -106,21 +106,33 @@ title: ServiceNow Capability Planner
             
             <!-- Tab Navigation -->
             <div class="tab-navigation">
-                <button class="tab-btn active" data-tab="export-import">Export / Import</button>
+                <button class="tab-btn active" data-tab="export">Export</button>
+                <button class="tab-btn" data-tab="import">Import</button>
+                <button class="tab-btn" data-tab="reset">Reset</button>
                 <button class="tab-btn" data-tab="instance">Instance</button>
                 <button class="tab-btn" data-tab="sn-script">ServiceNow Script</button>
             </div>
             
-            <!-- Export/Import Tab -->
-            <div id="export-import-tab" class="tab-content active">
+            <!-- Export Tab -->
+            <div id="export-tab" class="tab-content active">
                 <div class="export-section">
-                    <h3>Export</h3>
-                    <p>Download capability adoption states (only includes products that have been changed from default "Not Licensed"):</p>
-                    <button id="downloadJsonBtn" class="action-btn">Download JSON</button>
+                    <h3>Export Capability States</h3>
+                    <p>Download your current capability adoption states as JSON. Only includes products that have been changed from the default "Not Licensed" state.</p>
+                    <button id="downloadJsonBtn" class="action-btn">Download JSON File</button>
                 </div>
                 
+                <div class="json-viewer-section">
+                    <h3>Current State (JSON Preview)</h3>
+                    <p id="unmatchedInfo" class="unmatched-info"></p>
+                    <textarea id="jsonViewer" readonly></textarea>
+                    <button id="copyJsonBtn" class="action-btn">Copy to Clipboard</button>
+                </div>
+            </div>
+            
+            <!-- Import Tab -->
+            <div id="import-tab" class="tab-content">
                 <div class="import-section">
-                    <h3>Import</h3>
+                    <h3>Import Capability States</h3>
                     <p>Upload a JSON file or paste JSON directly to restore capability states. Products not in the current catalog will be preserved for future use.</p>
                     
                     <!-- File Import -->
@@ -140,19 +152,34 @@ title: ServiceNow Capability Planner
                     
                     <p id="importStatus" class="import-status"></p>
                 </div>
-                
+            </div>
+            
+            <!-- Reset Tab -->
+            <div id="reset-tab" class="tab-content">
                 <div class="reset-section">
-                    <h3>Reset Products</h3>
-                    <p>Restore all deleted preloaded products back to the catalog:</p>
-                    <button id="resetProductsBtn" class="action-btn">Restore Deleted Products</button>
-                    <p id="resetStatus" class="import-status"></p>
-                </div>
-                
-                <div class="json-viewer-section">
-                    <h3>Current State (JSON Preview)</h3>
-                    <p id="unmatchedInfo" class="unmatched-info"></p>
-                    <textarea id="jsonViewer" readonly></textarea>
-                    <button id="copyJsonBtn" class="action-btn">Copy to Clipboard</button>
+                    <h3>Reset Data</h3>
+                    <p>Reset various aspects of the tool back to their initial state.</p>
+                    
+                    <div class="reset-option">
+                        <h4>Restore Deleted Products</h4>
+                        <p>Bring back all preloaded products that you've deleted from the catalog.</p>
+                        <button id="resetProductsBtn" class="action-btn">Restore Deleted Products</button>
+                        <p id="resetStatus" class="form-status"></p>
+                    </div>
+                    
+                    <div class="reset-option">
+                        <h4>Reset All Product States</h4>
+                        <p>Reset all products back to "Not Licensed" state. This will clear all your capability adoption data.</p>
+                        <button id="resetStatesBtn" class="action-btn danger-btn">Reset All States</button>
+                        <p id="resetStatesStatus" class="form-status"></p>
+                    </div>
+                    
+                    <div class="reset-option">
+                        <h4>Clear All Data</h4>
+                        <p>Complete reset: removes all states, deleted products, custom products, and instance configuration. This cannot be undone!</p>
+                        <button id="clearAllDataBtn" class="action-btn danger-btn">Clear All Data</button>
+                        <p id="clearAllStatus" class="form-status"></p>
+                    </div>
                 </div>
             </div>
             

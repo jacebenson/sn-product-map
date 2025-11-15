@@ -37,6 +37,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const clearImportTextBtn = document.getElementById('clearImportTextBtn');
     const resetProductsBtn = document.getElementById('resetProductsBtn');
     const resetStatus = document.getElementById('resetStatus');
+    const resetStatesBtn = document.getElementById('resetStatesBtn');
+    const resetStatesStatus = document.getElementById('resetStatesStatus');
+    const clearAllDataBtn = document.getElementById('clearAllDataBtn');
+    const clearAllStatus = document.getElementById('clearAllStatus');
     
     // Instance configuration elements
     const instanceUrlInput = document.getElementById('instanceUrl');
@@ -140,6 +144,16 @@ document.addEventListener('DOMContentLoaded', function() {
     // Reset products button
     resetProductsBtn.addEventListener('click', function() {
         resetDeletedProducts();
+    });
+    
+    // Reset all states button
+    resetStatesBtn.addEventListener('click', function() {
+        resetAllStates();
+    });
+    
+    // Clear all data button
+    clearAllDataBtn.addEventListener('click', function() {
+        clearAllData();
     });
     
     // Instance configuration handlers
@@ -475,8 +489,6 @@ function handleDeleteProduct() {
         return;
     }
     
-    console.log('Deleting product:', { category, productName, isCustom });
-    
     const confirmMessage = isCustom 
         ? `Delete custom product "${productName}"?\n\nThis will permanently remove this product.`
         : `Delete preloaded product "${productName}"?\n\nThis will hide this product from the catalog. You can restore all preloaded products from Settings.`;
@@ -544,8 +556,6 @@ function deleteCustomProduct(category, productName) {
 function deletePreloadedProduct(category, productName) {
     const key = category + '::' + productName;
     
-    console.log('deletePreloadedProduct called:', { category, productName, key });
-    
     // Get or create deleted products list
     const deletedData = localStorage.getItem('deletedProducts');
     const deleted = deletedData ? JSON.parse(deletedData) : {};
@@ -553,7 +563,6 @@ function deletePreloadedProduct(category, productName) {
     deleted[key] = true;
     
     localStorage.setItem('deletedProducts', JSON.stringify(deleted));
-    console.log('Saved to deletedProducts:', deleted);
     
     // Remove from DOM - try to find the element
     let productElement = document.querySelector(
@@ -567,8 +576,6 @@ function deletePreloadedProduct(category, productName) {
         );
     }
     
-    console.log('Found product element:', productElement);
-    
     if (productElement) {
         productElement.remove();
     }
@@ -579,7 +586,6 @@ function deletePreloadedProduct(category, productName) {
         const states = JSON.parse(statesData);
         delete states[key];
         localStorage.setItem('capabilityStates', JSON.stringify(states));
-        console.log('Updated capabilityStates');
     }
     
     // Force a refresh of category visibility
@@ -624,6 +630,55 @@ function resetDeletedProducts() {
     
     // Reload the page to show all products
     location.reload();
+}
+
+// Reset all product states to "not-licensed"
+function resetAllStates() {
+    const statusElement = document.getElementById('resetStatesStatus');
+    
+    if (!confirm('Reset ALL product states back to "Not Licensed"?\n\nThis will clear all your capability adoption data. This cannot be undone!')) {
+        return;
+    }
+    
+    // Clear capability states
+    localStorage.removeItem('capabilityStates');
+    
+    statusElement.textContent = 'All states have been reset. Reloading...';
+    statusElement.style.color = '#27ae60';
+    
+    // Reload the page to show all products in default state
+    setTimeout(() => {
+        location.reload();
+    }, 1000);
+}
+
+// Clear all data (complete reset)
+function clearAllData() {
+    const statusElement = document.getElementById('clearAllStatus');
+    
+    if (!confirm('⚠️ COMPLETE RESET ⚠️\n\nThis will DELETE ALL DATA:\n• All product states\n• All deleted products\n• All custom products\n• Instance configuration\n\nThis CANNOT be undone!\n\nAre you absolutely sure?')) {
+        return;
+    }
+    
+    // Double confirmation for destructive action
+    if (!confirm('Last chance! This will permanently delete everything.\n\nClick OK to proceed with complete data wipe.')) {
+        return;
+    }
+    
+    // Clear all localStorage items
+    localStorage.removeItem('capabilityStates');
+    localStorage.removeItem('deletedProducts');
+    localStorage.removeItem('unmatchedProducts');
+    localStorage.removeItem('instanceUrl');
+    localStorage.removeItem('activeFilters');
+    
+    statusElement.textContent = 'All data cleared. Reloading...';
+    statusElement.style.color = '#27ae60';
+    
+    // Reload the page to show fresh state
+    setTimeout(() => {
+        location.reload();
+    }, 1000);
 }
 
 // Save states to localStorage
