@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const productItems = document.querySelectorAll('.product-item');
     const modal = document.getElementById('productModal');
     const closeBtn = document.querySelector('.close');
+    const deleteProductBtn = document.getElementById('deleteProductBtn');
     const legendItems = document.querySelectorAll('.legend-item');
     
     // Settings modal elements
@@ -34,6 +35,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const importTextarea = document.getElementById('importTextarea');
     const importFromTextBtn = document.getElementById('importFromTextBtn');
     const clearImportTextBtn = document.getElementById('clearImportTextBtn');
+    const resetProductsBtn = document.getElementById('resetProductsBtn');
+    const resetStatus = document.getElementById('resetStatus');
     
     // Instance configuration elements
     const instanceUrlInput = document.getElementById('instanceUrl');
@@ -132,6 +135,11 @@ document.addEventListener('DOMContentLoaded', function() {
         importTextarea.value = '';
         importStatus.textContent = '';
         importStatus.className = 'import-status';
+    });
+    
+    // Reset products button
+    resetProductsBtn.addEventListener('click', function() {
+        resetDeletedProducts();
     });
     
     // Instance configuration handlers
@@ -237,6 +245,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // Close modal handlers
     closeBtn.addEventListener('click', function() {
         modal.style.display = 'none';
+    });
+    
+    // Delete product button handler
+    deleteProductBtn.addEventListener('click', function() {
+        handleDeleteProduct();
     });
     
     window.addEventListener('click', function(e) {
@@ -346,6 +359,11 @@ function showModal(element) {
     const tables = element.getAttribute('data-tables');
     const productURL = element.getAttribute('data-product-url');
     
+    // Store current product info for delete functionality
+    modal.setAttribute('data-current-product', productName);
+    modal.setAttribute('data-current-category', category);
+    modal.setAttribute('data-current-is-custom', element.classList.contains('custom-product') ? 'true' : 'false');
+    
     document.getElementById('modalProductName').textContent = productName;
     document.getElementById('modalCategory').textContent = 'Category: ' + category;
     document.getElementById('modalDescription').textContent = description;
@@ -445,6 +463,169 @@ function showModal(element) {
     modal.style.display = 'block';
 }
 
+// Handle product deletion
+function handleDeleteProduct() {
+    const modal = document.getElementById('productModal');
+    const productName = modal.getAttribute('data-current-product');
+    const category = modal.getAttribute('data-current-category');
+    const isCustom = modal.getAttribute('data-current-is-custom') === 'true';
+    
+    if (!productName || !category) {
+        alert('Error: Could not identify product to delete');
+        return;
+    }
+    
+    console.log('Deleting product:', { category, productName, isCustom });
+    
+    const confirmMessage = isCustom 
+        ? `Delete custom product "${productName}"?\n\nThis will permanently remove this product.`
+        : `Delete preloaded product "${productName}"?\n\nThis will hide this product from the catalog. You can restore all preloaded products from Settings.`;
+    
+    if (!confirm(confirmMessage)) {
+        return;
+    }
+    
+    if (isCustom) {
+        deleteCustomProduct(category, productName);
+    } else {
+        deletePreloadedProduct(category, productName);
+    }
+    
+    // Close the modal
+    modal.style.display = 'none';
+}
+
+// Delete a custom product
+function deleteCustomProduct(category, productName) {
+    // Remove from unmatched products in localStorage
+    const unmatchedData = localStorage.getItem('unmatchedProducts');
+    if (unmatchedData) {
+        const unmatched = JSON.parse(unmatchedData);
+        const key = category + '::' + productName;
+        delete unmatched[key];
+        localStorage.setItem('unmatchedProducts', JSON.stringify(unmatched));
+    }
+    
+    // Remove from capability states
+    const statesData = localStorage.getItem('capabilityStates');
+    if (statesData) {
+        const states = JSON.parse(statesData);
+        const key = category + '::' + productName;
+        delete states[key];
+        localStorage.setItem('capabilityStates', JSON.stringify(states));
+    }
+    
+    // Remove from DOM - try multiple selectors to ensure we find it
+    let productElement = document.querySelector(
+        `.product-item.custom-product[data-category="${category}"][data-product="${productName}"]`
+    );
+    
+    if (!productElement) {
+        // Try without custom-product class
+        productElement = document.querySelector(
+            `.product-item[data-category="${category}"][data-product="${productName}"]`
+        );
+    }
+    
+    if (productElement) {
+        productElement.remove();
+    }
+    
+    // Re-render unmatched products section
+    renderUnmatchedProducts();
+    
+    // Force a refresh of category visibility
+    setTimeout(() => {
+        applyFilters();
+    }, 0);
+}
+
+// Delete a preloaded product (mark as deleted)
+function deletePreloadedProduct(category, productName) {
+    const key = category + '::' + productName;
+    
+    console.log('deletePreloadedProduct called:', { category, productName, key });
+    
+    // Get or create deleted products list
+    const deletedData = localStorage.getItem('deletedProducts');
+    const deleted = deletedData ? JSON.parse(deletedData) : {};
+    
+    deleted[key] = true;
+    
+    localStorage.setItem('deletedProducts', JSON.stringify(deleted));
+    console.log('Saved to deletedProducts:', deleted);
+    
+    // Remove from DOM - try to find the element
+    let productElement = document.querySelector(
+        `.product-item[data-category="${category}"][data-product="${productName}"]:not(.custom-product)`
+    );
+    
+    if (!productElement) {
+        // Try without the :not selector
+        productElement = document.querySelector(
+            `.product-item[data-category="${category}"][data-product="${productName}"]`
+        );
+    }
+    
+    console.log('Found product element:', productElement);
+    
+    if (productElement) {
+        productElement.remove();
+    }
+    
+    // Also remove from capability states
+    const statesData = localStorage.getItem('capabilityStates');
+    if (statesData) {
+        const states = JSON.parse(statesData);
+        delete states[key];
+        localStorage.setItem('capabilityStates', JSON.stringify(states));
+        console.log('Updated capabilityStates');
+    }
+    
+    // Force a refresh of category visibility
+    setTimeout(() => {
+        applyFilters();
+    }, 0);
+}
+
+// Reset deleted products (restore all preloaded products)
+function resetDeletedProducts() {
+    const deletedData = localStorage.getItem('deletedProducts');
+    
+    if (!deletedData) {
+        const resetStatus = document.getElementById('resetStatus');
+        resetStatus.textContent = 'No deleted products to restore.';
+        resetStatus.style.color = '#666';
+        setTimeout(() => {
+            resetStatus.textContent = '';
+        }, 3000);
+        return;
+    }
+    
+    const deleted = JSON.parse(deletedData);
+    const count = Object.keys(deleted).length;
+    
+    if (count === 0) {
+        const resetStatus = document.getElementById('resetStatus');
+        resetStatus.textContent = 'No deleted products to restore.';
+        resetStatus.style.color = '#666';
+        setTimeout(() => {
+            resetStatus.textContent = '';
+        }, 3000);
+        return;
+    }
+    
+    if (!confirm(`Restore ${count} deleted product(s)?\n\nThis will reload the page.`)) {
+        return;
+    }
+    
+    // Clear the deleted products list
+    localStorage.removeItem('deletedProducts');
+    
+    // Reload the page to show all products
+    location.reload();
+}
+
 // Save states to localStorage
 function saveStates() {
     const productItems = document.querySelectorAll('.product-item');
@@ -462,6 +643,8 @@ function saveStates() {
 // Load states from localStorage
 function loadStates() {
     const savedStates = localStorage.getItem('capabilityStates');
+    const deletedProducts = localStorage.getItem('deletedProducts');
+    const deleted = deletedProducts ? JSON.parse(deletedProducts) : {};
     
     if (savedStates) {
         const states = JSON.parse(savedStates);
@@ -469,10 +652,29 @@ function loadStates() {
         
         productItems.forEach(item => {
             const key = item.getAttribute('data-category') + '::' + item.getAttribute('data-product');
+            
+            // Check if this product has been deleted
+            if (deleted[key] && !item.classList.contains('custom-product')) {
+                item.remove();
+                return;
+            }
+            
             if (states[key]) {
                 item.setAttribute('data-state', states[key]);
             }
         });
+    } else {
+        // Even if no states saved, still check for deleted products
+        const deletedProductsList = deletedProducts ? JSON.parse(deletedProducts) : {};
+        if (Object.keys(deletedProductsList).length > 0) {
+            const productItems = document.querySelectorAll('.product-item');
+            productItems.forEach(item => {
+                const key = item.getAttribute('data-category') + '::' + item.getAttribute('data-product');
+                if (deletedProductsList[key] && !item.classList.contains('custom-product')) {
+                    item.remove();
+                }
+            });
+        }
     }
 }
 

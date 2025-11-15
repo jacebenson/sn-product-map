@@ -92,6 +92,9 @@ title: ServiceNow Capability Planner
                 <h3>Related Tables:</h3>
                 <ul id="tablesList"></ul>
             </div>
+            <div class="modal-actions">
+                <button id="deleteProductBtn" class="delete-btn">Delete Product</button>
+            </div>
         </div>
     </div>
 
@@ -136,6 +139,13 @@ title: ServiceNow Capability Planner
                     </div>
                     
                     <p id="importStatus" class="import-status"></p>
+                </div>
+                
+                <div class="reset-section">
+                    <h3>Reset Products</h3>
+                    <p>Restore all deleted preloaded products back to the catalog:</p>
+                    <button id="resetProductsBtn" class="action-btn">Restore Deleted Products</button>
+                    <p id="resetStatus" class="import-status"></p>
                 </div>
                 
                 <div class="json-viewer-section">
