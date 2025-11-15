@@ -4,7 +4,7 @@ module.exports = {
     { 
       name: "Public Sector Core", 
       tables: [
-        { "sn_ps_case": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "sn_ps_case": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "Core public sector capabilities",
       productURL: "https://www.servicenow.com/products/public-sector-digital-services.html"
@@ -12,7 +12,7 @@ module.exports = {
     { 
       name: "Constituent Experience", 
       tables: [
-        { "sn_ps_constituent": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "sn_ps_constituent": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "Manage constituent interactions",
       productURL: "https://www.servicenow.com/products/public-sector-digital-services.html"
@@ -20,7 +20,7 @@ module.exports = {
     { 
       name: "Government agent experience", 
       tables: [
-        { "sn_ps_agent": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "sn_ps_agent": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "Government agent tools",
       productURL: "https://www.servicenow.com/products/public-sector-digital-services.html"

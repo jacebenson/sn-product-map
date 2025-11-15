@@ -4,7 +4,7 @@ module.exports = {
     { 
       name: "Incident Mgmt", 
       tables: [
-        { "incident": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "incident": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "Manage IT incidents",
       productURL: "https://www.servicenow.com/products/incident-management.html"
@@ -12,8 +12,8 @@ module.exports = {
     { 
       name: "Problem Mgmt", 
       tables: [
-        { "problem": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" },
-        { "problem_task": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "problem": "sys_created_onRELATIVEGT@dayofweek@ago@90" },
+        { "problem_task": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "Root cause analysis",
       productURL: "https://www.servicenow.com/products/problem-management.html"
@@ -21,7 +21,7 @@ module.exports = {
     { 
       name: "Change Mgmt", 
       tables: [
-        { "change_request": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "change_request": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "Manage IT changes",
       productURL: "https://www.servicenow.com/products/change-management.html"
@@ -29,7 +29,7 @@ module.exports = {
     { 
       name: "Release Mgmt", 
       tables: [
-        { "rm_release": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "rm_release": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "Plan software releases",
       productURL: "https://www.servicenow.com/products/itsm.html"
@@ -37,8 +37,8 @@ module.exports = {
     { 
       name: "Request Mgmt", 
       tables: [
-        { "sc_request": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" },
-        { "sc_req_item": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "sc_request": "sys_created_onRELATIVEGT@dayofweek@ago@90" },
+        { "sc_req_item": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "Service requests",
       productURL: "https://www.servicenow.com/products/request-management.html"
@@ -46,8 +46,8 @@ module.exports = {
     { 
       name: "Asset and Cost Mgmt", 
       tables: [
-        { "alm_asset": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" },
-        { "fm_expense_line": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "alm_asset": "sys_created_onRELATIVEGT@dayofweek@ago@90" },
+        { "fm_expense_line": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "Asset lifecycle management",
       productURL: "https://www.servicenow.com/products/it-asset-management.html"
@@ -55,7 +55,7 @@ module.exports = {
     { 
       name: "Continual Improvement", 
       tables: [
-        { "sn_itsm_improvement": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "sn_itsm_improvement": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "ITSM improvement tracking",
       productURL: "https://www.servicenow.com/products/continual-improvement.html"
@@ -63,7 +63,7 @@ module.exports = {
     { 
       name: "Digital Portfolio Mgmt", 
       tables: [
-        { "pm_project": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "pm_project": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "IT portfolio management",
       productURL: "https://www.servicenow.com/products/digital-portfolio-management.html"
@@ -71,7 +71,7 @@ module.exports = {
     { 
       name: "DevOps Change Velocity", 
       tables: [
-        { "sn_devops_change": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "sn_devops_change": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "DevOps integration",
       productURL: "https://www.servicenow.com/products/devops-change-velocity.html"
@@ -79,7 +79,7 @@ module.exports = {
     { 
       name: "ITSM Success Dashboard", 
       tables: [
-        { "pa_dashboards": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "pa_dashboards": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "ITSM metrics dashboard",
       productURL: "https://www.servicenow.com/products/itsm.html"
@@ -87,7 +87,7 @@ module.exports = {
     { 
       name: "Digital End-User Experience", 
       tables: [
-        { "sn_deu_experience": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "sn_deu_experience": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "Monitor end-user experience",
       productURL: "https://www.servicenow.com/products/digital-user-experience.html"
@@ -95,7 +95,7 @@ module.exports = {
     { 
       name: "Now Assist for ITSM", 
       tables: [
-        { "sys_ai_assist": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "sys_ai_assist": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "AI for ITSM",
       productURL: "https://www.servicenow.com/products/itsm.html"

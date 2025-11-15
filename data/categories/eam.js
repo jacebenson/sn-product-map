@@ -4,7 +4,7 @@ module.exports = {
     { 
       name: "Enterprise Asset Mgmt", 
       tables: [
-        { "alm_asset": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "alm_asset": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "Enterprise-wide asset management",
       productURL: "https://www.servicenow.com/products/enterprise-asset-management.html"
@@ -12,7 +12,7 @@ module.exports = {
     { 
       name: "Enterprise Asset Lifecycle Mgmt", 
       tables: [
-        { "alm_asset": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "alm_asset": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "Asset lifecycle",
       productURL: "https://www.servicenow.com/products/enterprise-asset-management.html"
@@ -20,7 +20,7 @@ module.exports = {
     { 
       name: "Enterprise Asset Inventory Mgmt", 
       tables: [
-        { "alm_stockroom": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "alm_stockroom": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "Asset inventory",
       productURL: "https://www.servicenow.com/products/enterprise-asset-management.html"
@@ -28,7 +28,7 @@ module.exports = {
     { 
       name: "Indoor Mapping for Asset", 
       tables: [
-        { "sn_spm_map": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "sn_spm_map": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "Indoor asset mapping",
       productURL: "https://www.servicenow.com/products/enterprise-asset-management.html"

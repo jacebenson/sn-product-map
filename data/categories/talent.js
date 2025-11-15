@@ -4,7 +4,7 @@ module.exports = {
     { 
       name: "Learning", 
       tables: [
-        { "sn_learning_enrollment": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "sn_learning_enrollment": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "Learning management",
       productURL: "https://www.servicenow.com/products/talent-development.html"
@@ -12,7 +12,7 @@ module.exports = {
     { 
       name: "Manager Hub", 
       tables: [
-        { "sn_hr_manager_hub": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "sn_hr_manager_hub": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "Manager workspace",
       productURL: "https://www.servicenow.com/products/talent-development.html"
@@ -20,7 +20,7 @@ module.exports = {
     { 
       name: "Career Conversation", 
       tables: [
-        { "sn_hr_career": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "sn_hr_career": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "Career development",
       productURL: "https://www.servicenow.com/products/talent-development.html"
@@ -28,7 +28,7 @@ module.exports = {
     { 
       name: "Mentoring", 
       tables: [
-        { "sn_hr_mentoring": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "sn_hr_mentoring": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "Mentoring programs",
       productURL: "https://www.servicenow.com/products/talent-development.html"
@@ -36,7 +36,7 @@ module.exports = {
     { 
       name: "Opportunity Marketplace", 
       tables: [
-        { "sn_hr_opportunity": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "sn_hr_opportunity": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "Internal opportunities",
       productURL: "https://www.servicenow.com/products/talent-development.html"
@@ -44,7 +44,7 @@ module.exports = {
     { 
       name: "Skills Intelligence Workspace", 
       tables: [
-        { "sn_hr_skills": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "sn_hr_skills": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "Skills management",
       productURL: "https://www.servicenow.com/products/talent-development.html"

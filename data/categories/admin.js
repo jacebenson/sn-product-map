@@ -4,7 +4,7 @@ module.exports = {
     { 
       name: "Admin Center", 
       tables: [
-        { "sys_properties": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "sys_properties": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "Admin console",
       productURL: "https://www.servicenow.com/products/admin-center.html"
@@ -12,7 +12,7 @@ module.exports = {
     { 
       name: "Web UI & Mobile Builder", 
       tables: [
-        { "sys_ux_page": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "sys_ux_page": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "UI builder",
       productURL: "https://www.servicenow.com/products/mobile-app-builder.html"
@@ -20,7 +20,7 @@ module.exports = {
     { 
       name: "ServiceNow IDE", 
       tables: [
-        { "sys_script": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "sys_script": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "Development IDE",
       productURL: "https://www.servicenow.com/products/creator-studio.html"
@@ -28,7 +28,7 @@ module.exports = {
     { 
       name: "Workflow Studio", 
       tables: [
-        { "wf_workflow": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "wf_workflow": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "Workflow designer",
       productURL: "https://www.servicenow.com/products/platform-flow-designer.html"
@@ -36,7 +36,7 @@ module.exports = {
     { 
       name: "Advanced Work Assignment", 
       tables: [
-        { "awa_assignment": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "awa_assignment": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "Work assignment",
       productURL: "https://www.servicenow.com/products/workflow.html"
@@ -44,7 +44,7 @@ module.exports = {
     { 
       name: "Automated Test Framework", 
       tables: [
-        { "sys_atf_test": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "sys_atf_test": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "Test automation",
       productURL: "https://www.servicenow.com/products/automated-test-framework.html"
@@ -52,7 +52,7 @@ module.exports = {
     { 
       name: "Seamless upgrades", 
       tables: [
-        { "sys_update_xml": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "sys_update_xml": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "Upgrade management",
       productURL: "https://www.servicenow.com/products/now-platform/latest-release.html"
@@ -60,7 +60,7 @@ module.exports = {
     { 
       name: "Domain Separation", 
       tables: [
-        { "domain": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "domain": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "Multi-tenancy",
       productURL: "https://www.servicenow.com/products/now-platform.html"

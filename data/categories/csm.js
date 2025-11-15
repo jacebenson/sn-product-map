@@ -4,7 +4,7 @@ module.exports = {
     { 
       name: "Customer Case Mgmt", 
       tables: [
-        { "sn_customerservice_case": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "sn_customerservice_case": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "Manage customer cases efficiently",
       productURL: "https://www.servicenow.com/products/customer-service-management.html"
@@ -12,9 +12,9 @@ module.exports = {
     { 
       name: "IT Service Mgmt", 
       tables: [
-        { "incident": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" },
-        { "problem": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" },
-        { "change_request": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "incident": "sys_created_onRELATIVEGT@dayofweek@ago@90" },
+        { "problem": "sys_created_onRELATIVEGT@dayofweek@ago@90" },
+        { "change_request": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "Core ITSM capabilities",
       productURL: "https://www.servicenow.com/products/itsm.html"
@@ -22,7 +22,7 @@ module.exports = {
     { 
       name: "Targeted Communications", 
       tables: [
-        { "sn_csm_targeted_communication": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "sn_csm_targeted_communication": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "Send targeted communications to customers",
       productURL: "https://www.servicenow.com/products/customer-service-management.html"
@@ -30,8 +30,8 @@ module.exports = {
     { 
       name: "Communities", 
       tables: [
-        { "kb_knowledge": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" },
-        { "kb_submission": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "kb_knowledge": "sys_created_onRELATIVEGT@dayofweek@ago@90" },
+        { "kb_submission": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "Build customer communities",
       productURL: "https://www.servicenow.com/products/communities.html"
@@ -39,8 +39,8 @@ module.exports = {
     { 
       name: "Knowledge Mgmt", 
       tables: [
-        { "kb_knowledge": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" },
-        { "kb_knowledge_base": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "kb_knowledge": "sys_created_onRELATIVEGT@dayofweek@ago@90" },
+        { "kb_knowledge_base": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "Manage knowledge articles",
       productURL: "https://www.servicenow.com/products/knowledge-management.html"
@@ -48,7 +48,7 @@ module.exports = {
     { 
       name: "Playbook for CSM", 
       tables: [
-        { "sn_csm_playbook": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "sn_csm_playbook": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "Standardize service processes",
       productURL: "https://www.servicenow.com/products/customer-service-management.html"
@@ -56,7 +56,7 @@ module.exports = {
     { 
       name: "Workforce Optimization", 
       tables: [
-        { "sn_csm_wfo": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "sn_csm_wfo": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "Optimize workforce scheduling",
       productURL: "https://www.servicenow.com/products/customer-service-management.html"
@@ -64,7 +64,7 @@ module.exports = {
     { 
       name: "Now Assist for CSM", 
       tables: [
-        { "sys_ai_assist": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "sys_ai_assist": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "AI-powered assistance",
       productURL: "https://www.servicenow.com/products/customer-service-management.html"

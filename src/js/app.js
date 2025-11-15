@@ -31,6 +31,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const copyJsonBtn = document.getElementById('copyJsonBtn');
     const jsonViewer = document.getElementById('jsonViewer');
     const importStatus = document.getElementById('importStatus');
+    const importTextarea = document.getElementById('importTextarea');
+    const importFromTextBtn = document.getElementById('importFromTextBtn');
+    const clearImportTextBtn = document.getElementById('clearImportTextBtn');
     
     // Instance configuration elements
     const instanceUrlInput = document.getElementById('instanceUrl');
@@ -49,6 +52,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // Search filter elements
     const searchInput = document.getElementById('searchInput');
     const searchClear = document.getElementById('searchClear');
+    
+    // ServiceNow script elements
+    const generateScriptBtn = document.getElementById('generateScriptBtn');
+    const copyScriptBtn = document.getElementById('copyScriptBtn');
+    const scriptOutput = document.getElementById('scriptOutput');
+    const scriptCode = document.getElementById('scriptCode');
     
     // Load saved states from localStorage
     loadStates();
@@ -113,6 +122,18 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 2000);
     });
     
+    // Import from textarea button
+    importFromTextBtn.addEventListener('click', function() {
+        importStateFromText();
+    });
+    
+    // Clear import textarea button
+    clearImportTextBtn.addEventListener('click', function() {
+        importTextarea.value = '';
+        importStatus.textContent = '';
+        importStatus.className = 'import-status';
+    });
+    
     // Instance configuration handlers
     saveInstanceBtn.addEventListener('click', function() {
         saveInstanceConfig();
@@ -125,6 +146,15 @@ document.addEventListener('DOMContentLoaded', function() {
     // Instance URL input preview
     instanceUrlInput.addEventListener('input', function() {
         updateUrlPreview();
+    });
+    
+    // ServiceNow script handlers
+    generateScriptBtn.addEventListener('click', function() {
+        generateServiceNowScript();
+    });
+    
+    copyScriptBtn.addEventListener('click', function() {
+        copyServiceNowScript();
     });
     
     // Add Product modal handlers
@@ -350,15 +380,34 @@ function showModal(element) {
     
     if (tables && tables.trim() !== '') {
         try {
-            // Try to parse as JSON (new format)
-            const tablesArray = JSON.parse(tables);
+            // Try to parse as JSON
+            const tablesData = JSON.parse(tables);
             
-            if (Array.isArray(tablesArray) && tablesArray.length > 0) {
-                tablesArray.forEach(tableItem => {
+            // Check if it's an object (new format) or array (old format)
+            if (typeof tablesData === 'object' && tablesData !== null && !Array.isArray(tablesData)) {
+                // New format: { "table_name": "query", "table_name2": "query2" }
+                const entries = Object.entries(tablesData);
+                if (entries.length > 0) {
+                    entries.forEach(([tableName, query]) => {
+                        const li = document.createElement('li');
+                        li.textContent = tableName;
+                        if (query) {
+                            li.title = `Query: ${query}`;
+                        }
+                        tablesList.appendChild(li);
+                    });
+                } else {
+                    const li = document.createElement('li');
+                    li.textContent = 'No specific tables defined';
+                    li.style.fontStyle = 'italic';
+                    tablesList.appendChild(li);
+                }
+            } else if (Array.isArray(tablesData) && tablesData.length > 0) {
+                // Old format: array of objects [{ "table_name": "query" }]
+                tablesData.forEach(tableItem => {
                     const li = document.createElement('li');
                     
                     if (typeof tableItem === 'object' && tableItem !== null) {
-                        // New format: { "table_name": "query" }
                         Object.entries(tableItem).forEach(([tableName, query]) => {
                             li.textContent = tableName;
                             if (query) {
@@ -366,7 +415,6 @@ function showModal(element) {
                             }
                         });
                     } else if (typeof tableItem === 'string') {
-                        // Old format: "table_name"
                         li.textContent = tableItem;
                     }
                     
@@ -1039,33 +1087,65 @@ function generateInstanceLinks(tablesData) {
         // Parse the tables data (it's now JSON)
         const tables = JSON.parse(tablesData);
         
-        if (!Array.isArray(tables) || tables.length === 0) return null;
-        
-        const links = [];
-        
-        tables.forEach(tableItem => {
-            if (typeof tableItem === 'object' && tableItem !== null) {
-                // New format: { "table_name": "query" }
-                Object.entries(tableItem).forEach(([tableName, query]) => {
-                    const url = query 
-                        ? `${instanceUrl}/${tableName}_list.do?sysparm_query=${encodeURIComponent(query)}`
-                        : `${instanceUrl}/nav_to.do?uri=${tableName}_list.do`;
-                    
-                    links.push({
-                        table: tableName,
-                        url: url
-                    });
-                });
-            } else if (typeof tableItem === 'string') {
-                // Old format: "table_name"
+        // Check if it's an object (new format) or array (old format)
+        if (typeof tables === 'object' && tables !== null && !Array.isArray(tables)) {
+            // New format: { "table_name": "query", "table_name2": "query2" }
+            const links = [];
+            Object.entries(tables).forEach(([tableName, query]) => {
+                let finalQuery = query;
+                
+                // Append ORDER BY clause if query exists
+                if (finalQuery) {
+                    finalQuery += '^ORDERBYDESCsys_created_on';
+                }
+                
+                const url = finalQuery 
+                    ? `${instanceUrl}/nav_to.do?uri=${tableName}_list.do?sysparm_query=${encodeURIComponent(finalQuery)}`
+                    : `${instanceUrl}/nav_to.do?uri=${tableName}_list.do`;
+                
                 links.push({
-                    table: tableItem,
-                    url: `${instanceUrl}/nav_to.do?uri=${tableItem}_list.do`
+                    table: tableName,
+                    url: url
                 });
-            }
-        });
+            });
+            return links.length > 0 ? links : null;
+        }
         
-        return links.length > 0 ? links : null;
+        // Old format: array of objects [{ "table_name": "query" }]
+        if (Array.isArray(tables) && tables.length > 0) {
+            const links = [];
+            
+            tables.forEach(tableItem => {
+                if (typeof tableItem === 'object' && tableItem !== null) {
+                    Object.entries(tableItem).forEach(([tableName, query]) => {
+                        let finalQuery = query;
+                        
+                        // Append ORDER BY clause if query exists
+                        if (finalQuery) {
+                            finalQuery += '^ORDERBYDESCsys_created_on';
+                        }
+                        
+                        const url = finalQuery 
+                            ? `${instanceUrl}/nav_to.do?uri=${tableName}_list.do?sysparm_query=${encodeURIComponent(finalQuery)}`
+                            : `${instanceUrl}/nav_to.do?uri=${tableName}_list.do`;
+                        
+                        links.push({
+                            table: tableName,
+                            url: url
+                        });
+                    });
+                } else if (typeof tableItem === 'string') {
+                    links.push({
+                        table: tableItem,
+                        url: `${instanceUrl}/nav_to.do?uri=${tableItem}_list.do`
+                    });
+                }
+            });
+            
+            return links.length > 0 ? links : null;
+        }
+        
+        return null;
     } catch (e) {
         // Fallback for old comma-separated format
         const tableArray = tablesData.split(',').map(t => t.trim()).filter(t => t);
@@ -1093,6 +1173,107 @@ function downloadStateAsJson() {
     URL.revokeObjectURL(url);
 }
 
+// Process imported JSON data (shared logic)
+function processImportedData(data) {
+    const importStatus = document.getElementById('importStatus');
+    
+    try {
+        // Validate data structure
+        if (!Array.isArray(data)) {
+            throw new Error('Invalid JSON format: expected an array');
+        }
+        
+        // Apply imported states
+        const productItems = document.querySelectorAll('.product-item');
+        let matchedCount = 0;
+        let unmatchedCount = 0;
+        const unmatchedProducts = [];
+        
+        // Create a map of existing products for faster lookup
+        const existingProducts = new Map();
+        productItems.forEach(productItem => {
+            const key = productItem.getAttribute('data-category') + '::' + productItem.getAttribute('data-product');
+            existingProducts.set(key, productItem);
+        });
+        
+        // Process imported data
+        data.forEach(item => {
+            const key = item.category + '::' + item.product;
+            
+            if (existingProducts.has(key)) {
+                // Product exists - update its state
+                const productItem = existingProducts.get(key);
+                if (item.state) {
+                    productItem.setAttribute('data-state', item.state);
+                    matchedCount++;
+                }
+            } else {
+                // Product doesn't exist - store for future reference
+                unmatchedProducts.push(item);
+                unmatchedCount++;
+            }
+        });
+        
+        // Save matched states to localStorage
+        saveStates();
+        
+        // Save unmatched products separately
+        if (unmatchedProducts.length > 0) {
+            localStorage.setItem('unmatchedProducts', JSON.stringify(unmatchedProducts));
+        }
+        
+        // Render unmatched products on the UI
+        renderUnmatchedProducts();
+        
+        // Reapply filters
+        applyFilters();
+        
+        // Update JSON viewer with merged data (current + unmatched)
+        const jsonViewer = document.getElementById('jsonViewer');
+        const currentData = exportData();
+        const mergedData = mergeImportedData(currentData, unmatchedProducts);
+        jsonViewer.value = JSON.stringify(mergedData, null, 2);
+        
+        // Show detailed success message
+        let message = `Successfully imported ${matchedCount} capability state(s)!`;
+        if (unmatchedCount > 0) {
+            message += ` (${unmatchedCount} product(s) not found but saved for future use)`;
+        }
+        importStatus.textContent = message;
+        importStatus.className = 'import-status success';
+        
+        return true;
+    } catch (error) {
+        importStatus.textContent = `Error importing: ${error.message}`;
+        importStatus.className = 'import-status error';
+        return false;
+    }
+}
+
+// Import state from textarea
+function importStateFromText() {
+    const importStatus = document.getElementById('importStatus');
+    const importTextarea = document.getElementById('importTextarea');
+    const text = importTextarea.value.trim();
+    
+    if (!text) {
+        importStatus.textContent = 'Please paste JSON data first';
+        importStatus.className = 'import-status error';
+        return;
+    }
+    
+    try {
+        const data = JSON.parse(text);
+        if (processImportedData(data)) {
+            // Clear textarea on success
+            importTextarea.value = '';
+        }
+    } catch (error) {
+        importStatus.textContent = `Invalid JSON: ${error.message}`;
+        importStatus.className = 'import-status error';
+    }
+}
+
 // Import state from JSON file
 function importStateFromJson(file) {
     const importStatus = document.getElementById('importStatus');
@@ -1101,73 +1282,9 @@ function importStateFromJson(file) {
     reader.onload = function(e) {
         try {
             const data = JSON.parse(e.target.result);
-            
-            // Validate data structure
-            if (!Array.isArray(data)) {
-                throw new Error('Invalid JSON format: expected an array');
-            }
-            
-            // Apply imported states
-            const productItems = document.querySelectorAll('.product-item');
-            let matchedCount = 0;
-            let unmatchedCount = 0;
-            const unmatchedProducts = [];
-            
-            // Create a map of existing products for faster lookup
-            const existingProducts = new Map();
-            productItems.forEach(productItem => {
-                const key = productItem.getAttribute('data-category') + '::' + productItem.getAttribute('data-product');
-                existingProducts.set(key, productItem);
-            });
-            
-            // Process imported data
-            data.forEach(item => {
-                const key = item.category + '::' + item.product;
-                
-                if (existingProducts.has(key)) {
-                    // Product exists - update its state
-                    const productItem = existingProducts.get(key);
-                    if (item.state) {
-                        productItem.setAttribute('data-state', item.state);
-                        matchedCount++;
-                    }
-                } else {
-                    // Product doesn't exist - store for future reference
-                    unmatchedProducts.push(item);
-                    unmatchedCount++;
-                }
-            });
-            
-            // Save matched states to localStorage
-            saveStates();
-            
-            // Save unmatched products separately
-            if (unmatchedProducts.length > 0) {
-                localStorage.setItem('unmatchedProducts', JSON.stringify(unmatchedProducts));
-            }
-            
-            // Render unmatched products on the UI
-            renderUnmatchedProducts();
-            
-            // Reapply filters
-            applyFilters();
-            
-            // Update JSON viewer with merged data (current + unmatched)
-            const jsonViewer = document.getElementById('jsonViewer');
-            const currentData = exportData();
-            const mergedData = mergeImportedData(currentData, unmatchedProducts);
-            jsonViewer.value = JSON.stringify(mergedData, null, 2);
-            
-            // Show detailed success message
-            let message = `Successfully imported ${matchedCount} capability state(s)!`;
-            if (unmatchedCount > 0) {
-                message += ` (${unmatchedCount} product(s) not found but saved for future use)`;
-            }
-            importStatus.textContent = message;
-            importStatus.className = 'import-status success';
-            
+            processImportedData(data);
         } catch (error) {
-            importStatus.textContent = `Error importing file: ${error.message}`;
+            importStatus.textContent = `Error reading file: ${error.message}`;
             importStatus.className = 'import-status error';
         }
     };
@@ -1217,3 +1334,199 @@ document.addEventListener('keydown', function(e) {
         openSettingsModal();
     }
 });
+
+// Generate ServiceNow script for usage analysis
+function generateServiceNowScript() {
+    // Get all products with their tables
+    var productItems = document.querySelectorAll('.product-item');
+    var tableMap = {}; // Map of table name to { query: '', products: [] }
+    
+    productItems.forEach(function(item) {
+        var productName = item.getAttribute('data-product');
+        var categoryName = item.getAttribute('data-category');
+        var tablesData = item.getAttribute('data-tables');
+        
+        if (tablesData) {
+            try {
+                var tables = JSON.parse(tablesData);
+                
+                // Handle object format (new): { "table_name": "query" }
+                if (typeof tables === 'object' && tables !== null && !Array.isArray(tables)) {
+                    Object.keys(tables).forEach(function(tableName) {
+                        var query = tables[tableName] || '';
+                        
+                        if (!tableMap[tableName]) {
+                            tableMap[tableName] = {
+                                query: query,
+                                products: []
+                            };
+                        }
+                        tableMap[tableName].products.push({
+                            product: productName,
+                            category: categoryName
+                        });
+                    });
+                }
+                // Handle array format (old): [{ "table_name": "query" }]
+                else if (Array.isArray(tables)) {
+                    tables.forEach(function(tableItem) {
+                        if (typeof tableItem === 'object' && tableItem !== null) {
+                            Object.keys(tableItem).forEach(function(tableName) {
+                                var query = tableItem[tableName] || '';
+                                
+                                if (!tableMap[tableName]) {
+                                    tableMap[tableName] = {
+                                        query: query,
+                                        products: []
+                                    };
+                                }
+                                tableMap[tableName].products.push({
+                                    product: productName,
+                                    category: categoryName
+                                });
+                            });
+                        }
+                    });
+                }
+            } catch (e) {
+                // Skip invalid JSON
+            }
+        }
+    });
+    
+    // Generate ECMAScript 5 compatible ServiceNow script
+    var script = '// ServiceNow Capability Usage Analysis Script\n';
+    script += '// Generated: ' + new Date().toISOString() + '\n';
+    script += '// Run this in Scripts - Background\n';
+    script += '//\n';
+    script += '// This script analyzes table usage and outputs JSON for import\n';
+    script += '// Usage categories:\n';
+    script += '//   High: >100 records\n';
+    script += '//   Medium: 50-100 records\n';
+    script += '//   Low: 1-49 records\n';
+    script += '//   Not Used: 0 records\n';
+    script += '//\n';
+    script += '// Note: Queries from table definitions are applied to filter records\n\n';
+    
+    script += '(function() {\n';
+    script += '    var results = [];\n';
+    script += '    var tablesToCheck = ' + JSON.stringify(tableMap, null, 4) + ';\n\n';
+    
+    script += '    // Iterate through each table\n';
+    script += '    for (var tableName in tablesToCheck) {\n';
+    script += '        if (!tablesToCheck.hasOwnProperty(tableName)) continue;\n\n';
+    
+    script += '        var tableData = tablesToCheck[tableName];\n';
+    script += '        var products = tableData.products;\n';
+    script += '        var query = tableData.query || \'\';\n';
+    script += '        var count = 0;\n\n';
+    
+    script += '        try {\n';
+    script += '            // Use GlideAggregate to count records\n';
+    script += '            var ga = new GlideAggregate(tableName);\n';
+    script += '            \n';
+    script += '            // Apply query filter if provided\n';
+    script += '            if (query) {\n';
+    script += '                ga.addEncodedQuery(query);\n';
+    script += '            }\n';
+    script += '            \n';
+    script += '            ga.addAggregate(\'COUNT\');\n';
+    script += '            ga.query();\n\n';
+    
+    script += '            if (ga.next()) {\n';
+    script += '                count = parseInt(ga.getAggregate(\'COUNT\'), 10);\n';
+    script += '            }\n';
+    script += '        } catch (e) {\n';
+    script += '            gs.warn(\'Error counting table \' + tableName + \': \' + e.message);\n';
+    script += '            continue;\n';
+    script += '        }\n\n';
+    
+    script += '        // Determine usage state based on count\n';
+    script += '        var state;\n';
+    script += '        if (count > 100) {\n';
+    script += '            state = \'licensed-high\';\n';
+    script += '        } else if (count >= 50) {\n';
+    script += '            state = \'licensed-medium\';\n';
+    script += '        } else if (count > 0) {\n';
+    script += '            state = \'licensed-low\';\n';
+    script += '        } else {\n';
+    script += '            state = \'licensed-not-used\';\n';
+    script += '        }\n\n';
+    
+    script += '        // Add result for each product using this table\n';
+    script += '        for (var i = 0; i < products.length; i++) {\n';
+    script += '            var product = products[i];\n';
+    script += '            \n';
+    script += '            // Check if we already have this product\n';
+    script += '            var found = false;\n';
+    script += '            for (var j = 0; j < results.length; j++) {\n';
+    script += '                if (results[j].product === product.product && results[j].category === product.category) {\n';
+    script += '                    found = true;\n';
+    script += '                    // If this table has higher usage, update the state\n';
+    script += '                    var currentPriority = getStatePriority(results[j].state);\n';
+    script += '                    var newPriority = getStatePriority(state);\n';
+    script += '                    if (newPriority > currentPriority) {\n';
+    script += '                        results[j].state = state;\n';
+    script += '                    }\n';
+    script += '                    break;\n';
+    script += '                }\n';
+    script += '            }\n\n';
+    
+    script += '            if (!found) {\n';
+    script += '                results.push({\n';
+    script += '                    category: product.category,\n';
+    script += '                    product: product.product,\n';
+    script += '                    state: state\n';
+    script += '                });\n';
+    script += '            }\n';
+    script += '        }\n';
+    script += '    }\n\n';
+    
+    script += '    // Helper function to get state priority (higher = more usage)\n';
+    script += '    function getStatePriority(state) {\n';
+    script += '        var priorities = {\n';
+    script += '            \'licensed-not-used\': 0,\n';
+    script += '            \'licensed-low\': 1,\n';
+    script += '            \'licensed-medium\': 2,\n';
+    script += '            \'licensed-high\': 3\n';
+    script += '        };\n';
+    script += '        return priorities[state] || 0;\n';
+    script += '    }\n\n';
+    
+    script += '    // Output results as JSON\n';
+    script += '    gs.info(\'=== CAPABILITY USAGE ANALYSIS RESULTS ===\');\n';
+    script += '    gs.info(\'Total products analyzed: \' + results.length);\n';
+    script += '    gs.info(\'Copy the JSON below and import it into the tool:\');\n';
+    script += '    gs.info(\'\\n\' + JSON.stringify(results, null, 2));\n';
+    script += '    gs.info(\'=== END RESULTS ===\');\n';
+    script += '})();\n';
+    
+    // Display the script
+    scriptCode.textContent = script;
+    scriptOutput.style.display = 'block';
+    copyScriptBtn.style.display = 'inline-block';
+}
+
+// Copy ServiceNow script to clipboard
+function copyServiceNowScript() {
+    var script = scriptCode.textContent;
+    
+    // Create temporary textarea
+    var textarea = document.createElement('textarea');
+    textarea.value = script;
+    textarea.style.position = 'fixed';
+    textarea.style.opacity = '0';
+    document.body.appendChild(textarea);
+    
+    textarea.select();
+    document.execCommand('copy');
+    
+    document.body.removeChild(textarea);
+    
+    // Update button text
+    var originalText = copyScriptBtn.textContent;
+    copyScriptBtn.textContent = 'Copied!';
+    setTimeout(function() {
+        copyScriptBtn.textContent = originalText;
+    }, 2000);
+}

@@ -4,7 +4,7 @@ module.exports = {
     { 
       name: "Integration Hub", 
       tables: [
-        { "sys_hub_action_instance": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "sys_hub_action_instance": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "Integration automation",
       productURL: "https://www.servicenow.com/products/integration-hub.html"
@@ -12,7 +12,7 @@ module.exports = {
     { 
       name: "RPA Hub", 
       tables: [
-        { "sn_rpa_hub": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "sn_rpa_hub": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "RPA management",
       productURL: "https://www.servicenow.com/products/robotic-process-automation.html"
@@ -20,7 +20,7 @@ module.exports = {
     { 
       name: "Unattended Robots", 
       tables: [
-        { "sn_rpa_robot": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "sn_rpa_robot": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "Unattended automation",
       productURL: "https://www.servicenow.com/products/robotic-process-automation.html"
@@ -28,7 +28,7 @@ module.exports = {
     { 
       name: "Attended Robots", 
       tables: [
-        { "sn_rpa_robot": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "sn_rpa_robot": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "Attended automation",
       productURL: "https://www.servicenow.com/products/robotic-process-automation.html"
@@ -36,7 +36,7 @@ module.exports = {
     { 
       name: "Document Intelligence", 
       tables: [
-        { "sn_doc_intelligence": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "sn_doc_intelligence": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "Document AI",
       productURL: "https://www.servicenow.com/products/automation-engine.html"
@@ -44,7 +44,7 @@ module.exports = {
     { 
       name: "Automation Center", 
       tables: [
-        { "sn_automation_center": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "sn_automation_center": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "Automation dashboard",
       productURL: "https://www.servicenow.com/products/automation-center.html"
@@ -52,7 +52,7 @@ module.exports = {
     { 
       name: "Stream Connect for Apache Kafka", 
       tables: [
-        { "sn_stream_connect": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "sn_stream_connect": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "Kafka integration",
       productURL: "https://www.servicenow.com/products/automation-engine.html"

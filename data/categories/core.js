@@ -4,7 +4,7 @@ module.exports = {
     { 
       name: "Service Catalog", 
       tables: [
-        { "sc_catalog": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "sc_catalog": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "Service catalog",
       productURL: "https://www.servicenow.com/products/workflow.html"
@@ -12,7 +12,7 @@ module.exports = {
     { 
       name: "Knowledge Management", 
       tables: [
-        { "kb_knowledge": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "kb_knowledge": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "Knowledge base",
       productURL: "https://www.servicenow.com/products/knowledge-management.html"
@@ -20,7 +20,7 @@ module.exports = {
     { 
       name: "Service Level Mgmt", 
       tables: [
-        { "sla": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "sla": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "SLA management",
       productURL: "https://www.servicenow.com/products/workflow.html"
@@ -28,7 +28,7 @@ module.exports = {
     { 
       name: "CMDB", 
       tables: [
-        { "cmdb_ci": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "cmdb_ci": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "Configuration management",
       productURL: "https://www.servicenow.com/products/workflow.html"
@@ -36,7 +36,7 @@ module.exports = {
     { 
       name: "Common Service Data Model", 
       tables: [
-        { "cmdb_ci": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "cmdb_ci": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "Service data model",
       productURL: "https://www.servicenow.com/products/workflow.html"
@@ -44,7 +44,7 @@ module.exports = {
     { 
       name: "AI Search", 
       tables: [
-        { "sys_ai_search": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "sys_ai_search": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "AI-powered search",
       productURL: "https://www.servicenow.com/products/workflow.html"
@@ -52,7 +52,7 @@ module.exports = {
     { 
       name: "Visual Task Board", 
       tables: [
-        { "vtb_board": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "vtb_board": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "Visual task boards",
       productURL: "https://www.servicenow.com/products/workflow.html"
@@ -60,7 +60,7 @@ module.exports = {
     { 
       name: "Survey and Assessments", 
       tables: [
-        { "asmt_assessment_instance": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "asmt_assessment_instance": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "Surveys and assessments",
       productURL: "https://www.servicenow.com/products/workflow.html"

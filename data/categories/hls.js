@@ -4,8 +4,8 @@ module.exports = {
     { 
       name: "Healthcare Data Model", 
       tables: [
-        { "sn_hls_patient": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" },
-        { "sn_hls_provider": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "sn_hls_patient": "sys_created_onRELATIVEGT@dayofweek@ago@90" },
+        { "sn_hls_provider": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "Healthcare-specific data model",
       productURL: "https://www.servicenow.com/products/healthcare-life-sciences.html"
@@ -13,7 +13,7 @@ module.exports = {
     { 
       name: "Patient Support Services", 
       tables: [
-        { "sn_hls_patient_case": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "sn_hls_patient_case": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "Support patient services",
       productURL: "https://www.servicenow.com/products/healthcare-life-sciences.html"
@@ -21,7 +21,7 @@ module.exports = {
     { 
       name: "Pre-visit Mgmt", 
       tables: [
-        { "sn_hls_pre_visit": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "sn_hls_pre_visit": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "Manage pre-visit processes",
       productURL: "https://www.servicenow.com/products/healthcare-life-sciences.html"
@@ -29,7 +29,7 @@ module.exports = {
     { 
       name: "EMR Help", 
       tables: [
-        { "sn_hls_emr": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "sn_hls_emr": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "Electronic medical record support",
       productURL: "https://www.servicenow.com/products/healthcare-life-sciences.html"
@@ -37,7 +37,7 @@ module.exports = {
     { 
       name: "Clinical Device Mgmt", 
       tables: [
-        { "sn_hls_clinical_device": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "sn_hls_clinical_device": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "Manage clinical devices",
       productURL: "https://www.servicenow.com/products/healthcare-life-sciences.html"

@@ -4,7 +4,7 @@ module.exports = {
     { 
       name: "Procurement Case Mgmt", 
       tables: [
-        { "sn_procurement_case": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "sn_procurement_case": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "Procurement cases",
       productURL: "https://www.servicenow.com/products/financial-services-operations.html"
@@ -12,7 +12,7 @@ module.exports = {
     { 
       name: "Procurement Workspace", 
       tables: [
-        { "sn_procurement_workspace": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "sn_procurement_workspace": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "Procurement workspace",
       productURL: "https://www.servicenow.com/products/financial-services-operations.html"
@@ -20,7 +20,7 @@ module.exports = {
     { 
       name: "ShoppingHub", 
       tables: [
-        { "sn_shopping_hub": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "sn_shopping_hub": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "Shopping experience",
       productURL: "https://www.servicenow.com/products/financial-services-operations.html"
@@ -28,7 +28,7 @@ module.exports = {
     { 
       name: "Purchase & Receipt Automation", 
       tables: [
-        { "sn_procurement_automation": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "sn_procurement_automation": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "Automate P2P",
       productURL: "https://www.servicenow.com/products/financial-services-operations.html"
@@ -36,7 +36,7 @@ module.exports = {
     { 
       name: "Accounts Payable Invoice Processing", 
       tables: [
-        { "sn_ap_invoice": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "sn_ap_invoice": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "Invoice processing",
       productURL: "https://www.servicenow.com/products/financial-services-operations.html"
@@ -44,7 +44,7 @@ module.exports = {
     { 
       name: "Supplier Mgmt Workspace", 
       tables: [
-        { "sn_supplier_workspace": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "sn_supplier_workspace": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "Supplier management",
       productURL: "https://www.servicenow.com/products/supplier-lifecycle-management.html"
@@ -52,7 +52,7 @@ module.exports = {
     { 
       name: "Supplier Onboarding", 
       tables: [
-        { "sn_supplier_onboarding": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "sn_supplier_onboarding": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "Onboard suppliers",
       productURL: "https://www.servicenow.com/products/supplier-lifecycle-management.html"
@@ -60,7 +60,7 @@ module.exports = {
     { 
       name: "Supplier Intelligence", 
       tables: [
-        { "sn_supplier_intelligence": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "sn_supplier_intelligence": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "Supplier insights",
       productURL: "https://www.servicenow.com/products/supplier-lifecycle-management.html"
@@ -68,7 +68,7 @@ module.exports = {
     { 
       name: "Exception Workspace", 
       tables: [
-        { "sn_supply_exception": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "sn_supply_exception": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "Supply chain exceptions",
       productURL: "https://www.servicenow.com/products/financial-services-operations.html"

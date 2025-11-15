@@ -4,7 +4,7 @@ module.exports = {
     { 
       name: "Business Application Inventory", 
       tables: [
-        { "cmdb_ci_appl": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "cmdb_ci_appl": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "Application inventory",
       productURL: "https://www.servicenow.com/products/enterprise-architecture.html"
@@ -12,7 +12,7 @@ module.exports = {
     { 
       name: "Application Rationalization", 
       tables: [
-        { "sn_ea_app_rationalization": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "sn_ea_app_rationalization": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "Rationalize applications",
       productURL: "https://www.servicenow.com/products/enterprise-architecture.html"
@@ -20,7 +20,7 @@ module.exports = {
     { 
       name: "Technology Portfolio Mgmt", 
       tables: [
-        { "sn_ea_tech_portfolio": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "sn_ea_tech_portfolio": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "Technology portfolio",
       productURL: "https://www.servicenow.com/products/enterprise-architecture.html"

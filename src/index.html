@@ -105,6 +105,7 @@ title: ServiceNow Capability Planner
             <div class="tab-navigation">
                 <button class="tab-btn active" data-tab="export-import">Export / Import</button>
                 <button class="tab-btn" data-tab="instance">Instance</button>
+                <button class="tab-btn" data-tab="sn-script">ServiceNow Script</button>
             </div>
             
             <!-- Export/Import Tab -->
@@ -117,9 +118,23 @@ title: ServiceNow Capability Planner
                 
                 <div class="import-section">
                     <h3>Import</h3>
-                    <p>Upload a previously saved JSON file to restore capability states. Products not in the current catalog will be preserved for future use.</p>
-                    <input type="file" id="fileInput" accept=".json" style="display: none;">
-                    <button id="importJsonBtn" class="action-btn">Choose File to Import</button>
+                    <p>Upload a JSON file or paste JSON directly to restore capability states. Products not in the current catalog will be preserved for future use.</p>
+                    
+                    <!-- File Import -->
+                    <div class="import-method">
+                        <h4>Method 1: Upload File</h4>
+                        <input type="file" id="fileInput" accept=".json" style="display: none;">
+                        <button id="importJsonBtn" class="action-btn">Choose File to Import</button>
+                    </div>
+                    
+                    <!-- Paste Import -->
+                    <div class="import-method">
+                        <h4>Method 2: Paste JSON</h4>
+                        <textarea id="importTextarea" placeholder="Paste your JSON here..."></textarea>
+                        <button id="importFromTextBtn" class="action-btn">Import from Text</button>
+                        <button id="clearImportTextBtn" class="action-btn cancel-btn">Clear</button>
+                    </div>
+                    
                     <p id="importStatus" class="import-status"></p>
                 </div>
                 
@@ -166,6 +181,30 @@ title: ServiceNow Capability Planner
                             <li><code>acme.servicenowservices.com</code> → https://acme.servicenowservices.com</li>
                             <li><code>www.acme.service-now.com</code> → https://acme.service-now.com</li>
                         </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- ServiceNow Script Tab -->
+            <div id="sn-script-tab" class="tab-content">
+                <div class="sn-script-section">
+                    <h3>ServiceNow Usage Analysis Script</h3>
+                    <p>Copy and run this script in your ServiceNow instance (Scripts - Background) to analyze table usage and generate import data.</p>
+                    <p class="help-text"><strong>Note:</strong> This script uses GlideAggregate to count records in each table. It categorizes usage as:
+                        <span class="usage-category">High (>100 records)</span>,
+                        <span class="usage-category">Medium (50-100 records)</span>,
+                        <span class="usage-category">Low (1-49 records)</span>, or
+                        <span class="usage-category">Not Used (0 records)</span>.
+                    </p>
+                    
+                    <div class="script-actions">
+                        <button id="generateScriptBtn" class="action-btn">Generate Script</button>
+                        <button id="copyScriptBtn" class="action-btn" style="display: none;">Copy Script</button>
+                    </div>
+                    
+                    <div id="scriptOutput" style="display: none;">
+                        <h4>Generated Script:</h4>
+                        <pre id="scriptCode" class="script-code"></pre>
                     </div>
                 </div>
             </div>

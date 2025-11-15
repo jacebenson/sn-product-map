@@ -4,7 +4,7 @@ module.exports = {
     { 
       name: "Performance / Platform Analytics", 
       tables: [
-        { "pa_dashboards": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "pa_dashboards": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "Analytics platform",
       productURL: "https://www.servicenow.com/products/performance-analytics.html"
@@ -12,7 +12,7 @@ module.exports = {
     { 
       name: "Predictive Intelligence", 
       tables: [
-        { "ml_capability": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "ml_capability": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "Predictive ML",
       productURL: "https://www.servicenow.com/products/predictive-intelligence.html"
@@ -20,7 +20,7 @@ module.exports = {
     { 
       name: "Process Mining", 
       tables: [
-        { "sn_process_mining": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "sn_process_mining": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "Process mining",
       productURL: "https://www.servicenow.com/products/process-mining.html"
@@ -28,7 +28,7 @@ module.exports = {
     { 
       name: "Now Assist for Search", 
       tables: [
-        { "sys_ai_assist": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "sys_ai_assist": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "AI search",
       productURL: "https://www.servicenow.com/products/ai-search.html"
@@ -36,7 +36,7 @@ module.exports = {
     { 
       name: "Now Assist for Virtual Agent", 
       tables: [
-        { "sys_ai_assist": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "sys_ai_assist": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "AI chatbot",
       productURL: "https://www.servicenow.com/products/conversational-ai.html"
@@ -44,7 +44,7 @@ module.exports = {
     { 
       name: "Now Assist Panel", 
       tables: [
-        { "sys_ai_assist": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "sys_ai_assist": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "AI panel",
       productURL: "https://www.servicenow.com/products/now-platform.html"
@@ -52,7 +52,7 @@ module.exports = {
     { 
       name: "Generative AI Controller", 
       tables: [
-        { "sys_ai_controller": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "sys_ai_controller": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "GenAI control",
       productURL: "https://www.servicenow.com/products/ai-control-tower.html"
@@ -60,7 +60,7 @@ module.exports = {
     { 
       name: "Now Assist Skill Kit", 
       tables: [
-        { "sys_ai_skill": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "sys_ai_skill": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "AI skills",
       productURL: "https://www.servicenow.com/products/now-platform.html"
@@ -68,7 +68,7 @@ module.exports = {
     { 
       name: "AI Agents", 
       tables: [
-        { "sys_ai_agent": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "sys_ai_agent": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "AI agents",
       productURL: "https://www.servicenow.com/products/ai-agents.html"

@@ -4,7 +4,7 @@ module.exports = {
     { 
       name: "Demand Mgmt", 
       tables: [
-        { "dm_demand": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "dm_demand": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "Manage demand",
       productURL: "https://www.servicenow.com/products/demand-management.html"
@@ -12,7 +12,7 @@ module.exports = {
     { 
       name: "Project & Portfolio Mgmt", 
       tables: [
-        { "pm_project": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "pm_project": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "Project management",
       productURL: "https://www.servicenow.com/products/project-portfolio-management.html"
@@ -20,7 +20,7 @@ module.exports = {
     { 
       name: "Resource Mgmt", 
       tables: [
-        { "resource_plan": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "resource_plan": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "Resource planning",
       productURL: "https://www.servicenow.com/products/resource-management.html"
@@ -28,7 +28,7 @@ module.exports = {
     { 
       name: "Investment Funding", 
       tables: [
-        { "pm_investment": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "pm_investment": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "Investment tracking",
       productURL: "https://www.servicenow.com/products/strategic-portfolio-management.html"
@@ -36,7 +36,7 @@ module.exports = {
     { 
       name: "Roadmap Planning", 
       tables: [
-        { "pm_roadmap": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "pm_roadmap": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "Product roadmaps",
       productURL: "https://www.servicenow.com/products/strategic-portfolio-management.html"
@@ -44,7 +44,7 @@ module.exports = {
     { 
       name: "Agile Dev & Test", 
       tables: [
-        { "rm_story": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "rm_story": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "Agile development",
       productURL: "https://www.servicenow.com/products/agile-development.html"
@@ -52,7 +52,7 @@ module.exports = {
     { 
       name: "Scenario Planning", 
       tables: [
-        { "pm_scenario": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "pm_scenario": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "Scenario planning",
       productURL: "https://www.servicenow.com/products/strategic-portfolio-management.html"
@@ -60,7 +60,7 @@ module.exports = {
     { 
       name: "Timecards", 
       tables: [
-        { "time_card": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "time_card": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "Time tracking",
       productURL: "https://www.servicenow.com/products/strategic-portfolio-management.html"
@@ -68,7 +68,7 @@ module.exports = {
     { 
       name: "Now Assist for SPM", 
       tables: [
-        { "sys_ai_assist": "sys_created_onRELATIVEGT@dayofweek@ago@90^ORDERBYDESCsys_created_on" }
+        { "sys_ai_assist": "sys_created_onRELATIVEGT@dayofweek@ago@90" }
       ], 
       description: "AI for portfolio management",
       productURL: "https://www.servicenow.com/products/strategic-portfolio-management.html"
