@@ -98,6 +98,36 @@
     ]
   },
   {
+    "name": "PROD17831",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/PROD17831.pdf",
+    "productCodes": [
+      "PROD17831"
+    ]
+  },
+  {
+    "name": "sn-accenture-orchestra-addon-09202023",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-accenture-orchestra-addon-09202023.pdf",
+    "productCodes": [
+      "PROD21379"
+    ]
+  },
+  {
+    "name": "sn-accenture-orchestra-high-volume-09202023",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-accenture-orchestra-high-volume-09202023.pdf",
+    "productCodes": [
+      "PROD21378"
+    ]
+  },
+  {
+    "name": "sn-additional-1tb-capacity-e02012024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-additional-1tb-capacity-e02012024.pdf",
+    "productCodes": [
+      "PROD21095",
+      "PROD21096",
+      "PROD21097"
+    ]
+  },
+  {
     "name": "sn-additional-1tb-storage",
     "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-additional-1tb-storage.pdf",
     "productCodes": [
@@ -111,7 +141,25 @@
     "name": "sn-additional-application-penetration-test",
     "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-additional-application-penetration-test.pdf",
     "productCodes": [
-      "PROD03431"
+      "PROD03431",
+      "PROD18527",
+      "PROD18528"
+    ]
+  },
+  {
+    "name": "sn-additional-assist-pack-e09202023",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-additional-assist-pack-e09202023.pdf",
+    "productCodes": [
+      "PROD21223",
+      "PROD21224",
+      "PROD21225"
+    ]
+  },
+  {
+    "name": "sn-additional-non-production-instance",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-additional-non-production-instance.pdf",
+    "productCodes": [
+      "PROD17679"
     ]
   },
   {
@@ -140,7 +188,28 @@
       "PROD14586",
       "PROD14601",
       "PROD15670",
-      "PROD16937"
+      "PROD16937",
+      "PROD17680",
+      "PROD17911",
+      "PROD18238",
+      "PROD18699",
+      "PROD20927",
+      "PROD20930",
+      "PROD20935",
+      "PROD21135",
+      "PROD21140",
+      "PROD21145",
+      "PROD21789",
+      "PROD21793",
+      "PROD22462",
+      "PROD22689"
+    ]
+  },
+  {
+    "name": "sn-additional-production-environment",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-additional-production-environment.pdf",
+    "productCodes": [
+      "PROD17677"
     ]
   },
   {
@@ -166,7 +235,22 @@
       "PROD14587",
       "PROD14602",
       "PROD15671",
-      "PROD16936"
+      "PROD16936",
+      "PROD17678",
+      "PROD18698",
+      "PROD20926",
+      "PROD20929",
+      "PROD20934",
+      "PROD21134",
+      "PROD21139",
+      "PROD21144",
+      "PROD21788",
+      "PROD21792",
+      "PROD21794",
+      "PROD21797",
+      "PROD21798",
+      "PROD21799",
+      "PROD21803"
     ]
   },
   {
@@ -203,7 +287,13 @@
       "PROD15339",
       "PROD15340",
       "PROD15341",
-      "PROD15950"
+      "PROD15950",
+      "PROD19345",
+      "PROD19346",
+      "PROD19347",
+      "PROD19348",
+      "PROD19349",
+      "PROD19350"
     ]
   },
   {
@@ -227,7 +317,58 @@
       "PROD14300",
       "PROD14401",
       "PROD14402",
-      "PROD14404"
+      "PROD14404",
+      "PROD18623",
+      "PROD18785",
+      "PROD18786",
+      "PROD19245",
+      "PROD19246",
+      "PROD19396",
+      "PROD19413",
+      "PROD19414",
+      "PROD19415",
+      "PROD19416",
+      "PROD19417",
+      "PROD19418",
+      "PROD19989",
+      "PROD19995",
+      "PROD19997",
+      "PROD20000",
+      "PROD20001",
+      "PROD20002",
+      "PROD20003",
+      "PROD20004",
+      "PROD20005",
+      "PROD20006",
+      "PROD20007",
+      "PROD20008",
+      "PROD20009",
+      "PROD20010",
+      "PROD20011",
+      "PROD20012",
+      "PROD20013",
+      "PROD20014",
+      "PROD20326",
+      "PROD21662",
+      "PROD21663",
+      "PROD21664",
+      "PROD22847",
+      "PROD22851",
+      "PROD22855"
+    ]
+  },
+  {
+    "name": "sn-app-engine-enterprise-e02022023",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-app-engine-enterprise-e02022023.pdf",
+    "productCodes": [
+      "PROD19921",
+      "PROD19922",
+      "PROD19923",
+      "PROD19924",
+      "PROD19925",
+      "PROD19926",
+      "PROD19927",
+      "PROD19929"
     ]
   },
   {
@@ -235,7 +376,69 @@
     "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-app-engine-enterprise-e08032023.pdf",
     "productCodes": [
       "PROD13074",
-      "PROD13076"
+      "PROD13076",
+      "PROD19352",
+      "PROD19749",
+      "PROD19919",
+      "PROD19920",
+      "PROD19986",
+      "PROD19987",
+      "PROD19988"
+    ]
+  },
+  {
+    "name": "sn-app-engine-enterprise-for-erp-e08032023",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-app-engine-enterprise-for-erp-e08032023.pdf",
+    "productCodes": [
+      "PROD19231",
+      "PROD20945",
+      "PROD20946",
+      "PROD21555",
+      "PROD21556",
+      "PROD21557"
+    ]
+  },
+  {
+    "name": "sn-app-engine-enterprise-rsm-e05092024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-app-engine-enterprise-rsm-e05092024.pdf",
+    "productCodes": [
+      "PROD22858"
+    ]
+  },
+  {
+    "name": "sn-app-engine-standard-e01302025",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-app-engine-standard-e01302025.pdf",
+    "productCodes": [
+      "PROD22933",
+      "PROD22934",
+      "PROD22935"
+    ]
+  },
+  {
+    "name": "sn-app-engine-studio50-csm-industry-migrations-e05042023",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-app-engine-studio50-csm-industry-migrations-e05042023.pdf",
+    "productCodes": [
+      "PROD20169",
+      "PROD20172",
+      "PROD20175"
+    ]
+  },
+  {
+    "name": "sn-app-engine-studio50-fsm-migrations-e05042023",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-app-engine-studio50-fsm-migrations-e05042023.pdf",
+    "productCodes": [
+      "PROD20171",
+      "PROD20174",
+      "PROD20177"
+    ]
+  },
+  {
+    "name": "sn-app-engine-studio950-csm-industry-migrations-e05042023",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-app-engine-studio950-csm-industry-migrations-e05042023.pdf",
+    "productCodes": [
+      "PROD20170",
+      "PROD20173",
+      "PROD20176"
     ]
   },
   {
@@ -250,7 +453,21 @@
       "PROD14265",
       "PROD14368",
       "PROD14369",
-      "PROD16944"
+      "PROD16944",
+      "PROD17452",
+      "PROD17603",
+      "PROD17604",
+      "PROD17605",
+      "PROD17607",
+      "PROD17809",
+      "PROD17811"
+    ]
+  },
+  {
+    "name": "sn-architecture-excellence-04012024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-architecture-excellence-04012024.pdf",
+    "productCodes": [
+      "PROD22682"
     ]
   },
   {
@@ -259,6 +476,108 @@
     "productCodes": [
       "PROD15069",
       "PROD15070"
+    ]
+  },
+  {
+    "name": "sn-atf-cloud-runner",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-atf-cloud-runner.pdf",
+    "productCodes": [
+      "PROD18262"
+    ]
+  },
+  {
+    "name": "sn-authorized-training-partner-e02012024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-authorized-training-partner-e02012024.pdf",
+    "productCodes": [
+      "PROD22439"
+    ]
+  },
+  {
+    "name": "sn-automation-engine",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-automation-engine.pdf",
+    "productCodes": [
+      "PROD17159",
+      "PROD17160",
+      "PROD17161",
+      "PROD17653",
+      "PROD17654",
+      "PROD17713",
+      "PROD17714",
+      "PROD17715",
+      "PROD17716",
+      "PROD17717",
+      "PROD17718",
+      "PROD17719",
+      "PROD17720",
+      "PROD17764",
+      "PROD18351",
+      "PROD18353",
+      "PROD18354",
+      "PROD18355",
+      "PROD18369"
+    ]
+  },
+  {
+    "name": "sn-automation-engine-e03202024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-automation-engine-e03202024.pdf",
+    "productCodes": [
+      "PROD18247",
+      "PROD18358",
+      "PROD18361",
+      "PROD19395",
+      "PROD19397",
+      "PROD19893",
+      "PROD19896",
+      "PROD19897",
+      "PROD19898"
+    ]
+  },
+  {
+    "name": "sn-automation-engine-e05042023",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-automation-engine-e05042023.pdf",
+    "productCodes": [
+      "PROD18352",
+      "PROD19913",
+      "PROD19914"
+    ]
+  },
+  {
+    "name": "sn-automation-engine-e08012024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-automation-engine-e08012024.pdf",
+    "productCodes": [
+      "PROD17650",
+      "PROD17651",
+      "PROD22419",
+      "PROD22420",
+      "PROD22421",
+      "PROD22422",
+      "PROD22423",
+      "PROD22426",
+      "PROD22427",
+      "PROD22428",
+      "PROD22429",
+      "PROD22430",
+      "PROD22433",
+      "PROD22434",
+      "PROD22435",
+      "PROD22436",
+      "PROD22437"
+    ]
+  },
+  {
+    "name": "sn-automation-engine-e09202023",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-automation-engine-e09202023.pdf",
+    "productCodes": [
+      "PROD18249",
+      "PROD18357",
+      "PROD18360",
+      "PROD19357",
+      "PROD21363",
+      "PROD21364",
+      "PROD21365",
+      "PROD21366",
+      "PROD21367",
+      "PROD21368"
     ]
   },
   {
@@ -277,7 +596,112 @@
       "PROD14358",
       "PROD14359",
       "PROD14360",
-      "PROD16725"
+      "PROD16725",
+      "PROD17164",
+      "PROD17165",
+      "PROD17166",
+      "PROD17167",
+      "PROD17721",
+      "PROD17722",
+      "PROD17723",
+      "PROD17724",
+      "PROD17729",
+      "PROD17732",
+      "PROD17733",
+      "PROD17734",
+      "PROD17765",
+      "PROD17766",
+      "PROD17775",
+      "PROD18251",
+      "PROD18252",
+      "PROD18253",
+      "PROD18254",
+      "PROD18363",
+      "PROD18364",
+      "PROD18365",
+      "PROD18366",
+      "PROD18367",
+      "PROD18368",
+      "PROD18372",
+      "PROD18374",
+      "PROD18383",
+      "PROD18732",
+      "PROD22250",
+      "PROD22251",
+      "PROD22252",
+      "PROD22253"
+    ]
+  },
+  {
+    "name": "sn-base-pack-sales-and-order-management-for-media-and-entertainment-professional-transactions-e08012024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-base-pack-sales-and-order-management-for-media-and-entertainment-professional-transactions-e08012024.pdf",
+    "productCodes": [
+      "PROD22799"
+    ]
+  },
+  {
+    "name": "sn-base-pack-sales-and-order-management-for-telecommunications-professional-transactions-e08012024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-base-pack-sales-and-order-management-for-telecommunications-professional-transactions-e08012024.pdf",
+    "productCodes": [
+      "PROD22763",
+      "PROD22764",
+      "PROD22765"
+    ]
+  },
+  {
+    "name": "sn-base-pack-sales-and-order-management-media-entertainment-standard",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-base-pack-sales-and-order-management-media-entertainment-standard.pdf",
+    "productCodes": [
+      "PROD22793",
+      "PROD22794",
+      "PROD22795",
+      "PROD22800",
+      "PROD22801"
+    ]
+  },
+  {
+    "name": "sn-base-pack-sales-and-order-management-professional-transactions-e08012024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-base-pack-sales-and-order-management-professional-transactions-e08012024.pdf",
+    "productCodes": [
+      "PROD22745",
+      "PROD22746",
+      "PROD22747"
+    ]
+  },
+  {
+    "name": "sn-base-pack-sales-and-order-management-standard",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-base-pack-sales-and-order-management-standard.pdf",
+    "productCodes": [
+      "PROD22739",
+      "PROD22740",
+      "PROD22741"
+    ]
+  },
+  {
+    "name": "sn-base-pack-sales-and-order-management-technology-provider-standard",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-base-pack-sales-and-order-management-technology-provider-standard.pdf",
+    "productCodes": [
+      "PROD22775",
+      "PROD22776",
+      "PROD22777"
+    ]
+  },
+  {
+    "name": "sn-base-pack-sales-and-order-management-telecommunications-standard",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-base-pack-sales-and-order-management-telecommunications-standard.pdf",
+    "productCodes": [
+      "PROD22757",
+      "PROD22758",
+      "PROD22759"
+    ]
+  },
+  {
+    "name": "sn-base-pack-sales-order-management-for-technology-provider-professional-transactions-e08012024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-base-pack-sales-order-management-for-technology-provider-professional-transactions-e08012024.pdf",
+    "productCodes": [
+      "PROD22781",
+      "PROD22782",
+      "PROD22783"
     ]
   },
   {
@@ -297,7 +721,15 @@
       "PROD14201",
       "PROD14681",
       "PROD14683",
-      "PROD15281"
+      "PROD15281",
+      "PROD18111",
+      "PROD18112",
+      "PROD18127",
+      "PROD18210",
+      "PROD18216",
+      "PROD18217",
+      "PROD22213",
+      "PROD22269"
     ]
   },
   {
@@ -319,7 +751,152 @@
     "name": "sn-business-stakeholder-e09182024",
     "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-business-stakeholder-e09182024.pdf",
     "productCodes": [
-      "PROD13158"
+      "PROD13158",
+      "PROD17800",
+      "PROD17978",
+      "PROD18513",
+      "PROD18515"
+    ]
+  },
+  {
+    "name": "sn-cdm-plus-l3-e11072024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-cdm-plus-l3-e11072024.pdf",
+    "productCodes": [
+      "PROD22883"
+    ]
+  },
+  {
+    "name": "sn-celonis-process-mining",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-celonis-process-mining.pdf",
+    "productCodes": [
+      "PROD17464",
+      "PROD17465",
+      "PROD17466",
+      "PROD17467",
+      "PROD17468",
+      "PROD17469",
+      "PROD18162"
+    ]
+  },
+  {
+    "name": "sn-change-enablement",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-change-enablement.pdf",
+    "productCodes": [
+      "PROD17956",
+      "PROD17957",
+      "PROD17958",
+      "PROD17959"
+    ]
+  },
+  {
+    "name": "sn-claimsview-transactions-09202023",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-claimsview-transactions-09202023.pdf",
+    "productCodes": [
+      "PROD20841"
+    ]
+  },
+  {
+    "name": "sn-claimsview-transactions-addon-09202023",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-claimsview-transactions-addon-09202023.pdf",
+    "productCodes": [
+      "PROD20842"
+    ]
+  },
+  {
+    "name": "sn-clean-core-erp-for-app-engine-e08032023",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-clean-core-erp-for-app-engine-e08032023.pdf",
+    "productCodes": [
+      "PROD19232",
+      "PROD20951",
+      "PROD20952"
+    ]
+  },
+  {
+    "name": "sn-clinical-device-management-e02012024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-clinical-device-management-e02012024.pdf",
+    "productCodes": [
+      "PROD22159",
+      "PROD22160",
+      "PROD22161",
+      "PROD22162"
+    ]
+  },
+  {
+    "name": "sn-clinical-device-management-e05042023",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-clinical-device-management-e05042023.pdf",
+    "productCodes": [
+      "PROD19370",
+      "PROD19623",
+      "PROD19625",
+      "PROD20054",
+      "PROD20055"
+    ]
+  },
+  {
+    "name": "sn-clinical-device-management-e08032023",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-clinical-device-management-e08032023.pdf",
+    "productCodes": [
+      "PROD19369",
+      "PROD19620",
+      "PROD19621",
+      "PROD19928",
+      "PROD20053",
+      "PROD20060",
+      "PROD20751",
+      "PROD20752",
+      "PROD20753",
+      "PROD20754",
+      "PROD20755",
+      "PROD20756",
+      "PROD20757",
+      "PROD20758",
+      "PROD20759"
+    ]
+  },
+  {
+    "name": "sn-clinical-device-management-plus-e06272024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-clinical-device-management-plus-e06272024.pdf",
+    "productCodes": [
+      "PROD22881",
+      "PROD22882"
+    ]
+  },
+  {
+    "name": "sn-cloud-cost-management-e08032023",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-cloud-cost-management-e08032023.pdf",
+    "productCodes": [
+      "PROD20895"
+    ]
+  },
+  {
+    "name": "sn-cloud-encryption-e12102024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-cloud-encryption-e12102024.pdf",
+    "productCodes": [
+      "PROD22207",
+      "PROD22208",
+      "PROD22209"
+    ]
+  },
+  {
+    "name": "sn-cloud-encryption-withdraw-and-resupply-e02022023",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-cloud-encryption-withdraw-and-resupply-e02022023.pdf",
+    "productCodes": [
+      "PROD18218",
+      "PROD18371",
+      "PROD20074",
+      "PROD20075"
+    ]
+  },
+  {
+    "name": "sn-collaborative-work-management-e02012024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-collaborative-work-management-e02012024.pdf",
+    "productCodes": [
+      "PROD22188",
+      "PROD22189",
+      "PROD22190",
+      "PROD22191",
+      "PROD22192",
+      "PROD22193"
     ]
   },
   {
@@ -343,6 +920,84 @@
     "productCodes": [
       "PROD05410",
       "PROD05413"
+    ]
+  },
+  {
+    "name": "sn-contract-management-pro-e08012024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-contract-management-pro-e08012024.pdf",
+    "productCodes": [
+      "PROD21598",
+      "PROD21599",
+      "PROD21600",
+      "PROD21601",
+      "PROD21602",
+      "PROD21603",
+      "PROD21604",
+      "PROD21605",
+      "PROD21606"
+    ]
+  },
+  {
+    "name": "sn-contractor-marketplace-e02012024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-contractor-marketplace-e02012024.pdf",
+    "productCodes": [
+      "PROD22114",
+      "PROD22115",
+      "PROD22116",
+      "PROD22117",
+      "PROD22118",
+      "PROD22119"
+    ]
+  },
+  {
+    "name": "sn-creator-plus-e06272024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-creator-plus-e06272024.pdf",
+    "productCodes": [
+      "PROD21220",
+      "PROD21221"
+    ]
+  },
+  {
+    "name": "sn-creator-plus-l3-e11072024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-creator-plus-l3-e11072024.pdf",
+    "productCodes": [
+      "PROD21222"
+    ]
+  },
+  {
+    "name": "sn-credit-reinvest-program",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-credit-reinvest-program.pdf",
+    "productCodes": [
+      "PROD22822",
+      "PROD22823",
+      "PROD22824",
+      "PROD22825"
+    ]
+  },
+  {
+    "name": "sn-csm-plus-l3-e11072024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-csm-plus-l3-e11072024.pdf",
+    "productCodes": [
+      "PROD21210",
+      "PROD21211",
+      "PROD21212",
+      "PROD21213",
+      "PROD22033",
+      "PROD22057"
+    ]
+  },
+  {
+    "name": "sn-cta-pdp-04012024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-cta-pdp-04012024.pdf",
+    "productCodes": [
+      "PROD22683"
+    ]
+  },
+  {
+    "name": "sn-custom-training",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-custom-training.pdf",
+    "productCodes": [
+      "PROD17960"
     ]
   },
   {
@@ -370,6 +1025,48 @@
       "PROD13614",
       "PROD14603",
       "PROD15672"
+    ]
+  },
+  {
+    "name": "sn-customer-service-and-process-automation",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-customer-service-and-process-automation.pdf",
+    "productCodes": [
+      "PROD18582"
+    ]
+  },
+  {
+    "name": "sn-customer-service-and-process-automation-healthcare-and-life-sciences",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-customer-service-and-process-automation-healthcare-and-life-sciences.pdf",
+    "productCodes": [
+      "PROD18585"
+    ]
+  },
+  {
+    "name": "sn-customer-service-and-process-automation-media-and-entertainment",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-customer-service-and-process-automation-media-and-entertainment.pdf",
+    "productCodes": [
+      "PROD18587"
+    ]
+  },
+  {
+    "name": "sn-customer-service-and-process-automation-public-sector",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-customer-service-and-process-automation-public-sector.pdf",
+    "productCodes": [
+      "PROD18588"
+    ]
+  },
+  {
+    "name": "sn-customer-service-and-process-automation-technology-provider-services",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-customer-service-and-process-automation-technology-provider-services.pdf",
+    "productCodes": [
+      "PROD18586"
+    ]
+  },
+  {
+    "name": "sn-customer-service-and-process-automation-telecommunications",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-customer-service-and-process-automation-telecommunications.pdf",
+    "productCodes": [
+      "PROD18584"
     ]
   },
   {
@@ -436,7 +1133,134 @@
       "PROD15762",
       "PROD16098",
       "PROD16158",
-      "PROD16435"
+      "PROD16435",
+      "PROD17143",
+      "PROD17144",
+      "PROD17145",
+      "PROD17146",
+      "PROD17147",
+      "PROD17148",
+      "PROD17346",
+      "PROD17350",
+      "PROD17351",
+      "PROD17353",
+      "PROD17354",
+      "PROD17368",
+      "PROD17434",
+      "PROD17436",
+      "PROD17437",
+      "PROD17438",
+      "PROD17439",
+      "PROD17441",
+      "PROD17553",
+      "PROD17554",
+      "PROD17555",
+      "PROD17639",
+      "PROD17641",
+      "PROD18711",
+      "PROD18712",
+      "PROD18713",
+      "PROD18715",
+      "PROD18716",
+      "PROD18717",
+      "PROD19047",
+      "PROD19049",
+      "PROD19051",
+      "PROD19053",
+      "PROD19056",
+      "PROD19057",
+      "PROD19061",
+      "PROD19062",
+      "PROD19064",
+      "PROD19065",
+      "PROD19067",
+      "PROD19141",
+      "PROD19229",
+      "PROD20423",
+      "PROD20428",
+      "PROD20476"
+    ]
+  },
+  {
+    "name": "sn-customer-service-management-e02022023",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-customer-service-management-e02022023.pdf",
+    "productCodes": [
+      "PROD17279",
+      "PROD19066",
+      "PROD19069",
+      "PROD19093",
+      "PROD19094",
+      "PROD19096",
+      "PROD19097",
+      "PROD19098",
+      "PROD19100",
+      "PROD19101",
+      "PROD19102",
+      "PROD19103",
+      "PROD19104",
+      "PROD19205",
+      "PROD19206",
+      "PROD19278",
+      "PROD19279",
+      "PROD19280",
+      "PROD19281",
+      "PROD19282",
+      "PROD19283",
+      "PROD19284",
+      "PROD19285",
+      "PROD19286",
+      "PROD19432",
+      "PROD19433",
+      "PROD19435",
+      "PROD19436",
+      "PROD19437",
+      "PROD19438",
+      "PROD19474",
+      "PROD19475",
+      "PROD19477",
+      "PROD19478",
+      "PROD19479",
+      "PROD19480",
+      "PROD19481",
+      "PROD19483",
+      "PROD19484",
+      "PROD19485",
+      "PROD19486",
+      "PROD19487",
+      "PROD19562",
+      "PROD19648",
+      "PROD19665",
+      "PROD19667",
+      "PROD19668",
+      "PROD19669",
+      "PROD19849",
+      "PROD19850",
+      "PROD19851"
+    ]
+  },
+  {
+    "name": "sn-customer-service-management-plus-e06272024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-customer-service-management-plus-e06272024.pdf",
+    "productCodes": [
+      "PROD21202",
+      "PROD21203",
+      "PROD21204",
+      "PROD21205",
+      "PROD21206",
+      "PROD21207",
+      "PROD21208",
+      "PROD21209",
+      "PROD22017",
+      "PROD22025",
+      "PROD22041",
+      "PROD22049"
+    ]
+  },
+  {
+    "name": "sn-customer-service-process-automation-financial-services-ff-e03202024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-customer-service-process-automation-financial-services-ff-e03202024.pdf",
+    "productCodes": [
+      "PROD18583"
     ]
   },
   {
@@ -507,10 +1331,30 @@
     ]
   },
   {
+    "name": "sn-data-at-rest-encryption-transition-e08032023",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-data-at-rest-encryption-transition-e08032023.pdf",
+    "productCodes": [
+      "PROD20920",
+      "PROD20922",
+      "PROD20923"
+    ]
+  },
+  {
     "name": "sn-data-loss-prevention-incident-response",
     "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-data-loss-prevention-incident-response.pdf",
     "productCodes": [
-      "PROD16746"
+      "PROD16746",
+      "PROD17209",
+      "PROD17232"
+    ]
+  },
+  {
+    "name": "sn-data-privacy-e02012024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-data-privacy-e02012024.pdf",
+    "productCodes": [
+      "PROD22194",
+      "PROD22195",
+      "PROD22196"
     ]
   },
   {
@@ -523,6 +1367,13 @@
       "PROD14232",
       "PROD14335",
       "PROD14336"
+    ]
+  },
+  {
+    "name": "sn-database-encryption-one-time-setup-fee",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-database-encryption-one-time-setup-fee.pdf",
+    "productCodes": [
+      "PROD17152"
     ]
   },
   {
@@ -557,7 +1408,20 @@
       "PROD14588",
       "PROD14589",
       "PROD15674",
-      "PROD16938"
+      "PROD16938",
+      "PROD18815",
+      "PROD18816",
+      "PROD18817",
+      "PROD20933",
+      "PROD20936",
+      "PROD21136",
+      "PROD21141",
+      "PROD21146",
+      "PROD21806",
+      "PROD21857",
+      "PROD21858",
+      "PROD21860",
+      "PROD21861"
     ]
   },
   {
@@ -565,6 +1429,20 @@
     "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-devops-config.pdf",
     "productCodes": [
       "PROD11722"
+    ]
+  },
+  {
+    "name": "sn-digital-end-user-experience-e05092024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-digital-end-user-experience-e05092024.pdf",
+    "productCodes": [
+      "PROD20309"
+    ]
+  },
+  {
+    "name": "sn-digital-end-user-experience-v2-e05092024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-digital-end-user-experience-v2-e05092024.pdf",
+    "productCodes": [
+      "PROD22260"
     ]
   },
   {
@@ -596,7 +1474,11 @@
     "name": "sn-eam-field-service-technician-e02022023",
     "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-eam-field-service-technician-e02022023.pdf",
     "productCodes": [
-      "PROD14666"
+      "PROD14666",
+      "PROD19381",
+      "PROD19638",
+      "PROD19639",
+      "PROD21437"
     ]
   },
   {
@@ -613,7 +1495,8 @@
     "name": "sn-electronic-medical-records",
     "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-electronic-medical-records.pdf",
     "productCodes": [
-      "PROD15293"
+      "PROD15293",
+      "PROD21438"
     ]
   },
   {
@@ -645,10 +1528,46 @@
     ]
   },
   {
+    "name": "sn-employee-service-foundation-e02012024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-employee-service-foundation-e02012024.pdf",
+    "productCodes": [
+      "PROD21981",
+      "PROD21982",
+      "PROD21983",
+      "PROD21984",
+      "PROD21985",
+      "PROD21986"
+    ]
+  },
+  {
     "name": "sn-employee-workflow-starter",
     "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-employee-workflow-starter.pdf",
     "productCodes": [
-      "PROD15579"
+      "PROD15579",
+      "PROD18643",
+      "PROD19268",
+      "PROD19269",
+      "PROD19270",
+      "PROD19271"
+    ]
+  },
+  {
+    "name": "sn-enterprise-asset-management-e08012024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-enterprise-asset-management-e08012024.pdf",
+    "productCodes": [
+      "PROD18234"
+    ]
+  },
+  {
+    "name": "sn-enterprise-asset-management-e11022023",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-enterprise-asset-management-e11022023.pdf",
+    "productCodes": [
+      "PROD18284",
+      "PROD18285",
+      "PROD18313",
+      "PROD21613",
+      "PROD21614",
+      "PROD21615"
     ]
   },
   {
@@ -658,7 +1577,40 @@
       "PROD16985",
       "PROD16986",
       "PROD16987",
-      "PROD16988"
+      "PROD16988",
+      "PROD17933",
+      "PROD17934",
+      "PROD17935",
+      "PROD17936",
+      "PROD17937",
+      "PROD17938",
+      "PROD17939",
+      "PROD17940"
+    ]
+  },
+  {
+    "name": "sn-enterprise-service-management-e05042023",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-enterprise-service-management-e05042023.pdf",
+    "productCodes": [
+      "PROD20310",
+      "PROD20311",
+      "PROD20312",
+      "PROD20313",
+      "PROD20314",
+      "PROD20315",
+      "PROD20316",
+      "PROD20317",
+      "PROD20318",
+      "PROD20319",
+      "PROD20320",
+      "PROD20321"
+    ]
+  },
+  {
+    "name": "sn-enterprise-services-agreement-e04012024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-enterprise-services-agreement-e04012024.pdf",
+    "productCodes": [
+      "PROD22654"
     ]
   },
   {
@@ -676,10 +1628,39 @@
     ]
   },
   {
+    "name": "sn-enterprise-training-agreement",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-enterprise-training-agreement.pdf",
+    "productCodes": [
+      "PROD18140"
+    ]
+  },
+  {
+    "name": "sn-environmental-social-governance-management",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-environmental-social-governance-management.pdf",
+    "productCodes": [
+      "PROD18124",
+      "PROD18125",
+      "PROD18322",
+      "PROD18323",
+      "PROD18324",
+      "PROD18325"
+    ]
+  },
+  {
+    "name": "sn-erp-customization-mining-starter-e02022023",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-erp-customization-mining-starter-e02022023.pdf",
+    "productCodes": [
+      "PROD19230",
+      "PROD20949",
+      "PROD20950"
+    ]
+  },
+  {
     "name": "sn-esg-managementstandard-e08012024",
     "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-esg-managementstandard-e08012024.pdf",
     "productCodes": [
-      "PROD16695"
+      "PROD16695",
+      "PROD17821"
     ]
   },
   {
@@ -688,6 +1669,116 @@
     "productCodes": [
       "PROD02471",
       "PROD10591"
+    ]
+  },
+  {
+    "name": "sn-expansion-pack-sales-and-order-management-for-media-and-entertainment-professional-transactions-e08012024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-expansion-pack-sales-and-order-management-for-media-and-entertainment-professional-transactions-e08012024.pdf",
+    "productCodes": [
+      "PROD22802"
+    ]
+  },
+  {
+    "name": "sn-expansion-pack-sales-and-order-management-for-telecommunications-professional-transactions-e08012024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-expansion-pack-sales-and-order-management-for-telecommunications-professional-transactions-e08012024.pdf",
+    "productCodes": [
+      "PROD22766",
+      "PROD22767",
+      "PROD22768"
+    ]
+  },
+  {
+    "name": "sn-expansion-pack-sales-and-order-management-media-entertainment-professional",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-expansion-pack-sales-and-order-management-media-entertainment-professional.pdf",
+    "productCodes": [
+      "PROD22803",
+      "PROD22804"
+    ]
+  },
+  {
+    "name": "sn-expansion-pack-sales-and-order-management-media-entertainment-standard",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-expansion-pack-sales-and-order-management-media-entertainment-standard.pdf",
+    "productCodes": [
+      "PROD22796",
+      "PROD22797",
+      "PROD22798"
+    ]
+  },
+  {
+    "name": "sn-expansion-pack-sales-and-order-management-professional-transactions-e08012024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-expansion-pack-sales-and-order-management-professional-transactions-e08012024.pdf",
+    "productCodes": [
+      "PROD22748",
+      "PROD22749",
+      "PROD22750"
+    ]
+  },
+  {
+    "name": "sn-expansion-pack-sales-and-order-management-standard",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-expansion-pack-sales-and-order-management-standard.pdf",
+    "productCodes": [
+      "PROD22742",
+      "PROD22743",
+      "PROD22744"
+    ]
+  },
+  {
+    "name": "sn-expansion-pack-sales-and-order-management-technology-provider-standard",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-expansion-pack-sales-and-order-management-technology-provider-standard.pdf",
+    "productCodes": [
+      "PROD22778",
+      "PROD22779",
+      "PROD22780"
+    ]
+  },
+  {
+    "name": "sn-expansion-pack-sales-and-order-management-telecommunications-standard",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-expansion-pack-sales-and-order-management-telecommunications-standard.pdf",
+    "productCodes": [
+      "PROD22760",
+      "PROD22761",
+      "PROD22762"
+    ]
+  },
+  {
+    "name": "sn-expansion-pack-sales-order-management-for-technology-provider-professional-transactions-e08012024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-expansion-pack-sales-order-management-for-technology-provider-professional-transactions-e08012024.pdf",
+    "productCodes": [
+      "PROD22784",
+      "PROD22785",
+      "PROD22786"
+    ]
+  },
+  {
+    "name": "sn-extended-backup-for-additional-1tb-storage-e08032023",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-extended-backup-for-additional-1tb-storage-e08032023.pdf",
+    "productCodes": [
+      "PROD21582",
+      "PROD21585"
+    ]
+  },
+  {
+    "name": "sn-extended-backup-for-dedicated-environment-e08032023",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-extended-backup-for-dedicated-environment-e08032023.pdf",
+    "productCodes": [
+      "PROD21583",
+      "PROD21586"
+    ]
+  },
+  {
+    "name": "sn-extended-backup-for-non-production-instance-e08032023",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-extended-backup-for-non-production-instance-e08032023.pdf",
+    "productCodes": [
+      "PROD21588",
+      "PROD21590"
+    ]
+  },
+  {
+    "name": "sn-extended-backup-for-production-instance-e08032023",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-extended-backup-for-production-instance-e08032023.pdf",
+    "productCodes": [
+      "PROD21587",
+      "PROD21589"
     ]
   },
   {
@@ -705,6 +1796,15 @@
     ]
   },
   {
+    "name": "sn-fedramp-premium-e12062024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-fedramp-premium-e12062024.pdf",
+    "productCodes": [
+      "PROD18818",
+      "PROD18819",
+      "PROD18820"
+    ]
+  },
+  {
     "name": "sn-field-service-management",
     "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-field-service-management.pdf",
     "productCodes": [
@@ -715,7 +1815,17 @@
       "PROD15368",
       "PROD15606",
       "PROD15619",
-      "PROD15620"
+      "PROD15620",
+      "PROD18258",
+      "PROD19371",
+      "PROD19374",
+      "PROD19626",
+      "PROD19627",
+      "PROD19632",
+      "PROD19633",
+      "PROD20181",
+      "PROD20184",
+      "PROD20237"
     ]
   },
   {
@@ -728,7 +1838,9 @@
       "PROD15369",
       "PROD15607",
       "PROD15621",
-      "PROD15622"
+      "PROD15622",
+      "PROD19840",
+      "PROD19843"
     ]
   },
   {
@@ -738,7 +1850,72 @@
       "PROD03432",
       "PROD14229",
       "PROD14296",
-      "PROD14400"
+      "PROD14400",
+      "PROD19372",
+      "PROD19373",
+      "PROD19375",
+      "PROD19376",
+      "PROD19377",
+      "PROD19378",
+      "PROD19379",
+      "PROD19380",
+      "PROD19628",
+      "PROD19629",
+      "PROD19630",
+      "PROD19631",
+      "PROD19634",
+      "PROD19635",
+      "PROD19636",
+      "PROD19637",
+      "PROD19643",
+      "PROD19644",
+      "PROD19649",
+      "PROD19650",
+      "PROD19651",
+      "PROD19653",
+      "PROD19654",
+      "PROD19655",
+      "PROD19841",
+      "PROD19842",
+      "PROD19844",
+      "PROD19845",
+      "PROD20179",
+      "PROD20180",
+      "PROD20182",
+      "PROD20183",
+      "PROD20185",
+      "PROD20186",
+      "PROD20187",
+      "PROD20188",
+      "PROD20190",
+      "PROD20191",
+      "PROD20193",
+      "PROD20194"
+    ]
+  },
+  {
+    "name": "sn-field-service-management-legacy",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-field-service-management-legacy.pdf",
+    "productCodes": [
+      "PROD17225"
+    ]
+  },
+  {
+    "name": "sn-field-service-management-plus-e06272024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-field-service-management-plus-e06272024.pdf",
+    "productCodes": [
+      "PROD21569",
+      "PROD21570",
+      "PROD21571",
+      "PROD21572",
+      "PROD21573",
+      "PROD21574",
+      "PROD21575",
+      "PROD21576",
+      "PROD22024",
+      "PROD22032",
+      "PROD22048",
+      "PROD22056"
     ]
   },
   {
@@ -762,7 +1939,26 @@
       "PROD15692",
       "PROD15693",
       "PROD15694",
-      "PROD15695"
+      "PROD15695",
+      "PROD17338",
+      "PROD17339",
+      "PROD17815",
+      "PROD17816",
+      "PROD17971",
+      "PROD17980",
+      "PROD18736",
+      "PROD18737",
+      "PROD18738",
+      "PROD18739",
+      "PROD18740",
+      "PROD18957",
+      "PROD18967",
+      "PROD18968",
+      "PROD18977",
+      "PROD18990",
+      "PROD18993",
+      "PROD18994",
+      "PROD18999"
     ]
   },
   {
@@ -776,11 +1972,166 @@
     ]
   },
   {
+    "name": "sn-financial-services-operations-20220803",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-financial-services-operations-20220803.pdf",
+    "productCodes": [
+      "PROD17430",
+      "PROD17432",
+      "PROD17487",
+      "PROD17488",
+      "PROD17490",
+      "PROD17556",
+      "PROD17557"
+    ]
+  },
+  {
     "name": "sn-financial-services-operations-e02022023",
     "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-financial-services-operations-e02022023.pdf",
     "productCodes": [
       "PROD13627",
-      "PROD14309"
+      "PROD14309",
+      "PROD18963",
+      "PROD18965",
+      "PROD18966",
+      "PROD18976",
+      "PROD18988",
+      "PROD18989",
+      "PROD18991",
+      "PROD18992",
+      "PROD18998",
+      "PROD19000",
+      "PROD19771",
+      "PROD19773",
+      "PROD19774",
+      "PROD19775",
+      "PROD19777",
+      "PROD19779",
+      "PROD19815",
+      "PROD19816",
+      "PROD19908"
+    ]
+  },
+  {
+    "name": "sn-financial-services-operations-e05092024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-financial-services-operations-e05092024.pdf",
+    "productCodes": [
+      "PROD17317",
+      "PROD17319",
+      "PROD17355",
+      "PROD17356",
+      "PROD17608",
+      "PROD17609",
+      "PROD17610",
+      "PROD17691",
+      "PROD17693",
+      "PROD17817",
+      "PROD17818",
+      "PROD17973",
+      "PROD17982",
+      "PROD19297",
+      "PROD19298",
+      "PROD19299",
+      "PROD19300",
+      "PROD19301",
+      "PROD19302",
+      "PROD19303",
+      "PROD19304",
+      "PROD19429",
+      "PROD19498",
+      "PROD19499",
+      "PROD19500",
+      "PROD19501",
+      "PROD19502",
+      "PROD19503",
+      "PROD19504",
+      "PROD19506",
+      "PROD19507",
+      "PROD19508",
+      "PROD19509",
+      "PROD19510",
+      "PROD19511",
+      "PROD19512",
+      "PROD19513",
+      "PROD19514",
+      "PROD19515",
+      "PROD19516",
+      "PROD19855",
+      "PROD19868",
+      "PROD19869"
+    ]
+  },
+  {
+    "name": "sn-financial-services-operations-enterprise-built-with-visa-fulfiller",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-financial-services-operations-enterprise-built-with-visa-fulfiller.pdf",
+    "productCodes": [
+      "PROD22601",
+      "PROD22605",
+      "PROD22609",
+      "PROD22700",
+      "PROD22702",
+      "PROD22704"
+    ]
+  },
+  {
+    "name": "sn-financial-services-operations-enterprise-built-with-visa-transactions",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-financial-services-operations-enterprise-built-with-visa-transactions.pdf",
+    "productCodes": [
+      "PROD22602",
+      "PROD22606",
+      "PROD22610"
+    ]
+  },
+  {
+    "name": "sn-financial-services-operations-plus-e06272024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-financial-services-operations-plus-e06272024.pdf",
+    "productCodes": [
+      "PROD21250",
+      "PROD21251",
+      "PROD21252",
+      "PROD21253",
+      "PROD21254",
+      "PROD21255",
+      "PROD21256",
+      "PROD21257",
+      "PROD22019",
+      "PROD22027",
+      "PROD22043",
+      "PROD22051"
+    ]
+  },
+  {
+    "name": "sn-financial-services-operations-plus-e09202023",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-financial-services-operations-plus-e09202023.pdf",
+    "productCodes": [
+      "PROD20750"
+    ]
+  },
+  {
+    "name": "sn-financial-services-operations-professional-built-with-visa-fulfiller",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-financial-services-operations-professional-built-with-visa-fulfiller.pdf",
+    "productCodes": [
+      "PROD22599",
+      "PROD22603",
+      "PROD22607",
+      "PROD22699",
+      "PROD22701",
+      "PROD22703"
+    ]
+  },
+  {
+    "name": "sn-financial-services-operations-professional-built-with-visa-transactions",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-financial-services-operations-professional-built-with-visa-transactions.pdf",
+    "productCodes": [
+      "PROD22600",
+      "PROD22604",
+      "PROD22608"
+    ]
+  },
+  {
+    "name": "sn-financial-services-operations-transactions",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-financial-services-operations-transactions.pdf",
+    "productCodes": [
+      "PROD18741"
     ]
   },
   {
@@ -788,7 +2139,33 @@
     "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-fsm-contractor-user-e02012024.pdf",
     "productCodes": [
       "PROD15370",
-      "PROD15723"
+      "PROD15723",
+      "PROD19428",
+      "PROD20491"
+    ]
+  },
+  {
+    "name": "sn-fsm-plus-l3-e11072024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-fsm-plus-l3-e11072024.pdf",
+    "productCodes": [
+      "PROD21577",
+      "PROD21578",
+      "PROD21579",
+      "PROD21580",
+      "PROD22040",
+      "PROD22064"
+    ]
+  },
+  {
+    "name": "sn-fso-plus-l3-e11072024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-fso-plus-l3-e11072024.pdf",
+    "productCodes": [
+      "PROD21258",
+      "PROD21259",
+      "PROD21260",
+      "PROD21261",
+      "PROD22035",
+      "PROD22059"
     ]
   },
   {
@@ -806,7 +2183,186 @@
     "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-fundamentals-training.pdf",
     "productCodes": [
       "PROD00122",
-      "PROD15180"
+      "PROD15180",
+      "PROD17963"
+    ]
+  },
+  {
+    "name": "sn-gcc-cdm-plus-e062724",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-gcc-cdm-plus-e062724.pdf",
+    "productCodes": [
+      "PROD23049"
+    ]
+  },
+  {
+    "name": "sn-gcc-creator-plus-e062724",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-gcc-creator-plus-e062724.pdf",
+    "productCodes": [
+      "PROD23050"
+    ]
+  },
+  {
+    "name": "sn-gcc-csm-plus-e062724",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-gcc-csm-plus-e062724.pdf",
+    "productCodes": [
+      "PROD23051",
+      "PROD23052",
+      "PROD23053",
+      "PROD23054",
+      "PROD23055",
+      "PROD23056"
+    ]
+  },
+  {
+    "name": "sn-gcc-fsm-plus-e062724",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-gcc-fsm-plus-e062724.pdf",
+    "productCodes": [
+      "PROD23057",
+      "PROD23058",
+      "PROD23059",
+      "PROD23060",
+      "PROD23061",
+      "PROD23062"
+    ]
+  },
+  {
+    "name": "sn-gcc-fso-plus-e062724",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-gcc-fso-plus-e062724.pdf",
+    "productCodes": [
+      "PROD23063",
+      "PROD23064",
+      "PROD23065",
+      "PROD23066",
+      "PROD23067",
+      "PROD23068"
+    ]
+  },
+  {
+    "name": "sn-gcc-hcls-plus-e062724",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-gcc-hcls-plus-e062724.pdf",
+    "productCodes": [
+      "PROD23069",
+      "PROD23070",
+      "PROD23071",
+      "PROD23072",
+      "PROD23073",
+      "PROD23074"
+    ]
+  },
+  {
+    "name": "sn-gcc-hrsd-plus-e062724",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-gcc-hrsd-plus-e062724.pdf",
+    "productCodes": [
+      "PROD23075",
+      "PROD23076",
+      "PROD23077",
+      "PROD23078"
+    ]
+  },
+  {
+    "name": "sn-gcc-itom-plus-e062724",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-gcc-itom-plus-e062724.pdf",
+    "productCodes": [
+      "PROD23079",
+      "PROD23080"
+    ]
+  },
+  {
+    "name": "sn-gcc-itsm-plus-e062724",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-gcc-itsm-plus-e062724.pdf",
+    "productCodes": [
+      "PROD23081",
+      "PROD23082",
+      "PROD23083",
+      "PROD23084"
+    ]
+  },
+  {
+    "name": "sn-gcc-mco-plus-e062724",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-gcc-mco-plus-e062724.pdf",
+    "productCodes": [
+      "PROD23085",
+      "PROD23086",
+      "PROD23087",
+      "PROD23088",
+      "PROD23089",
+      "PROD23090"
+    ]
+  },
+  {
+    "name": "sn-gcc-mesm-plus-e062724",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-gcc-mesm-plus-e062724.pdf",
+    "productCodes": [
+      "PROD23091",
+      "PROD23092",
+      "PROD23093",
+      "PROD23094"
+    ]
+  },
+  {
+    "name": "sn-gcc-psds-plus-e062724",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-gcc-psds-plus-e062724.pdf",
+    "productCodes": [
+      "PROD23095",
+      "PROD23096",
+      "PROD23097",
+      "PROD23098",
+      "PROD23099",
+      "PROD23100"
+    ]
+  },
+  {
+    "name": "sn-gcc-rsm-plus-e062724",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-gcc-rsm-plus-e062724.pdf",
+    "productCodes": [
+      "PROD23101",
+      "PROD23102"
+    ]
+  },
+  {
+    "name": "sn-gcc-tpsm-plus-e062724",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-gcc-tpsm-plus-e062724.pdf",
+    "productCodes": [
+      "PROD23107",
+      "PROD23108",
+      "PROD23109",
+      "PROD23110",
+      "PROD23111",
+      "PROD23112"
+    ]
+  },
+  {
+    "name": "sn-gcc-tsm-plus-e062724",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-gcc-tsm-plus-e062724.pdf",
+    "productCodes": [
+      "PROD23113",
+      "PROD23114",
+      "PROD23115",
+      "PROD23116",
+      "PROD23117",
+      "PROD23118"
+    ]
+  },
+  {
+    "name": "sn-gcc-tsom-plus-e062724",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-gcc-tsom-plus-e062724.pdf",
+    "productCodes": [
+      "PROD23119",
+      "PROD23120"
+    ]
+  },
+  {
+    "name": "sn-gen-ai-base-components-e02012024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-gen-ai-base-components-e02012024.pdf",
+    "productCodes": [
+      "PROD21619"
+    ]
+  },
+  {
+    "name": "sn-generative-ai-controller-e05042023",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-generative-ai-controller-e05042023.pdf",
+    "productCodes": [
+      "PROD20364"
     ]
   },
   {
@@ -904,7 +2460,24 @@
       "PROD14061",
       "PROD14599",
       "PROD15131",
-      "PROD15136"
+      "PROD15136",
+      "PROD18514",
+      "PROD18516"
+    ]
+  },
+  {
+    "name": "sn-hardware-asset-management-e05042023",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-hardware-asset-management-e05042023.pdf",
+    "productCodes": [
+      "PROD20239",
+      "PROD20242",
+      "PROD20243",
+      "PROD21616",
+      "PROD21617",
+      "PROD21618",
+      "PROD22870",
+      "PROD22871",
+      "PROD22872"
     ]
   },
   {
@@ -928,6 +2501,33 @@
     ]
   },
   {
+    "name": "sn-hcls-sm-plus-l3-e11072024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-hcls-sm-plus-l3-e11072024.pdf",
+    "productCodes": [
+      "PROD21306",
+      "PROD21307",
+      "PROD21308",
+      "PROD21309",
+      "PROD22039",
+      "PROD22063"
+    ]
+  },
+  {
+    "name": "sn-health-and-safety-e08032023",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-health-and-safety-e08032023.pdf",
+    "productCodes": [
+      "PROD18657",
+      "PROD18878",
+      "PROD19253",
+      "PROD19967",
+      "PROD20015",
+      "PROD20016",
+      "PROD20772",
+      "PROD20773",
+      "PROD20774"
+    ]
+  },
+  {
     "name": "sn-healthcare-and-life-sciences-service-management",
     "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-healthcare-and-life-sciences-service-management.pdf",
     "productCodes": [
@@ -939,7 +2539,122 @@
       "PROD16305",
       "PROD16306",
       "PROD16311",
-      "PROD16312"
+      "PROD16312",
+      "PROD17366",
+      "PROD17367",
+      "PROD17380",
+      "PROD17381",
+      "PROD17475",
+      "PROD17491",
+      "PROD17492",
+      "PROD17493",
+      "PROD17625",
+      "PROD17628",
+      "PROD17669",
+      "PROD17670",
+      "PROD17701",
+      "PROD17702",
+      "PROD17703",
+      "PROD17910",
+      "PROD17979",
+      "PROD18743",
+      "PROD18744",
+      "PROD18745",
+      "PROD18748",
+      "PROD18749",
+      "PROD18750",
+      "PROD19126",
+      "PROD19127",
+      "PROD19128",
+      "PROD19129",
+      "PROD19130",
+      "PROD19131",
+      "PROD19145",
+      "PROD19146",
+      "PROD19575",
+      "PROD19576",
+      "PROD19838"
+    ]
+  },
+  {
+    "name": "sn-healthcare-and-life-sciences-service-management-e02022023",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-healthcare-and-life-sciences-service-management-e02022023.pdf",
+    "productCodes": [
+      "PROD19087",
+      "PROD19088",
+      "PROD19089",
+      "PROD19090",
+      "PROD19091",
+      "PROD19092",
+      "PROD19318",
+      "PROD19319",
+      "PROD19320",
+      "PROD19321",
+      "PROD19322",
+      "PROD19323",
+      "PROD19324",
+      "PROD19384",
+      "PROD19430",
+      "PROD19558",
+      "PROD19559",
+      "PROD19560",
+      "PROD19561",
+      "PROD19563",
+      "PROD19564",
+      "PROD19565",
+      "PROD19566",
+      "PROD19567",
+      "PROD19568",
+      "PROD19569",
+      "PROD19570",
+      "PROD19571",
+      "PROD19572",
+      "PROD19573",
+      "PROD19574",
+      "PROD19835",
+      "PROD19836",
+      "PROD19837",
+      "PROD19839",
+      "PROD19846",
+      "PROD19847",
+      "PROD19848",
+      "PROD19948",
+      "PROD19949",
+      "PROD19950",
+      "PROD19951",
+      "PROD21060"
+    ]
+  },
+  {
+    "name": "sn-healthcare-and-life-sciences-service-management-plus-e06272024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-healthcare-and-life-sciences-service-management-plus-e06272024.pdf",
+    "productCodes": [
+      "PROD21298",
+      "PROD21299",
+      "PROD21300",
+      "PROD21301",
+      "PROD21302",
+      "PROD21303",
+      "PROD21304",
+      "PROD21305",
+      "PROD22023",
+      "PROD22031",
+      "PROD22047",
+      "PROD22055"
+    ]
+  },
+  {
+    "name": "sn-hospital-on-duty-beds-09202023",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-hospital-on-duty-beds-09202023.pdf",
+    "productCodes": [
+      "PROD21347"
+    ]
+  },
+  {
+    "name": "sn-hospital-on-duty-beds-addon-09202023",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-hospital-on-duty-beds-addon-09202023.pdf",
+    "productCodes": [
+      "PROD21348"
     ]
   },
   {
@@ -959,10 +2674,41 @@
     ]
   },
   {
+    "name": "sn-hr-service-delivery-plus-e05092024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-hr-service-delivery-plus-e05092024.pdf",
+    "productCodes": [
+      "PROD22074",
+      "PROD22075",
+      "PROD22076",
+      "PROD22077",
+      "PROD22078",
+      "PROD22079"
+    ]
+  },
+  {
+    "name": "sn-hr-service-delivery-plus-e06272024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-hr-service-delivery-plus-e06272024.pdf",
+    "productCodes": [
+      "PROD21214",
+      "PROD21215",
+      "PROD21216",
+      "PROD21217"
+    ]
+  },
+  {
+    "name": "sn-hrsd-plus-l3-e11072024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-hrsd-plus-l3-e11072024.pdf",
+    "productCodes": [
+      "PROD21218",
+      "PROD21219"
+    ]
+  },
+  {
     "name": "sn-human-resources",
     "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-human-resources.pdf",
     "productCodes": [
-      "PROD16250"
+      "PROD16250",
+      "PROD18345"
     ]
   },
   {
@@ -1004,7 +2750,41 @@
       "PROD15404",
       "PROD15597",
       "PROD15598",
-      "PROD15603"
+      "PROD15603",
+      "PROD17239",
+      "PROD17746",
+      "PROD17747",
+      "PROD18176",
+      "PROD18496",
+      "PROD18497",
+      "PROD19244",
+      "PROD20019",
+      "PROD20020",
+      "PROD20760",
+      "PROD20761",
+      "PROD20762",
+      "PROD20763",
+      "PROD20764",
+      "PROD20765",
+      "PROD22097",
+      "PROD22098",
+      "PROD22099",
+      "PROD22100",
+      "PROD22101",
+      "PROD22102",
+      "PROD22103",
+      "PROD22104",
+      "PROD22105",
+      "PROD22106",
+      "PROD22107",
+      "PROD22108"
+    ]
+  },
+  {
+    "name": "sn-human-resources-e02022023",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-human-resources-e02022023.pdf",
+    "productCodes": [
+      "PROD19918"
     ]
   },
   {
@@ -1020,7 +2800,27 @@
       "PROD14322",
       "PROD14350",
       "PROD15405",
-      "PROD15599"
+      "PROD15599",
+      "PROD17237",
+      "PROD17238",
+      "PROD17594",
+      "PROD17595",
+      "PROD17596",
+      "PROD17597"
+    ]
+  },
+  {
+    "name": "sn-idp-logins-09202023",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-idp-logins-09202023.pdf",
+    "productCodes": [
+      "PROD20843"
+    ]
+  },
+  {
+    "name": "sn-idp-logins-addon-09202023",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-idp-logins-addon-09202023.pdf",
+    "productCodes": [
+      "PROD20844"
     ]
   },
   {
@@ -1031,10 +2831,40 @@
     ]
   },
   {
+    "name": "sn-impact-advanced-msp-dedicated-instance-v2",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-impact-advanced-msp-dedicated-instance-v2.pdf",
+    "productCodes": [
+      "PROD19215",
+      "PROD22565"
+    ]
+  },
+  {
     "name": "sn-impact-advanced-public-sector-us",
     "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-impact-advanced-public-sector-us.pdf",
     "productCodes": [
       "PROD16510"
+    ]
+  },
+  {
+    "name": "sn-impact-advanced-public-sector-us-e05042023",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-impact-advanced-public-sector-us-e05042023.pdf",
+    "productCodes": [
+      "PROD19956"
+    ]
+  },
+  {
+    "name": "sn-impact-advanced-public-sector-v3",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-impact-advanced-public-sector-v3.pdf",
+    "productCodes": [
+      "PROD22567",
+      "PROD22569"
+    ]
+  },
+  {
+    "name": "sn-impact-advanced-v2",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-impact-advanced-v2.pdf",
+    "productCodes": [
+      "PROD22561"
     ]
   },
   {
@@ -1052,10 +2882,66 @@
     ]
   },
   {
+    "name": "sn-impact-guided-msp-dedicated-instance-v2",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-impact-guided-msp-dedicated-instance-v2.pdf",
+    "productCodes": [
+      "PROD22564"
+    ]
+  },
+  {
+    "name": "sn-impact-guided-msp-e03212023",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-impact-guided-msp-e03212023.pdf",
+    "productCodes": [
+      "PROD19214"
+    ]
+  },
+  {
     "name": "sn-impact-guided-public-sector-us",
     "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-impact-guided-public-sector-us.pdf",
     "productCodes": [
       "PROD16586"
+    ]
+  },
+  {
+    "name": "sn-impact-guided-public-sector-us-e05042023",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-impact-guided-public-sector-us-e05042023.pdf",
+    "productCodes": [
+      "PROD20067"
+    ]
+  },
+  {
+    "name": "sn-impact-guided-v2",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-impact-guided-v2.pdf",
+    "productCodes": [
+      "PROD22560"
+    ]
+  },
+  {
+    "name": "sn-impact-instance-observer-seats",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-impact-instance-observer-seats.pdf",
+    "productCodes": [
+      "PROD22475"
+    ]
+  },
+  {
+    "name": "sn-impact-managed-support",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-impact-managed-support.pdf",
+    "productCodes": [
+      "PROD22474"
+    ]
+  },
+  {
+    "name": "sn-impact-platform-governance",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-impact-platform-governance.pdf",
+    "productCodes": [
+      "PROD22473"
+    ]
+  },
+  {
+    "name": "sn-impact-strategic-value",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-impact-strategic-value.pdf",
+    "productCodes": [
+      "PROD22472"
     ]
   },
   {
@@ -1073,6 +2959,14 @@
     ]
   },
   {
+    "name": "sn-impact-total-msp-dedicated-instance-v2",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-impact-total-msp-dedicated-instance-v2.pdf",
+    "productCodes": [
+      "PROD19216",
+      "PROD22566"
+    ]
+  },
+  {
     "name": "sn-impact-total-public-sector-us",
     "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-impact-total-public-sector-us.pdf",
     "productCodes": [
@@ -1080,10 +2974,40 @@
     ]
   },
   {
+    "name": "sn-impact-total-public-sector-us-05042023",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-impact-total-public-sector-us-05042023.pdf",
+    "productCodes": [
+      "PROD19983"
+    ]
+  },
+  {
+    "name": "sn-impact-total-public-sector-v3",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-impact-total-public-sector-v3.pdf",
+    "productCodes": [
+      "PROD22568"
+    ]
+  },
+  {
+    "name": "sn-impact-total-v2",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-impact-total-v2.pdf",
+    "productCodes": [
+      "PROD22562"
+    ]
+  },
+  {
     "name": "sn-impact-transition",
     "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-impact-transition.pdf",
     "productCodes": [
       "PROD16380"
+    ]
+  },
+  {
+    "name": "sn-included-1tb-capacity-e02012024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-included-1tb-capacity-e02012024.pdf",
+    "productCodes": [
+      "PROD21177",
+      "PROD21178",
+      "PROD21179"
     ]
   },
   {
@@ -1101,7 +3025,24 @@
       "PROD15570",
       "PROD15571",
       "PROD15572",
-      "PROD15573"
+      "PROD15573",
+      "PROD17892",
+      "PROD18697",
+      "PROD19251",
+      "PROD19975",
+      "PROD20107",
+      "PROD20932",
+      "PROD20938",
+      "PROD21133",
+      "PROD21138",
+      "PROD21143",
+      "PROD21546",
+      "PROD21785",
+      "PROD21791",
+      "PROD21796",
+      "PROD21801",
+      "PROD21802",
+      "PROD21805"
     ]
   },
   {
@@ -1128,7 +3069,36 @@
       "PROD15559",
       "PROD15560",
       "PROD15561",
-      "PROD15562"
+      "PROD15562",
+      "PROD17891",
+      "PROD18696",
+      "PROD19250",
+      "PROD19974",
+      "PROD20106",
+      "PROD20931",
+      "PROD20937",
+      "PROD21132",
+      "PROD21137",
+      "PROD21142",
+      "PROD21545",
+      "PROD21784",
+      "PROD21790",
+      "PROD21795",
+      "PROD21800",
+      "PROD21804",
+      "PROD21843",
+      "PROD22459",
+      "PROD22460",
+      "PROD22461"
+    ]
+  },
+  {
+    "name": "sn-indoor-mapping-service-e05092024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-indoor-mapping-service-e05092024.pdf",
+    "productCodes": [
+      "PROD22878",
+      "PROD22879",
+      "PROD22880"
     ]
   },
   {
@@ -1179,7 +3149,17 @@
       "PROD14685",
       "PROD15334",
       "PROD15869",
-      "PROD15870"
+      "PROD15870",
+      "PROD18083",
+      "PROD18109",
+      "PROD18110",
+      "PROD18211",
+      "PROD18214",
+      "PROD18215",
+      "PROD18335",
+      "PROD18336",
+      "PROD18337",
+      "PROD18338"
     ]
   },
   {
@@ -1200,7 +3180,26 @@
       "PROD11661",
       "PROD11663",
       "PROD11664",
-      "PROD11665"
+      "PROD11665",
+      "PROD18382",
+      "PROD19392",
+      "PROD19394",
+      "PROD19750",
+      "PROD19751",
+      "PROD19911",
+      "PROD19912",
+      "PROD22418",
+      "PROD22424",
+      "PROD22425",
+      "PROD22431",
+      "PROD22432"
+    ]
+  },
+  {
+    "name": "sn-integration-hub-starter-e02202025",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-integration-hub-starter-e02202025.pdf",
+    "productCodes": [
+      "PROD22417"
     ]
   },
   {
@@ -1230,6 +3229,15 @@
     "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-iqoq-qualification-production-instance-uplift-e08032022.pdf",
     "productCodes": [
       "PROD00877"
+    ]
+  },
+  {
+    "name": "sn-irm-standard-professional-enterprise-lite-operator-e08012024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-irm-standard-professional-enterprise-lite-operator-e08012024.pdf",
+    "productCodes": [
+      "PROD18126",
+      "PROD18326",
+      "PROD18327"
     ]
   },
   {
@@ -1264,7 +3272,11 @@
       "PROD15510",
       "PROD15604",
       "PROD15850",
-      "PROD16000"
+      "PROD16000",
+      "PROD17099",
+      "PROD17119",
+      "PROD17428",
+      "PROD17429"
     ]
   },
   {
@@ -1289,7 +3301,9 @@
     "productCodes": [
       "PROD14995",
       "PROD15149",
-      "PROD15150"
+      "PROD15150",
+      "PROD17109",
+      "PROD17110"
     ]
   },
   {
@@ -1314,7 +3328,11 @@
       "PROD16273",
       "PROD16278",
       "PROD16962",
-      "PROD16963"
+      "PROD16963",
+      "PROD17203",
+      "PROD17204",
+      "PROD17218",
+      "PROD17221"
     ]
   },
   {
@@ -1340,7 +3358,31 @@
       "PROD15638",
       "PROD15640",
       "PROD15646",
-      "PROD16964"
+      "PROD16964",
+      "PROD17205",
+      "PROD17206",
+      "PROD17223",
+      "PROD19272",
+      "PROD19273"
+    ]
+  },
+  {
+    "name": "sn-it-operations-management-iot",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-it-operations-management-iot.pdf",
+    "productCodes": [
+      "PROD17771"
+    ]
+  },
+  {
+    "name": "sn-it-operations-management-plus-e05092024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-it-operations-management-plus-e05092024.pdf",
+    "productCodes": [
+      "PROD22521",
+      "PROD22522",
+      "PROD22523",
+      "PROD22524",
+      "PROD22525",
+      "PROD22526"
     ]
   },
   {
@@ -1412,7 +3454,55 @@
       "PROD15702",
       "PROD15705",
       "PROD16097",
-      "PROD16157"
+      "PROD16157",
+      "PROD17243",
+      "PROD17252",
+      "PROD17256",
+      "PROD17257",
+      "PROD17259",
+      "PROD17269",
+      "PROD17369",
+      "PROD17370",
+      "PROD17372",
+      "PROD17373",
+      "PROD17377",
+      "PROD17378",
+      "PROD17408",
+      "PROD17409",
+      "PROD17410",
+      "PROD17411",
+      "PROD17412",
+      "PROD17413",
+      "PROD17414",
+      "PROD17415",
+      "PROD17416",
+      "PROD17417",
+      "PROD17418",
+      "PROD17419",
+      "PROD17550",
+      "PROD17551",
+      "PROD17552",
+      "PROD18245",
+      "PROD18591",
+      "PROD18592",
+      "PROD18593",
+      "PROD18595",
+      "PROD18947",
+      "PROD18948",
+      "PROD18949",
+      "PROD18950",
+      "PROD18951",
+      "PROD18952",
+      "PROD18953",
+      "PROD18954",
+      "PROD18955",
+      "PROD18958",
+      "PROD18959",
+      "PROD18960",
+      "PROD20274",
+      "PROD20327",
+      "PROD20328",
+      "PROD20329"
     ]
   },
   {
@@ -1422,6 +3512,27 @@
       "PROD11727",
       "PROD15948",
       "PROD15949"
+    ]
+  },
+  {
+    "name": "sn-it-service-management-plus-e06272024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-it-service-management-plus-e06272024.pdf",
+    "productCodes": [
+      "PROD21190",
+      "PROD21191",
+      "PROD21192",
+      "PROD21193",
+      "PROD21194",
+      "PROD21195",
+      "PROD21196",
+      "PROD21197"
+    ]
+  },
+  {
+    "name": "sn-it-service-management-standard-uki-e09202024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-it-service-management-standard-uki-e09202024.pdf",
+    "productCodes": [
+      "PROD22859"
     ]
   },
   {
@@ -1444,7 +3555,8 @@
     "name": "sn-itom-cloud-accelerate-e05012025",
     "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-itom-cloud-accelerate-e05012025.pdf",
     "productCodes": [
-      "PROD16960"
+      "PROD16960",
+      "PROD17222"
     ]
   },
   {
@@ -1462,6 +3574,16 @@
     ]
   },
   {
+    "name": "sn-itsm-plus-l3-e11072024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-itsm-plus-l3-e11072024.pdf",
+    "productCodes": [
+      "PROD21198",
+      "PROD21199",
+      "PROD21200",
+      "PROD21201"
+    ]
+  },
+  {
     "name": "sn-legal-service-delivery",
     "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-legal-service-delivery.pdf",
     "productCodes": [
@@ -1475,7 +3597,16 @@
       "PROD12815",
       "PROD12846",
       "PROD15266",
-      "PROD15267"
+      "PROD15267",
+      "PROD19247",
+      "PROD20017",
+      "PROD20018",
+      "PROD22958",
+      "PROD22959",
+      "PROD22960",
+      "PROD22961",
+      "PROD22962",
+      "PROD22963"
     ]
   },
   {
@@ -1485,14 +3616,18 @@
       "PROD15269",
       "PROD15601",
       "PROD15602",
-      "PROD16896"
+      "PROD16896",
+      "PROD17570",
+      "PROD17571",
+      "PROD18521"
     ]
   },
   {
     "name": "sn-lightstep-active-services",
     "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-lightstep-active-services.pdf",
     "productCodes": [
-      "PROD16640"
+      "PROD16640",
+      "PROD18350"
     ]
   },
   {
@@ -1510,6 +3645,20 @@
     ]
   },
   {
+    "name": "sn-lightstep-professional-services-hours",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-lightstep-professional-services-hours.pdf",
+    "productCodes": [
+      "PROD17447"
+    ]
+  },
+  {
+    "name": "sn-lightstep-quickstart",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-lightstep-quickstart.pdf",
+    "productCodes": [
+      "PROD17446"
+    ]
+  },
+  {
     "name": "sn-lightstep-seats",
     "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-lightstep-seats.pdf",
     "productCodes": [
@@ -1517,10 +3666,106 @@
     ]
   },
   {
+    "name": "sn-lightstep-span-data",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-lightstep-span-data.pdf",
+    "productCodes": [
+      "PROD17443"
+    ]
+  },
+  {
+    "name": "sn-lightstep-span-data-ingest",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-lightstep-span-data-ingest.pdf",
+    "productCodes": [
+      "PROD18348"
+    ]
+  },
+  {
+    "name": "sn-lightstep-span-data-retention",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-lightstep-span-data-retention.pdf",
+    "productCodes": [
+      "PROD18349"
+    ]
+  },
+  {
+    "name": "sn-lightstep-streams",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-lightstep-streams.pdf",
+    "productCodes": [
+      "PROD17444"
+    ]
+  },
+  {
+    "name": "sn-log-export-service-e02022023",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-log-export-service-e02022023.pdf",
+    "productCodes": [
+      "PROD18746",
+      "PROD18747",
+      "PROD19910",
+      "PROD19917",
+      "PROD20076",
+      "PROD20077",
+      "PROD20078",
+      "PROD20079"
+    ]
+  },
+  {
     "name": "sn-loom-predictive-intelligence-e12062024",
     "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-loom-predictive-intelligence-e12062024.pdf",
     "productCodes": [
       "PROD13483"
+    ]
+  },
+  {
+    "name": "sn-manufacturing-commercial-operations-e11032023",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-manufacturing-commercial-operations-e11032023.pdf",
+    "productCodes": [
+      "PROD21490",
+      "PROD21491",
+      "PROD21492",
+      "PROD21493",
+      "PROD21494",
+      "PROD21495",
+      "PROD21496",
+      "PROD21497",
+      "PROD21498",
+      "PROD21499",
+      "PROD21500",
+      "PROD21501",
+      "PROD21502",
+      "PROD21503",
+      "PROD21504"
+    ]
+  },
+  {
+    "name": "sn-manufacturing-commercial-operations-enterprise-unrestricted-user",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-manufacturing-commercial-operations-enterprise-unrestricted-user.pdf",
+    "productCodes": [
+      "PROD22724",
+      "PROD22725",
+      "PROD22726"
+    ]
+  },
+  {
+    "name": "sn-manufacturing-commercial-operations-professional-unrestricted-user",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-manufacturing-commercial-operations-professional-unrestricted-user.pdf",
+    "productCodes": [
+      "PROD22722",
+      "PROD22723"
+    ]
+  },
+  {
+    "name": "sn-manufacturing-commercial-operations-professional-unrestricted-user-e05012025",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-manufacturing-commercial-operations-professional-unrestricted-user-e05012025.pdf",
+    "productCodes": [
+      "PROD22721"
+    ]
+  },
+  {
+    "name": "sn-manufacturing-commercial-operations-standard-unrestricted-user",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-manufacturing-commercial-operations-standard-unrestricted-user.pdf",
+    "productCodes": [
+      "PROD22718",
+      "PROD22719",
+      "PROD22720"
     ]
   },
   {
@@ -1535,32 +3780,164 @@
     ]
   },
   {
+    "name": "sn-mco-plus-e11072024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-mco-plus-e11072024.pdf",
+    "productCodes": [
+      "PROD21997",
+      "PROD21998",
+      "PROD22154",
+      "PROD22156",
+      "PROD22733",
+      "PROD22734",
+      "PROD22736",
+      "PROD22737"
+    ]
+  },
+  {
+    "name": "sn-mco-plus-l3-e11072024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-mco-plus-l3-e11072024.pdf",
+    "productCodes": [
+      "PROD22155",
+      "PROD22157",
+      "PROD22735",
+      "PROD22738"
+    ]
+  },
+  {
+    "name": "sn-media-and-entertainment-service-management",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-media-and-entertainment-service-management.pdf",
+    "productCodes": [
+      "PROD17502",
+      "PROD17503",
+      "PROD17504",
+      "PROD17505",
+      "PROD17506",
+      "PROD17507",
+      "PROD18760",
+      "PROD18761",
+      "PROD18763",
+      "PROD18764"
+    ]
+  },
+  {
     "name": "sn-media-and-entertainment-service-management-e05092024",
     "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-media-and-entertainment-service-management-e05092024.pdf",
     "productCodes": [
       "PROD15838",
-      "PROD15839"
+      "PROD15839",
+      "PROD17019",
+      "PROD17398",
+      "PROD17399",
+      "PROD17705",
+      "PROD19864",
+      "PROD19865",
+      "PROD19866"
+    ]
+  },
+  {
+    "name": "sn-media-and-entertainment-service-management-enterprise-fulfiller-user-e01302025",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-media-and-entertainment-service-management-enterprise-fulfiller-user-e01302025.pdf",
+    "productCodes": [
+      "PROD19340"
+    ]
+  },
+  {
+    "name": "sn-media-and-entertainment-service-management-enterprise-transactions-e01302025",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-media-and-entertainment-service-management-enterprise-transactions-e01302025.pdf",
+    "productCodes": [
+      "PROD19344"
+    ]
+  },
+  {
+    "name": "sn-media-and-entertainment-service-management-enterprise-unrestricted-user-e01302025",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-media-and-entertainment-service-management-enterprise-unrestricted-user-e01302025.pdf",
+    "productCodes": [
+      "PROD19341"
     ]
   },
   {
     "name": "sn-media-and-entertainment-service-management-enterprise-with-app-engine-1000-ff-e01302025",
     "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-media-and-entertainment-service-management-enterprise-with-app-engine-1000-ff-e01302025.pdf",
     "productCodes": [
-      "PROD15206"
+      "PROD15206",
+      "PROD17400"
+    ]
+  },
+  {
+    "name": "sn-media-and-entertainment-service-management-enterprise-with-app-engine-1000-transactions-e01302025",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-media-and-entertainment-service-management-enterprise-with-app-engine-1000-transactions-e01302025.pdf",
+    "productCodes": [
+      "PROD17706"
     ]
   },
   {
     "name": "sn-media-and-entertainment-service-management-enterprise-with-app-engine-1000-uu-e01302025",
     "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-media-and-entertainment-service-management-enterprise-with-app-engine-1000-uu-e01302025.pdf",
     "productCodes": [
-      "PROD15851"
+      "PROD15851",
+      "PROD17402"
+    ]
+  },
+  {
+    "name": "sn-media-and-entertainment-service-management-plus-e06272024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-media-and-entertainment-service-management-plus-e06272024.pdf",
+    "productCodes": [
+      "PROD21286",
+      "PROD21287",
+      "PROD21288",
+      "PROD21289",
+      "PROD21290",
+      "PROD21291",
+      "PROD21292",
+      "PROD21293",
+      "PROD22022",
+      "PROD22030",
+      "PROD22046",
+      "PROD22054"
+    ]
+  },
+  {
+    "name": "sn-media-and-entertainment-service-management-professional-fulfiller-user-e01302025",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-media-and-entertainment-service-management-professional-fulfiller-user-e01302025.pdf",
+    "productCodes": [
+      "PROD19339"
+    ]
+  },
+  {
+    "name": "sn-media-and-entertainment-service-management-professional-transaction-e01302025",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-media-and-entertainment-service-management-professional-transaction-e01302025.pdf",
+    "productCodes": [
+      "PROD19343"
+    ]
+  },
+  {
+    "name": "sn-media-and-entertainment-service-management-professional-unrestricted-user-e01302025",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-media-and-entertainment-service-management-professional-unrestricted-user-e01302025.pdf",
+    "productCodes": [
+      "PROD19338"
     ]
   },
   {
     "name": "sn-media-and-entertainment-service-management-standard-fulfiller-user-e01302025",
     "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-media-and-entertainment-service-management-standard-fulfiller-user-e01302025.pdf",
     "productCodes": [
-      "PROD15837"
+      "PROD15837",
+      "PROD17395",
+      "PROD19336"
+    ]
+  },
+  {
+    "name": "sn-media-and-entertainment-service-management-standard-transactions",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-media-and-entertainment-service-management-standard-transactions.pdf",
+    "productCodes": [
+      "PROD17704"
+    ]
+  },
+  {
+    "name": "sn-media-and-entertainment-service-management-standard-transactions-e01302025",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-media-and-entertainment-service-management-standard-transactions-e01302025.pdf",
+    "productCodes": [
+      "PROD19342"
     ]
   },
   {
@@ -1571,10 +3948,68 @@
     ]
   },
   {
+    "name": "sn-media-and-entertainment-service-management-standard-unrestricted-user-e01302025",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-media-and-entertainment-service-management-standard-unrestricted-user-e01302025.pdf",
+    "productCodes": [
+      "PROD17397",
+      "PROD19337"
+    ]
+  },
+  {
+    "name": "sn-media-and-entertainment-service-management-transactions",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-media-and-entertainment-service-management-transactions.pdf",
+    "productCodes": [
+      "PROD18762",
+      "PROD18765"
+    ]
+  },
+  {
+    "name": "sn-media-entertainment-service-management-e02022023",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-media-entertainment-service-management-e02022023.pdf",
+    "productCodes": [
+      "PROD19004",
+      "PROD19005",
+      "PROD19007",
+      "PROD19032",
+      "PROD19034",
+      "PROD19035",
+      "PROD19037",
+      "PROD19048",
+      "PROD19052",
+      "PROD19054",
+      "PROD19058",
+      "PROD19059",
+      "PROD19805",
+      "PROD19806",
+      "PROD19807",
+      "PROD19808",
+      "PROD19809",
+      "PROD19810",
+      "PROD19811",
+      "PROD19812",
+      "PROD19813"
+    ]
+  },
+  {
+    "name": "sn-mesm-plus-l3-e11072024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-mesm-plus-l3-e11072024.pdf",
+    "productCodes": [
+      "PROD21294",
+      "PROD21295",
+      "PROD21296",
+      "PROD21297",
+      "PROD22038",
+      "PROD22062"
+    ]
+  },
+  {
     "name": "sn-messaging-service",
     "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-messaging-service.pdf",
     "productCodes": [
-      "PROD16036"
+      "PROD16036",
+      "PROD17072",
+      "PROD17073",
+      "PROD17079"
     ]
   },
   {
@@ -1654,6 +4089,24 @@
     ]
   },
   {
+    "name": "sn-mwc-manufacturing-foundation-e12182024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-mwc-manufacturing-foundation-e12182024.pdf",
+    "productCodes": [
+      "PROD19164",
+      "PROD19165",
+      "PROD19166"
+    ]
+  },
+  {
+    "name": "sn-non-production-instance-e03222022",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-non-production-instance-e03222022.pdf",
+    "productCodes": [
+      "PROD18489",
+      "PROD18491",
+      "PROD18493"
+    ]
+  },
+  {
     "name": "sn-non-standard-and-unmonitored-instance-access-tunnel-e12062024",
     "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-non-standard-and-unmonitored-instance-access-tunnel-e12062024.pdf",
     "productCodes": [
@@ -1682,7 +4135,10 @@
     "productCodes": [
       "PROD16059",
       "PROD16200",
-      "PROD16941"
+      "PROD16941",
+      "PROD17113",
+      "PROD17629",
+      "PROD17638"
     ]
   },
   {
@@ -1702,6 +4158,129 @@
     ]
   },
   {
+    "name": "sn-order-management-base-pack-transaction-pack-e08012024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-order-management-base-pack-transaction-pack-e08012024.pdf",
+    "productCodes": [
+      "PROD19287"
+    ]
+  },
+  {
+    "name": "sn-order-management-expansion-pack-e08012024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-order-management-expansion-pack-e08012024.pdf",
+    "productCodes": [
+      "PROD19391"
+    ]
+  },
+  {
+    "name": "sn-order-management-ff",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-order-management-ff.pdf",
+    "productCodes": [
+      "PROD17011"
+    ]
+  },
+  {
+    "name": "sn-order-management-for-media-and-entertainment-unrestricted-user-e05042023",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-order-management-for-media-and-entertainment-unrestricted-user-e05042023.pdf",
+    "productCodes": [
+      "PROD20246"
+    ]
+  },
+  {
+    "name": "sn-order-management-for-mesm-base-pack-e02022023",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-order-management-for-mesm-base-pack-e02022023.pdf",
+    "productCodes": [
+      "PROD19335"
+    ]
+  },
+  {
+    "name": "sn-order-management-for-mesm-expansion-pack-e02022023",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-order-management-for-mesm-expansion-pack-e02022023.pdf",
+    "productCodes": [
+      "PROD19399"
+    ]
+  },
+  {
+    "name": "sn-order-management-for-technology-provider-base-pack-transaction-pack-e08012024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-order-management-for-technology-provider-base-pack-transaction-pack-e08012024.pdf",
+    "productCodes": [
+      "PROD19328"
+    ]
+  },
+  {
+    "name": "sn-order-management-for-technology-provider-expansion-pack-e08012024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-order-management-for-technology-provider-expansion-pack-e08012024.pdf",
+    "productCodes": [
+      "PROD19393"
+    ]
+  },
+  {
+    "name": "sn-order-management-for-technology-provider-unrestricted-user-e05042023",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-order-management-for-technology-provider-unrestricted-user-e05042023.pdf",
+    "productCodes": [
+      "PROD20245",
+      "PROD20267",
+      "PROD20268"
+    ]
+  },
+  {
+    "name": "sn-order-management-for-telecommunications-base-pack-e08012024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-order-management-for-telecommunications-base-pack-e08012024.pdf",
+    "productCodes": [
+      "PROD19311"
+    ]
+  },
+  {
+    "name": "sn-order-management-for-telecommunications-unrestricted-user-e05042023",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-order-management-for-telecommunications-unrestricted-user-e05042023.pdf",
+    "productCodes": [
+      "PROD20244",
+      "PROD20265",
+      "PROD20266",
+      "PROD20726"
+    ]
+  },
+  {
+    "name": "sn-order-management-for-tpsm-expansion-pack-e02022023",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-order-management-for-tpsm-expansion-pack-e02022023.pdf",
+    "productCodes": [
+      "PROD19398"
+    ]
+  },
+  {
+    "name": "sn-order-management-for-tsm-base-pack-e02022023",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-order-management-for-tsm-base-pack-e02022023.pdf",
+    "productCodes": [
+      "PROD19786"
+    ]
+  },
+  {
+    "name": "sn-order-management-transaction-pack",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-order-management-transaction-pack.pdf",
+    "productCodes": [
+      "PROD17010",
+      "PROD17016",
+      "PROD17017"
+    ]
+  },
+  {
+    "name": "sn-order-management-uu",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-order-management-uu.pdf",
+    "productCodes": [
+      "PROD20247",
+      "PROD20269",
+      "PROD20270"
+    ]
+  },
+  {
+    "name": "sn-ot-asset-management",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-ot-asset-management.pdf",
+    "productCodes": [
+      "PROD22884",
+      "PROD22885",
+      "PROD22886"
+    ]
+  },
+  {
     "name": "sn-ot-service-management",
     "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-ot-service-management.pdf",
     "productCodes": [
@@ -1713,7 +4292,33 @@
       "PROD16681",
       "PROD16911",
       "PROD16913",
-      "PROD16914"
+      "PROD16914",
+      "PROD17342",
+      "PROD17358",
+      "PROD17359",
+      "PROD17361",
+      "PROD17362",
+      "PROD17363",
+      "PROD17480",
+      "PROD17481",
+      "PROD17482",
+      "PROD17484",
+      "PROD17485",
+      "PROD17630",
+      "PROD17633",
+      "PROD17634",
+      "PROD17635",
+      "PROD17636",
+      "PROD17637",
+      "PROD17648",
+      "PROD17649",
+      "PROD17661",
+      "PROD17662",
+      "PROD17663",
+      "PROD17664",
+      "PROD18071",
+      "PROD18072",
+      "PROD18073"
     ]
   },
   {
@@ -1771,7 +4376,9 @@
       "PROD11900",
       "PROD13615",
       "PROD14608",
-      "PROD15673"
+      "PROD15673",
+      "PROD21933",
+      "PROD22821"
     ]
   },
   {
@@ -1809,7 +4416,8 @@
     "name": "sn-platform-encryption",
     "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-platform-encryption.pdf",
     "productCodes": [
-      "PROD16906"
+      "PROD16906",
+      "PROD17427"
     ]
   },
   {
@@ -1817,6 +4425,13 @@
     "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-platform-runtime-uu-e12052024.pdf",
     "productCodes": [
       "PROD01163"
+    ]
+  },
+  {
+    "name": "sn-preventive-care",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-preventive-care.pdf",
+    "productCodes": [
+      "PROD21777"
     ]
   },
   {
@@ -1843,13 +4458,266 @@
     ]
   },
   {
+    "name": "sn-process-mining-for-manufacturing-commercial-operations-professional-unrestricted-user",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-process-mining-for-manufacturing-commercial-operations-professional-unrestricted-user.pdf",
+    "productCodes": [
+      "PROD22727",
+      "PROD22728",
+      "PROD22729"
+    ]
+  },
+  {
+    "name": "sn-process-mining-for-rsm-e05092024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-process-mining-for-rsm-e05092024.pdf",
+    "productCodes": [
+      "PROD22846",
+      "PROD22850",
+      "PROD22854"
+    ]
+  },
+  {
+    "name": "sn-process-mining-for-spmt-e02012024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-process-mining-for-spmt-e02012024.pdf",
+    "productCodes": [
+      "PROD22003",
+      "PROD22004",
+      "PROD22009",
+      "PROD22010",
+      "PROD22015",
+      "PROD22016"
+    ]
+  },
+  {
+    "name": "sn-procurement-operations-management",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-procurement-operations-management.pdf",
+    "productCodes": [
+      "PROD18318",
+      "PROD18319"
+    ]
+  },
+  {
+    "name": "sn-procurement-Operations-management-e02022023",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-procurement-Operations-management-e02022023.pdf",
+    "productCodes": [
+      "PROD18184",
+      "PROD18185",
+      "PROD18484",
+      "PROD18485",
+      "PROD18486",
+      "PROD18487"
+    ]
+  },
+  {
+    "name": "sn-procurement-service-management",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-procurement-service-management.pdf",
+    "productCodes": [
+      "PROD18344"
+    ]
+  },
+  {
+    "name": "sn-procurement-service-management-20220803",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-procurement-service-management-20220803.pdf",
+    "productCodes": [
+      "PROD17118"
+    ]
+  },
+  {
     "name": "sn-procurement-service-management-e02022023",
     "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-procurement-service-management-e02022023.pdf",
     "productCodes": [
       "PROD14992",
       "PROD14993",
       "PROD16928",
-      "PROD16930"
+      "PROD16930",
+      "PROD17566",
+      "PROD17567",
+      "PROD17568",
+      "PROD17569",
+      "PROD18164",
+      "PROD18481",
+      "PROD18482"
+    ]
+  },
+  {
+    "name": "sn-production-instance-e03222022",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-production-instance-e03222022.pdf",
+    "productCodes": [
+      "PROD18488",
+      "PROD18490",
+      "PROD18492"
+    ]
+  },
+  {
+    "name": "sn-psds-plus-l3-e11072024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-psds-plus-l3-e11072024.pdf",
+    "productCodes": [
+      "PROD21246",
+      "PROD21247",
+      "PROD21248",
+      "PROD21249",
+      "PROD22034",
+      "PROD22058"
+    ]
+  },
+  {
+    "name": "sn-public-sector-digital-services",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-public-sector-digital-services.pdf",
+    "productCodes": [
+      "PROD17309",
+      "PROD17310",
+      "PROD17311",
+      "PROD17314",
+      "PROD17643",
+      "PROD17644",
+      "PROD17748",
+      "PROD17749",
+      "PROD17752",
+      "PROD17753",
+      "PROD17754",
+      "PROD18074",
+      "PROD18075",
+      "PROD18076",
+      "PROD18725",
+      "PROD18727",
+      "PROD18728",
+      "PROD18729",
+      "PROD18730",
+      "PROD18731",
+      "PROD19023",
+      "PROD19024",
+      "PROD19025",
+      "PROD19026",
+      "PROD19027",
+      "PROD19123",
+      "PROD19124",
+      "PROD19125",
+      "PROD19142",
+      "PROD19143",
+      "PROD19144",
+      "PROD19427"
+    ]
+  },
+  {
+    "name": "sn-public-sector-digital-services-e02022023",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-public-sector-digital-services-e02022023.pdf",
+    "productCodes": [
+      "PROD17285",
+      "PROD17308",
+      "PROD17642",
+      "PROD18964",
+      "PROD18978",
+      "PROD18979",
+      "PROD18980",
+      "PROD18981",
+      "PROD18982",
+      "PROD19288",
+      "PROD19289",
+      "PROD19290",
+      "PROD19291",
+      "PROD19292",
+      "PROD19293",
+      "PROD19294",
+      "PROD19295",
+      "PROD19296",
+      "PROD19439",
+      "PROD19440",
+      "PROD19441",
+      "PROD19444",
+      "PROD19445",
+      "PROD19446",
+      "PROD19447",
+      "PROD19448",
+      "PROD19449",
+      "PROD19450",
+      "PROD19451",
+      "PROD19453",
+      "PROD19492",
+      "PROD19493",
+      "PROD19494",
+      "PROD19495",
+      "PROD19496",
+      "PROD19497",
+      "PROD19677",
+      "PROD19678",
+      "PROD19680",
+      "PROD19681",
+      "PROD19682",
+      "PROD19683",
+      "PROD19852",
+      "PROD19853",
+      "PROD19854",
+      "PROD20056",
+      "PROD20057",
+      "PROD20058"
+    ]
+  },
+  {
+    "name": "sn-public-sector-digital-services-plus-e06272024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-public-sector-digital-services-plus-e06272024.pdf",
+    "productCodes": [
+      "PROD22831"
+    ]
+  },
+  {
+    "name": "sn-public-sector-digital-services-plus-e09202023",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-public-sector-digital-services-plus-e09202023.pdf",
+    "productCodes": [
+      "PROD20748",
+      "PROD20749",
+      "PROD21238",
+      "PROD21239",
+      "PROD21240",
+      "PROD21241",
+      "PROD21242",
+      "PROD21243",
+      "PROD21244",
+      "PROD21245",
+      "PROD22018",
+      "PROD22026",
+      "PROD22042",
+      "PROD22050"
+    ]
+  },
+  {
+    "name": "sn-retail-operations-e08012024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-retail-operations-e08012024.pdf",
+    "productCodes": [
+      "PROD21231",
+      "PROD21232",
+      "PROD21233"
+    ]
+  },
+  {
+    "name": "sn-retail-service-management-e05092024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-retail-service-management-e05092024.pdf",
+    "productCodes": [
+      "PROD22834",
+      "PROD22835",
+      "PROD22836",
+      "PROD22838",
+      "PROD22839",
+      "PROD22840",
+      "PROD22842",
+      "PROD22843",
+      "PROD22844"
+    ]
+  },
+  {
+    "name": "sn-retail-service-management-plus-e06272024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-retail-service-management-plus-e06272024.pdf",
+    "productCodes": [
+      "PROD22848",
+      "PROD22849",
+      "PROD22852",
+      "PROD22853"
+    ]
+  },
+  {
+    "name": "sn-retail-service-management-plus-l3-e01302025",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-retail-service-management-plus-l3-e01302025.pdf",
+    "productCodes": [
+      "PROD22856",
+      "PROD22857"
     ]
   },
   {
@@ -1862,6 +4730,147 @@
     ]
   },
   {
+    "name": "sn-sales-and-order-management-e02012024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-sales-and-order-management-e02012024.pdf",
+    "productCodes": [
+      "PROD22220",
+      "PROD22221",
+      "PROD22222"
+    ]
+  },
+  {
+    "name": "sn-sales-and-order-management-for-media-and-entertainment-professional-e08012024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-sales-and-order-management-for-media-and-entertainment-professional-e08012024.pdf",
+    "productCodes": [
+      "PROD22241",
+      "PROD22242",
+      "PROD22243"
+    ]
+  },
+  {
+    "name": "sn-sales-and-order-management-for-media-and-entertainment-professional-unrestricted-user-e08012024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-sales-and-order-management-for-media-and-entertainment-professional-unrestricted-user-e08012024.pdf",
+    "productCodes": [
+      "PROD22808"
+    ]
+  },
+  {
+    "name": "sn-sales-and-order-management-for-technology-provider-e02012024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-sales-and-order-management-for-technology-provider-e02012024.pdf",
+    "productCodes": [
+      "PROD22232",
+      "PROD22233",
+      "PROD22234"
+    ]
+  },
+  {
+    "name": "sn-sales-and-order-management-for-technology-provider-professional-fulfiller-user-e08012024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-sales-and-order-management-for-technology-provider-professional-fulfiller-user-e08012024.pdf",
+    "productCodes": [
+      "PROD22235",
+      "PROD22236",
+      "PROD22237"
+    ]
+  },
+  {
+    "name": "sn-sales-and-order-management-for-technology-provider-professional-unrestricted-user-e08012024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-sales-and-order-management-for-technology-provider-professional-unrestricted-user-e08012024.pdf",
+    "productCodes": [
+      "PROD22790",
+      "PROD22791",
+      "PROD22792"
+    ]
+  },
+  {
+    "name": "sn-sales-and-order-management-for-telecommunications-e02012024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-sales-and-order-management-for-telecommunications-e02012024.pdf",
+    "productCodes": [
+      "PROD22226",
+      "PROD22227",
+      "PROD22228"
+    ]
+  },
+  {
+    "name": "sn-sales-and-order-management-for-telecommunications-professional-fulfiller-user-e08012024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-sales-and-order-management-for-telecommunications-professional-fulfiller-user-e08012024.pdf",
+    "productCodes": [
+      "PROD22229",
+      "PROD22230",
+      "PROD22231"
+    ]
+  },
+  {
+    "name": "sn-sales-and-order-management-for-telecommunications-professional-unrestricted-user-e08012024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-sales-and-order-management-for-telecommunications-professional-unrestricted-user-e08012024.pdf",
+    "productCodes": [
+      "PROD22772",
+      "PROD22773",
+      "PROD22774"
+    ]
+  },
+  {
+    "name": "sn-sales-and-order-management-media-entertainment-professional-unrestricted-user",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-sales-and-order-management-media-entertainment-professional-unrestricted-user.pdf",
+    "productCodes": [
+      "PROD22809",
+      "PROD22810"
+    ]
+  },
+  {
+    "name": "sn-sales-and-order-management-media-entertainment-standard-unrestricted-user",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-sales-and-order-management-media-entertainment-standard-unrestricted-user.pdf",
+    "productCodes": [
+      "PROD22805",
+      "PROD22806",
+      "PROD22807"
+    ]
+  },
+  {
+    "name": "sn-sales-and-order-management-professional-fulfiller-user-e08012024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-sales-and-order-management-professional-fulfiller-user-e08012024.pdf",
+    "productCodes": [
+      "PROD22223",
+      "PROD22224",
+      "PROD22225"
+    ]
+  },
+  {
+    "name": "sn-sales-and-order-management-professional-unrestricted-user-e08012024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-sales-and-order-management-professional-unrestricted-user-e08012024.pdf",
+    "productCodes": [
+      "PROD22754",
+      "PROD22755",
+      "PROD22756"
+    ]
+  },
+  {
+    "name": "sn-sales-and-order-management-standard-unrestricted-user",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-sales-and-order-management-standard-unrestricted-user.pdf",
+    "productCodes": [
+      "PROD22751",
+      "PROD22752",
+      "PROD22753"
+    ]
+  },
+  {
+    "name": "sn-sales-and-order-management-technology-provider-standard-unrestricted-user",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-sales-and-order-management-technology-provider-standard-unrestricted-user.pdf",
+    "productCodes": [
+      "PROD22787",
+      "PROD22788",
+      "PROD22789"
+    ]
+  },
+  {
+    "name": "sn-sales-and-order-management-telecommunications-standard-unrestricted-user",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-sales-and-order-management-telecommunications-standard-unrestricted-user.pdf",
+    "productCodes": [
+      "PROD22769",
+      "PROD22770",
+      "PROD22771"
+    ]
+  },
+  {
     "name": "sn-scaled-agile-framework",
     "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-scaled-agile-framework.pdf",
     "productCodes": [
@@ -1869,11 +4878,54 @@
     ]
   },
   {
+    "name": "sn-schedule-optimization",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-schedule-optimization.pdf",
+    "productCodes": [
+      "PROD18317"
+    ]
+  },
+  {
+    "name": "sn-schedule-optimization-fulfiller-e02022023",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-schedule-optimization-fulfiller-e02022023.pdf",
+    "productCodes": [
+      "PROD18257",
+      "PROD18499",
+      "PROD18500",
+      "PROD19382",
+      "PROD19656",
+      "PROD19657"
+    ]
+  },
+  {
+    "name": "sn-schedule-optimization-transactions-e02022023",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-schedule-optimization-transactions-e02022023.pdf",
+    "productCodes": [
+      "PROD19383",
+      "PROD19658",
+      "PROD19659"
+    ]
+  },
+  {
     "name": "sn-sec-ops-pro-ent-VR-e08012024",
     "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-sec-ops-pro-ent-VR-e08012024.pdf",
     "productCodes": [
       "PROD12824",
-      "PROD16745"
+      "PROD16745",
+      "PROD18263",
+      "PROD18276",
+      "PROD18282",
+      "PROD20825",
+      "PROD20826",
+      "PROD22888"
+    ]
+  },
+  {
+    "name": "sn-secrets-management-for-itom-e08032023",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-secrets-management-for-itom-e08032023.pdf",
+    "productCodes": [
+      "PROD20903",
+      "PROD20904",
+      "PROD20905"
     ]
   },
   {
@@ -1891,7 +4943,53 @@
       "PROD14393",
       "PROD14395",
       "PROD16743",
-      "PROD16744"
+      "PROD16744",
+      "PROD17111",
+      "PROD17207",
+      "PROD17208",
+      "PROD17210",
+      "PROD17226",
+      "PROD17231",
+      "PROD17233",
+      "PROD17235",
+      "PROD18277",
+      "PROD18278",
+      "PROD18280"
+    ]
+  },
+  {
+    "name": "sn-security-operations-e05092024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-security-operations-e05092024.pdf",
+    "productCodes": [
+      "PROD22090",
+      "PROD22290"
+    ]
+  },
+  {
+    "name": "sn-security-operations-e08032023",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-security-operations-e08032023.pdf",
+    "productCodes": [
+      "PROD20790",
+      "PROD20791",
+      "PROD20792",
+      "PROD20824",
+      "PROD20827",
+      "PROD20828",
+      "PROD20829",
+      "PROD20831",
+      "PROD20845",
+      "PROD20846"
+    ]
+  },
+  {
+    "name": "sn-security-operations-enterprise-sir-e02012024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-security-operations-enterprise-sir-e02012024.pdf",
+    "productCodes": [
+      "PROD22087",
+      "PROD22088",
+      "PROD22089",
+      "PROD22091",
+      "PROD22092"
     ]
   },
   {
@@ -1915,7 +5013,195 @@
       "PROD13271",
       "PROD13272",
       "PROD16204",
-      "PROD16206"
+      "PROD16206",
+      "PROD17112",
+      "PROD17236"
+    ]
+  },
+  {
+    "name": "sn-security-posture-control-e02012024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-security-posture-control-e02012024.pdf",
+    "productCodes": [
+      "PROD20860",
+      "PROD22093"
+    ]
+  },
+  {
+    "name": "sn-security-posture-control-e05092024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-security-posture-control-e05092024.pdf",
+    "productCodes": [
+      "PROD20862"
+    ]
+  },
+  {
+    "name": "sn-selfhosted-cdm-plus-e062724",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-selfhosted-cdm-plus-e062724.pdf",
+    "productCodes": [
+      "PROD23121"
+    ]
+  },
+  {
+    "name": "sn-selfhosted-creator-plus-e062724",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-selfhosted-creator-plus-e062724.pdf",
+    "productCodes": [
+      "PROD23122"
+    ]
+  },
+  {
+    "name": "sn-selfhosted-csm-plus-e062724",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-selfhosted-csm-plus-e062724.pdf",
+    "productCodes": [
+      "PROD23123",
+      "PROD23124",
+      "PROD23125",
+      "PROD23126",
+      "PROD23127",
+      "PROD23128"
+    ]
+  },
+  {
+    "name": "sn-selfhosted-fsm-plus-e062724",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-selfhosted-fsm-plus-e062724.pdf",
+    "productCodes": [
+      "PROD23129",
+      "PROD23130",
+      "PROD23131",
+      "PROD23132",
+      "PROD23133",
+      "PROD23134"
+    ]
+  },
+  {
+    "name": "sn-selfhosted-fso-plus-e062724",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-selfhosted-fso-plus-e062724.pdf",
+    "productCodes": [
+      "PROD23135",
+      "PROD23136",
+      "PROD23137",
+      "PROD23138",
+      "PROD23139",
+      "PROD23140"
+    ]
+  },
+  {
+    "name": "sn-selfhosted-hcls-plus-e062724",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-selfhosted-hcls-plus-e062724.pdf",
+    "productCodes": [
+      "PROD23141",
+      "PROD23142",
+      "PROD23143",
+      "PROD23144",
+      "PROD23145",
+      "PROD23146"
+    ]
+  },
+  {
+    "name": "sn-selfhosted-hrsd-plus-e062724",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-selfhosted-hrsd-plus-e062724.pdf",
+    "productCodes": [
+      "PROD23147",
+      "PROD23148",
+      "PROD23149",
+      "PROD23150"
+    ]
+  },
+  {
+    "name": "sn-selfhosted-itom-plus-e062724",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-selfhosted-itom-plus-e062724.pdf",
+    "productCodes": [
+      "PROD23151",
+      "PROD23152"
+    ]
+  },
+  {
+    "name": "sn-selfhosted-itsm-plus-e062724",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-selfhosted-itsm-plus-e062724.pdf",
+    "productCodes": [
+      "PROD23153",
+      "PROD23154",
+      "PROD23155",
+      "PROD23156"
+    ]
+  },
+  {
+    "name": "sn-selfhosted-mco-plus-e062724",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-selfhosted-mco-plus-e062724.pdf",
+    "productCodes": [
+      "PROD23163",
+      "PROD23164",
+      "PROD23165",
+      "PROD23166"
+    ]
+  },
+  {
+    "name": "sn-selfhosted-mesm-plus-e062724",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-selfhosted-mesm-plus-e062724.pdf",
+    "productCodes": [
+      "PROD23157",
+      "PROD23158",
+      "PROD23159",
+      "PROD23160",
+      "PROD23161",
+      "PROD23162"
+    ]
+  },
+  {
+    "name": "sn-selfhosted-psds-plus-e062724",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-selfhosted-psds-plus-e062724.pdf",
+    "productCodes": [
+      "PROD23167",
+      "PROD23168",
+      "PROD23169",
+      "PROD23170",
+      "PROD23171",
+      "PROD23172"
+    ]
+  },
+  {
+    "name": "sn-selfhosted-rsm-plus-e062724",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-selfhosted-rsm-plus-e062724.pdf",
+    "productCodes": [
+      "PROD23173",
+      "PROD23174"
+    ]
+  },
+  {
+    "name": "sn-selfhosted-tpsm-plus-e062724",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-selfhosted-tpsm-plus-e062724.pdf",
+    "productCodes": [
+      "PROD23179",
+      "PROD23180",
+      "PROD23181",
+      "PROD23182",
+      "PROD23183",
+      "PROD23184"
+    ]
+  },
+  {
+    "name": "sn-selfhosted-tsm-plus-e062724",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-selfhosted-tsm-plus-e062724.pdf",
+    "productCodes": [
+      "PROD23185",
+      "PROD23186",
+      "PROD23187",
+      "PROD23188",
+      "PROD23189",
+      "PROD23190"
+    ]
+  },
+  {
+    "name": "sn-selfhosted-tsom-plus-e062724",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-selfhosted-tsom-plus-e062724.pdf",
+    "productCodes": [
+      "PROD23191",
+      "PROD23192"
+    ]
+  },
+  {
+    "name": "sn-service-catalog-unified-e08032023",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-service-catalog-unified-e08032023.pdf",
+    "productCodes": [
+      "PROD20891"
     ]
   },
   {
@@ -1927,6 +5213,45 @@
       "PROD02951",
       "PROD02973",
       "PROD02976"
+    ]
+  },
+  {
+    "name": "sn-servicenow-cloud-observability-log-data-cold-retention-e05042023",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-servicenow-cloud-observability-log-data-cold-retention-e05042023.pdf",
+    "productCodes": [
+      "PROD20219"
+    ]
+  },
+  {
+    "name": "sn-servicenow-cloud-observability-log-data-hot-retention-e05042023",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-servicenow-cloud-observability-log-data-hot-retention-e05042023.pdf",
+    "productCodes": [
+      "PROD20217"
+    ]
+  },
+  {
+    "name": "sn-servicenow-cloud-observability-log-data-ingest-e05042023",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-servicenow-cloud-observability-log-data-ingest-e05042023.pdf",
+    "productCodes": [
+      "PROD20215"
+    ]
+  },
+  {
+    "name": "sn-servicenow-smart-operations-e05092024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-servicenow-smart-operations-e05092024.pdf",
+    "productCodes": [
+      "PROD22937",
+      "PROD22938",
+      "PROD22939"
+    ]
+  },
+  {
+    "name": "sn-servicenow-vault-e08032023",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-servicenow-vault-e08032023.pdf",
+    "productCodes": [
+      "PROD18537",
+      "PROD18783",
+      "PROD18784"
     ]
   },
   {
@@ -2030,7 +5355,41 @@
       "PROD16719",
       "PROD16813",
       "PROD16814",
-      "PROD16815"
+      "PROD16815",
+      "PROD17027",
+      "PROD17029",
+      "PROD17042",
+      "PROD17043",
+      "PROD17230",
+      "PROD17951",
+      "PROD17953",
+      "PROD17954",
+      "PROD17955",
+      "PROD17964",
+      "PROD20360",
+      "PROD20361",
+      "PROD20376",
+      "PROD20466",
+      "PROD20467",
+      "PROD20597",
+      "PROD20598",
+      "PROD20599",
+      "PROD20602",
+      "PROD20603",
+      "PROD20604",
+      "PROD21841",
+      "PROD21842",
+      "PROD21978",
+      "PROD21979",
+      "PROD22301",
+      "PROD22438",
+      "PROD22707",
+      "PROD22708",
+      "PROD22813",
+      "PROD22814",
+      "PROD22815",
+      "PROD22819",
+      "PROD22820"
     ]
   },
   {
@@ -2055,7 +5414,41 @@
       "PROD15513",
       "PROD15654",
       "PROD15757",
-      "PROD15758"
+      "PROD15758",
+      "PROD20892",
+      "PROD20893",
+      "PROD20894",
+      "PROD21647",
+      "PROD22545"
+    ]
+  },
+  {
+    "name": "sn-source-to-pay-operations-e05032023",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-source-to-pay-operations-e05032023.pdf",
+    "productCodes": [
+      "PROD20289",
+      "PROD20290",
+      "PROD20291",
+      "PROD20292",
+      "PROD20293",
+      "PROD20294",
+      "PROD22912",
+      "PROD22913",
+      "PROD22914"
+    ]
+  },
+  {
+    "name": "sn-sscap-assessments-09202023",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-sscap-assessments-09202023.pdf",
+    "productCodes": [
+      "PROD21343"
+    ]
+  },
+  {
+    "name": "sn-sscap-assessments-addon-09202023",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-sscap-assessments-addon-09202023.pdf",
+    "productCodes": [
+      "PROD21344"
     ]
   },
   {
@@ -2063,7 +5456,13 @@
     "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-strategic-portfolio-management-e08012024.pdf",
     "productCodes": [
       "PROD16951",
-      "PROD16952"
+      "PROD16952",
+      "PROD17190",
+      "PROD17193",
+      "PROD17195",
+      "PROD17197",
+      "PROD18362",
+      "PROD21391"
     ]
   },
   {
@@ -2071,7 +5470,76 @@
     "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-strategic-portfolio-management-e08032023.pdf",
     "productCodes": [
       "PROD16953",
-      "PROD16955"
+      "PROD16955",
+      "PROD17105",
+      "PROD17107",
+      "PROD17108",
+      "PROD17191",
+      "PROD17194",
+      "PROD17196",
+      "PROD17198",
+      "PROD20901",
+      "PROD20906",
+      "PROD20907",
+      "PROD20908",
+      "PROD20909",
+      "PROD20910"
+    ]
+  },
+  {
+    "name": "sn-strategic-portfolio-management-for-telecommunications-e02022024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-strategic-portfolio-management-for-telecommunications-e02022024.pdf",
+    "productCodes": [
+      "PROD21999",
+      "PROD22000",
+      "PROD22001",
+      "PROD22002",
+      "PROD22005",
+      "PROD22006",
+      "PROD22007",
+      "PROD22008",
+      "PROD22011",
+      "PROD22012",
+      "PROD22013",
+      "PROD22014",
+      "PROD22163"
+    ]
+  },
+  {
+    "name": "sn-stream-connect-for-apache-kafka-e02022023",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-stream-connect-for-apache-kafka-e02022023.pdf",
+    "productCodes": [
+      "PROD19411",
+      "PROD19412",
+      "PROD19915",
+      "PROD19916",
+      "PROD20080",
+      "PROD20081",
+      "PROD20082",
+      "PROD20098"
+    ]
+  },
+  {
+    "name": "sn-supply-chain-exception-management-e01302025",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-supply-chain-exception-management-e01302025.pdf",
+    "productCodes": [
+      "PROD17801",
+      "PROD22283",
+      "PROD22284"
+    ]
+  },
+  {
+    "name": "sn-synergy-configuration-items-09202023",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-synergy-configuration-items-09202023.pdf",
+    "productCodes": [
+      "PROD21345"
+    ]
+  },
+  {
+    "name": "sn-synergy-configuration-items-addon-09202023",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-synergy-configuration-items-addon-09202023.pdf",
+    "productCodes": [
+      "PROD21346"
     ]
   },
   {
@@ -2083,59 +5551,264 @@
     ]
   },
   {
+    "name": "sn-talent-acquisition-e02012024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-talent-acquisition-e02012024.pdf",
+    "productCodes": [
+      "PROD22172",
+      "PROD22173",
+      "PROD22174",
+      "PROD22175",
+      "PROD22176",
+      "PROD22177",
+      "PROD22178",
+      "PROD22179",
+      "PROD22180",
+      "PROD22181",
+      "PROD22182",
+      "PROD22183"
+    ]
+  },
+  {
+    "name": "sn-talent-development-e08012024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-talent-development-e08012024.pdf",
+    "productCodes": [
+      "PROD18682",
+      "PROD18701",
+      "PROD19242",
+      "PROD19243",
+      "PROD20960",
+      "PROD20961",
+      "PROD20962",
+      "PROD20963",
+      "PROD20964",
+      "PROD20965",
+      "PROD20966",
+      "PROD20967"
+    ]
+  },
+  {
     "name": "sn-technology-core-uu-e11072023",
     "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-technology-core-uu-e11072023.pdf",
     "productCodes": [
-      "PROD16981"
+      "PROD16981",
+      "PROD17924",
+      "PROD17925"
     ]
   },
   {
     "name": "sn-technology-premium-uu-e11072023",
     "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-technology-premium-uu-e11072023.pdf",
     "productCodes": [
-      "PROD16982"
+      "PROD16982",
+      "PROD17926",
+      "PROD17927"
+    ]
+  },
+  {
+    "name": "sn-technology-provider-service-management",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-technology-provider-service-management.pdf",
+    "productCodes": [
+      "PROD17478",
+      "PROD17479",
+      "PROD17498",
+      "PROD17499",
+      "PROD17500",
+      "PROD17561",
+      "PROD17562",
+      "PROD18768",
+      "PROD18769",
+      "PROD18771",
+      "PROD18772",
+      "PROD19012",
+      "PROD19014",
+      "PROD19016",
+      "PROD19018",
+      "PROD19020",
+      "PROD19022"
+    ]
+  },
+  {
+    "name": "sn-technology-provider-service-management-e02022023",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-technology-provider-service-management-e02022023.pdf",
+    "productCodes": [
+      "PROD19011",
+      "PROD19013",
+      "PROD19015",
+      "PROD19017",
+      "PROD19019",
+      "PROD19021",
+      "PROD19793",
+      "PROD19795",
+      "PROD19797",
+      "PROD19798",
+      "PROD19799",
+      "PROD19800",
+      "PROD19801",
+      "PROD19802",
+      "PROD19819"
+    ]
+  },
+  {
+    "name": "sn-technology-provider-service-management-enterprise-fulfiller-user-e01302025",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-technology-provider-service-management-enterprise-fulfiller-user-e01302025.pdf",
+    "productCodes": [
+      "PROD19327",
+      "PROD19581",
+      "PROD19582"
+    ]
+  },
+  {
+    "name": "sn-technology-provider-service-management-enterprise-transactions-e01302025",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-technology-provider-service-management-enterprise-transactions-e01302025.pdf",
+    "productCodes": [
+      "PROD19334",
+      "PROD19595",
+      "PROD19596"
+    ]
+  },
+  {
+    "name": "sn-technology-provider-service-management-enterprise-unrestricted-user-e01302025",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-technology-provider-service-management-enterprise-unrestricted-user-e01302025.pdf",
+    "productCodes": [
+      "PROD19331",
+      "PROD19589",
+      "PROD19590"
     ]
   },
   {
     "name": "sn-technology-provider-service-management-enterprise-with-app-engine-1000-fulfiller-user-e01302025",
     "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-technology-provider-service-management-enterprise-with-app-engine-1000-fulfiller-user-e01302025.pdf",
     "productCodes": [
-      "PROD16602"
+      "PROD16602",
+      "PROD17405"
+    ]
+  },
+  {
+    "name": "sn-technology-provider-service-management-enterprise-with-app-engine-1000-transactions-e01302025",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-technology-provider-service-management-enterprise-with-app-engine-1000-transactions-e01302025.pdf",
+    "productCodes": [
+      "PROD17699"
     ]
   },
   {
     "name": "sn-technology-provider-service-management-enterprise-with-app-engine-1000-unrestricted-user-e01302025",
     "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-technology-provider-service-management-enterprise-with-app-engine-1000-unrestricted-user-e01302025.pdf",
     "productCodes": [
-      "PROD16606"
+      "PROD16606",
+      "PROD17404"
+    ]
+  },
+  {
+    "name": "sn-technology-provider-service-management-plus-e06272024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-technology-provider-service-management-plus-e06272024.pdf",
+    "productCodes": [
+      "PROD21274",
+      "PROD21275",
+      "PROD21276",
+      "PROD21277",
+      "PROD21278",
+      "PROD21279",
+      "PROD21280",
+      "PROD21281",
+      "PROD22021",
+      "PROD22029",
+      "PROD22045",
+      "PROD22053"
+    ]
+  },
+  {
+    "name": "sn-technology-provider-service-management-professional-fulfiller-user-e01302025",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-technology-provider-service-management-professional-fulfiller-user-e01302025.pdf",
+    "productCodes": [
+      "PROD19326",
+      "PROD19579",
+      "PROD19580"
+    ]
+  },
+  {
+    "name": "sn-technology-provider-service-management-professional-transactions-e01302025",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-technology-provider-service-management-professional-transactions-e01302025.pdf",
+    "productCodes": [
+      "PROD19333",
+      "PROD19593",
+      "PROD19594"
+    ]
+  },
+  {
+    "name": "sn-technology-provider-service-management-professional-unrestricted-user-e01302025",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-technology-provider-service-management-professional-unrestricted-user-e01302025.pdf",
+    "productCodes": [
+      "PROD19330",
+      "PROD19587",
+      "PROD19588"
     ]
   },
   {
     "name": "sn-technology-provider-service-management-professional-with-app-engine-100-fulfiller-user-e01302025",
     "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-technology-provider-service-management-professional-with-app-engine-100-fulfiller-user-e01302025.pdf",
     "productCodes": [
-      "PROD16601"
+      "PROD16601",
+      "PROD17391",
+      "PROD17621",
+      "PROD17623"
     ]
   },
   {
     "name": "sn-technology-provider-service-management-professional-with-app-engine-100-unrestricted-user-e01302025",
     "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-technology-provider-service-management-professional-with-app-engine-100-unrestricted-user-e01302025.pdf",
     "productCodes": [
-      "PROD16605"
+      "PROD16605",
+      "PROD17393"
+    ]
+  },
+  {
+    "name": "sn-technology-provider-service-management-professional-with-app-engine%20-100-transactions",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-technology-provider-service-management-professional-with-app-engine%20-100-transactions.pdf",
+    "productCodes": [
+      "PROD17698"
     ]
   },
   {
     "name": "sn-technology-provider-service-management-standard-fulfiller-user-e01302025",
     "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-technology-provider-service-management-standard-fulfiller-user-e01302025.pdf",
     "productCodes": [
-      "PROD16600"
+      "PROD16600",
+      "PROD17387",
+      "PROD17618",
+      "PROD17620",
+      "PROD19325",
+      "PROD19577",
+      "PROD19578",
+      "PROD19861"
+    ]
+  },
+  {
+    "name": "sn-technology-provider-service-management-standard-transaction-e01302025",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-technology-provider-service-management-standard-transaction-e01302025.pdf",
+    "productCodes": [
+      "PROD17697",
+      "PROD19332",
+      "PROD19591",
+      "PROD19592"
     ]
   },
   {
     "name": "sn-technology-provider-service-management-standard-unrestricted-user-e01302025",
     "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-technology-provider-service-management-standard-unrestricted-user-e01302025.pdf",
     "productCodes": [
-      "PROD16604"
+      "PROD16604",
+      "PROD17392",
+      "PROD19329",
+      "PROD19585",
+      "PROD19586"
+    ]
+  },
+  {
+    "name": "sn-technology-provider-service-management-transactions",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-technology-provider-service-management-transactions.pdf",
+    "productCodes": [
+      "PROD18770",
+      "PROD18773"
     ]
   },
   {
@@ -2153,21 +5826,27 @@
     "name": "sn-technology-service-management-e05092024",
     "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-technology-service-management-e05092024.pdf",
     "productCodes": [
-      "PROD16607"
+      "PROD16607",
+      "PROD17020",
+      "PROD19862",
+      "PROD19863"
     ]
   },
   {
     "name": "sn-technology-transformation-premium-uu-e11072023",
     "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-technology-transformation-premium-uu-e11072023.pdf",
     "productCodes": [
-      "PROD16984"
+      "PROD16984",
+      "PROD17930",
+      "PROD17932"
     ]
   },
   {
     "name": "sn-technology-transformation-uu-e11072023",
     "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-technology-transformation-uu-e11072023.pdf",
     "productCodes": [
-      "PROD16983"
+      "PROD16983",
+      "PROD17929"
     ]
   },
   {
@@ -2179,19 +5858,99 @@
     ]
   },
   {
+    "name": "sn-telecommunications-network-inventory-e02012024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-telecommunications-network-inventory-e02012024.pdf",
+    "productCodes": [
+      "PROD20118",
+      "PROD20119",
+      "PROD20256",
+      "PROD20257",
+      "PROD22244",
+      "PROD22245",
+      "PROD22246",
+      "PROD22247",
+      "PROD22248",
+      "PROD22249"
+    ]
+  },
+  {
+    "name": "sn-telecommunications-service-management-e02022023",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-telecommunications-service-management-e02022023.pdf",
+    "productCodes": [
+      "PROD18972",
+      "PROD18974",
+      "PROD19001",
+      "PROD19003",
+      "PROD19008",
+      "PROD19042",
+      "PROD19044",
+      "PROD19787",
+      "PROD19788",
+      "PROD19789",
+      "PROD19790",
+      "PROD19791",
+      "PROD19792",
+      "PROD19818"
+    ]
+  },
+  {
     "name": "sn-telecommunications-service-management-e05092024",
     "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-telecommunications-service-management-e05092024.pdf",
     "productCodes": [
       "PROD14415",
       "PROD14416",
-      "PROD14964"
+      "PROD14964",
+      "PROD17015",
+      "PROD17018",
+      "PROD17114",
+      "PROD17694",
+      "PROD17695",
+      "PROD19535",
+      "PROD19536",
+      "PROD19858",
+      "PROD20727"
+    ]
+  },
+  {
+    "name": "sn-telecommunications-service-management-plus-e06272024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-telecommunications-service-management-plus-e06272024.pdf",
+    "productCodes": [
+      "PROD21262",
+      "PROD21263",
+      "PROD21264",
+      "PROD21265",
+      "PROD21266",
+      "PROD21267",
+      "PROD21268",
+      "PROD21269",
+      "PROD22020",
+      "PROD22028",
+      "PROD22044",
+      "PROD22052"
+    ]
+  },
+  {
+    "name": "sn-telecommunications-service-management-standard-transactions-e013025",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-telecommunications-service-management-standard-transactions-e013025.pdf",
+    "productCodes": [
+      "PROD19315"
+    ]
+  },
+  {
+    "name": "sn-telecommunications-service-operations-management",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-telecommunications-service-operations-management.pdf",
+    "productCodes": [
+      "PROD19783",
+      "PROD19784"
     ]
   },
   {
     "name": "sn-telecommunications-service-operations-management-e06012021",
     "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-telecommunications-service-operations-management-e06012021.pdf",
     "productCodes": [
-      "PROD16255"
+      "PROD16255",
+      "PROD17470",
+      "PROD19364"
     ]
   },
   {
@@ -2202,13 +5961,96 @@
     ]
   },
   {
+    "name": "sn-telecommunications-service-operations-management-enterprise-e01302025",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-telecommunications-service-operations-management-enterprise-e01302025.pdf",
+    "productCodes": [
+      "PROD17834",
+      "PROD17976",
+      "PROD17984",
+      "PROD19307",
+      "PROD19521",
+      "PROD19522"
+    ]
+  },
+  {
+    "name": "sn-telecommunications-service-operations-management-plus-e05092024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-telecommunications-service-operations-management-plus-e05092024.pdf",
+    "productCodes": [
+      "PROD22527",
+      "PROD22528",
+      "PROD22529",
+      "PROD22530",
+      "PROD22531",
+      "PROD22532"
+    ]
+  },
+  {
     "name": "sn-telecommunications-service-operations-management-professional-e01302025",
     "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-telecommunications-service-operations-management-professional-e01302025.pdf",
     "productCodes": [
       "PROD15928",
       "PROD16260",
       "PROD16261",
-      "PROD16942"
+      "PROD16942",
+      "PROD17667",
+      "PROD17668",
+      "PROD19306",
+      "PROD19519",
+      "PROD19520"
+    ]
+  },
+  {
+    "name": "sn-telecommunications-services-management",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-telecommunications-services-management.pdf",
+    "productCodes": [
+      "PROD17476",
+      "PROD17477",
+      "PROD17494",
+      "PROD17495",
+      "PROD17496",
+      "PROD17559",
+      "PROD17560",
+      "PROD18596",
+      "PROD18598",
+      "PROD18599",
+      "PROD18600",
+      "PROD18601",
+      "PROD18603",
+      "PROD18973",
+      "PROD19002",
+      "PROD19009",
+      "PROD19040",
+      "PROD19041",
+      "PROD19043",
+      "PROD19046"
+    ]
+  },
+  {
+    "name": "sn-telecommunications-services-management-enterprise-fulfiller-user-e01302025",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-telecommunications-services-management-enterprise-fulfiller-user-e01302025.pdf",
+    "productCodes": [
+      "PROD19310",
+      "PROD19527",
+      "PROD19528",
+      "PROD19860"
+    ]
+  },
+  {
+    "name": "sn-telecommunications-services-management-enterprise-transactions-e01302025",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-telecommunications-services-management-enterprise-transactions-e01302025.pdf",
+    "productCodes": [
+      "PROD19317",
+      "PROD19539",
+      "PROD19540"
+    ]
+  },
+  {
+    "name": "sn-telecommunications-services-management-enterprise-unrestricted-user-e01302025",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-telecommunications-services-management-enterprise-unrestricted-user-e01302025.pdf",
+    "productCodes": [
+      "PROD19314",
+      "PROD19533",
+      "PROD19534"
     ]
   },
   {
@@ -2217,7 +6059,17 @@
     "productCodes": [
       "PROD15286",
       "PROD15708",
-      "PROD15709"
+      "PROD15709",
+      "PROD17385",
+      "PROD19548",
+      "PROD19551"
+    ]
+  },
+  {
+    "name": "sn-telecommunications-services-management-enterprise-with-app-engine-1000-transactions-e01302025",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-telecommunications-services-management-enterprise-with-app-engine-1000-transactions-e01302025.pdf",
+    "productCodes": [
+      "PROD17857"
     ]
   },
   {
@@ -2226,7 +6078,38 @@
     "productCodes": [
       "PROD15291",
       "PROD15710",
-      "PROD15711"
+      "PROD15711",
+      "PROD17384",
+      "PROD19549",
+      "PROD19550"
+    ]
+  },
+  {
+    "name": "sn-telecommunications-services-management-professional-fulfiller-user-e013025",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-telecommunications-services-management-professional-fulfiller-user-e013025.pdf",
+    "productCodes": [
+      "PROD19309",
+      "PROD19525",
+      "PROD19526",
+      "PROD19859"
+    ]
+  },
+  {
+    "name": "sn-telecommunications-services-management-professional-transactions-e013025",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-telecommunications-services-management-professional-transactions-e013025.pdf",
+    "productCodes": [
+      "PROD19316",
+      "PROD19537",
+      "PROD19538"
+    ]
+  },
+  {
+    "name": "sn-telecommunications-services-management-professional-unrestricted-user-e013025",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-telecommunications-services-management-professional-unrestricted-user-e013025.pdf",
+    "productCodes": [
+      "PROD19313",
+      "PROD19531",
+      "PROD19532"
     ]
   },
   {
@@ -2236,7 +6119,11 @@
       "PROD15310",
       "PROD15703",
       "PROD15704",
-      "PROD16390"
+      "PROD16390",
+      "PROD17000",
+      "PROD17365",
+      "PROD17615",
+      "PROD17617"
     ]
   },
   {
@@ -2246,7 +6133,8 @@
       "PROD15290",
       "PROD15706",
       "PROD15707",
-      "PROD16029"
+      "PROD16029",
+      "PROD17383"
     ]
   },
   {
@@ -2255,7 +6143,13 @@
     "productCodes": [
       "PROD15285",
       "PROD15696",
-      "PROD15697"
+      "PROD15697",
+      "PROD17364",
+      "PROD17613",
+      "PROD17614",
+      "PROD19308",
+      "PROD19523",
+      "PROD19524"
     ]
   },
   {
@@ -2264,7 +6158,11 @@
     "productCodes": [
       "PROD15289",
       "PROD15699",
-      "PROD15701"
+      "PROD15701",
+      "PROD17382",
+      "PROD19312",
+      "PROD19529",
+      "PROD19530"
     ]
   },
   {
@@ -2272,6 +6170,18 @@
     "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-terms-are-subject-e12052024.pdf",
     "productCodes": [
       "PROD00074"
+    ]
+  },
+  {
+    "name": "sn-third-party-risk-management",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-third-party-risk-management.pdf",
+    "productCodes": [
+      "PROD20914",
+      "PROD20915",
+      "PROD20916",
+      "PROD20917",
+      "PROD20918",
+      "PROD20919"
     ]
   },
   {
@@ -2284,6 +6194,37 @@
     ]
   },
   {
+    "name": "sn-toolbox-e12062024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-toolbox-e12062024.pdf",
+    "productCodes": [
+      "PROD22206"
+    ]
+  },
+  {
+    "name": "sn-tpsm-plus-l3-e11072024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-tpsm-plus-l3-e11072024.pdf",
+    "productCodes": [
+      "PROD21282",
+      "PROD21283",
+      "PROD21284",
+      "PROD21285",
+      "PROD22037",
+      "PROD22061"
+    ]
+  },
+  {
+    "name": "sn-tsm-plus-l3-e11072024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-tsm-plus-l3-e11072024.pdf",
+    "productCodes": [
+      "PROD21270",
+      "PROD21271",
+      "PROD21272",
+      "PROD21273",
+      "PROD22036",
+      "PROD22060"
+    ]
+  },
+  {
     "name": "sn-us-citizen-us-soil-customer-support",
     "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-us-citizen-us-soil-customer-support.pdf",
     "productCodes": [
@@ -2291,6 +6232,114 @@
       "PROD09547",
       "PROD09875",
       "PROD13617"
+    ]
+  },
+  {
+    "name": "sn-workforce-optimization-customer-service-management-02012024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-workforce-optimization-customer-service-management-02012024.pdf",
+    "productCodes": [
+      "PROD22125",
+      "PROD22135",
+      "PROD22145"
+    ]
+  },
+  {
+    "name": "sn-workforce-optimization-field-service-management-02012024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-workforce-optimization-field-service-management-02012024.pdf",
+    "productCodes": [
+      "PROD22133",
+      "PROD22143",
+      "PROD22153"
+    ]
+  },
+  {
+    "name": "sn-workforce-optimization-financial-services-operations-02012024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-workforce-optimization-financial-services-operations-02012024.pdf",
+    "productCodes": [
+      "PROD22130",
+      "PROD22140",
+      "PROD22150"
+    ]
+  },
+  {
+    "name": "sn-workforce-optimization-for-manufacturing-commercial-operations-professional-unrestricted-user",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-workforce-optimization-for-manufacturing-commercial-operations-professional-unrestricted-user.pdf",
+    "productCodes": [
+      "PROD22730",
+      "PROD22731",
+      "PROD22732"
+    ]
+  },
+  {
+    "name": "sn-workforce-optimization-for-rsm-e05092024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-workforce-optimization-for-rsm-e05092024.pdf",
+    "productCodes": [
+      "PROD22837",
+      "PROD22841",
+      "PROD22845"
+    ]
+  },
+  {
+    "name": "sn-workforce-optimization-healthcare-life-sciences-service-management-02012024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-workforce-optimization-healthcare-life-sciences-service-management-02012024.pdf",
+    "productCodes": [
+      "PROD22131",
+      "PROD22141",
+      "PROD22151"
+    ]
+  },
+  {
+    "name": "sn-workforce-optimization-it-service-management-02012024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-workforce-optimization-it-service-management-02012024.pdf",
+    "productCodes": [
+      "PROD22124",
+      "PROD22134",
+      "PROD22144"
+    ]
+  },
+  {
+    "name": "sn-workforce-optimization-manufacturing-commercial-operations-02012024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-workforce-optimization-manufacturing-commercial-operations-02012024.pdf",
+    "productCodes": [
+      "PROD22132",
+      "PROD22142",
+      "PROD22152"
+    ]
+  },
+  {
+    "name": "sn-workforce-optimization-media-entertainment-service-management-02012024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-workforce-optimization-media-entertainment-service-management-02012024.pdf",
+    "productCodes": [
+      "PROD22128",
+      "PROD22138",
+      "PROD22148"
+    ]
+  },
+  {
+    "name": "sn-workforce-optimization-public-sector-digital-services-02012024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-workforce-optimization-public-sector-digital-services-02012024.pdf",
+    "productCodes": [
+      "PROD22129",
+      "PROD22139",
+      "PROD22149"
+    ]
+  },
+  {
+    "name": "sn-workforce-optimization-technology-provider-service-management-02012024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-workforce-optimization-technology-provider-service-management-02012024.pdf",
+    "productCodes": [
+      "PROD22127",
+      "PROD22137"
+    ]
+  },
+  {
+    "name": "sn-workforce-optimization-telecommunications-service-management-02012024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-workforce-optimization-telecommunications-service-management-02012024.pdf",
+    "productCodes": [
+      "PROD22126",
+      "PROD22136",
+      "PROD22146",
+      "PROD22147"
     ]
   },
   {
@@ -2305,7 +6354,59 @@
       "PROD15138",
       "PROD15139",
       "PROD16884",
-      "PROD16885"
+      "PROD16885",
+      "PROD17115",
+      "PROD17116",
+      "PROD17332",
+      "PROD17333",
+      "PROD17334",
+      "PROD17335",
+      "PROD19255",
+      "PROD19256",
+      "PROD19880",
+      "PROD19881",
+      "PROD20021",
+      "PROD20023",
+      "PROD20024",
+      "PROD20061",
+      "PROD20766",
+      "PROD20767",
+      "PROD20768",
+      "PROD20769",
+      "PROD20770",
+      "PROD20771"
+    ]
+  },
+  {
+    "name": "sn-xm-cyber-e05092024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-xm-cyber-e05092024.pdf",
+    "productCodes": [
+      "PROD22985",
+      "PROD22986",
+      "PROD22987",
+      "PROD22988",
+      "PROD22989",
+      "PROD22990",
+      "PROD22991",
+      "PROD22992",
+      "PROD22993",
+      "PROD22994",
+      "PROD22995",
+      "PROD22996",
+      "PROD22997",
+      "PROD22998",
+      "PROD22999"
+    ]
+  },
+  {
+    "name": "sn-zero-trust-access-e02012024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-zero-trust-access-e02012024.pdf",
+    "productCodes": [
+      "PROD22197",
+      "PROD22198",
+      "PROD22199",
+      "PROD22200",
+      "PROD22203"
     ]
   }
 ]
