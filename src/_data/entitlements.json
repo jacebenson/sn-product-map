@@ -1,0 +1,532 @@
+[
+  {
+    "name": "PROD00170",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/PROD00170.pdf",
+    "productCodes": [
+      "PROD00170"
+    ]
+  },
+  {
+    "name": "PROD00525",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/PROD00525.pdf",
+    "productCodes": [
+      "PROD00525"
+    ]
+  },
+  {
+    "name": "PROD01170",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/PROD01170.pdf",
+    "productCodes": [
+      "PROD01170"
+    ]
+  },
+  {
+    "name": "PROD01626",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/PROD01626.pdf",
+    "productCodes": [
+      "PROD01626"
+    ]
+  },
+  {
+    "name": "PROD02224",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/PROD02224.pdf",
+    "productCodes": [
+      "PROD02224"
+    ]
+  },
+  {
+    "name": "PROD02225",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/PROD02225.pdf",
+    "productCodes": [
+      "PROD02225"
+    ]
+  },
+  {
+    "name": "PROD02226",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/PROD02226.pdf",
+    "productCodes": [
+      "PROD02226"
+    ]
+  },
+  {
+    "name": "PROD03389",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/PROD03389.pdf",
+    "productCodes": [
+      "PROD03389"
+    ]
+  },
+  {
+    "name": "PROD03421",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/PROD03421.pdf",
+    "productCodes": [
+      "PROD03421"
+    ]
+  },
+  {
+    "name": "sn-additional-application-penetration-test",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-additional-application-penetration-test.pdf",
+    "productCodes": [
+      "PROD03431"
+    ]
+  },
+  {
+    "name": "sn-additional-non-production-instance-e02012024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-additional-non-production-instance-e02012024.pdf",
+    "productCodes": [
+      "PROD00146",
+      "PROD00147",
+      "PROD00065",
+      "PROD00066",
+      "PROD00067",
+      "PROD00068",
+      "PROD00069",
+      "PROD00070",
+      "PROD00071",
+      "PROD00573",
+      "PROD00809",
+      "PROD01467",
+      "PROD02074",
+      "PROD02933"
+    ]
+  },
+  {
+    "name": "sn-additional-production-instance-e02012024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-additional-production-instance-e02012024.pdf",
+    "productCodes": [
+      "PROD00827",
+      "PROD00828",
+      "PROD00829",
+      "PROD00830",
+      "PROD00831",
+      "PROD00832",
+      "PROD00833",
+      "PROD00835",
+      "PROD01637",
+      "PROD02075"
+    ]
+  },
+  {
+    "name": "sn-build-partner-program-e12102024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-build-partner-program-e12102024.pdf",
+    "productCodes": [
+      "PROD00145",
+      "PROD00148",
+      "PROD00483"
+    ]
+  },
+  {
+    "name": "sn-compliance-audit",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-compliance-audit.pdf",
+    "productCodes": [
+      "PROD00534",
+      "PROD01042"
+    ]
+  },
+  {
+    "name": "sn-configuration-compliance-tier",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-configuration-compliance-tier.pdf",
+    "productCodes": [
+      "PROD05410",
+      "PROD05413"
+    ]
+  },
+  {
+    "name": "sn-customer-service-management",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-customer-service-management.pdf",
+    "productCodes": [
+      "PROD01177",
+      "PROD01178",
+      "PROD01624",
+      "PROD02957"
+    ]
+  },
+  {
+    "name": "sn-dedicated-environment-e02012024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-dedicated-environment-e02012024.pdf",
+    "productCodes": [
+      "PROD00055"
+    ]
+  },
+  {
+    "name": "sn-direct-connect",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-direct-connect.pdf",
+    "productCodes": [
+      "PROD00049"
+    ]
+  },
+  {
+    "name": "sn-domain-separation-for-non-msp-customers",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-domain-separation-for-non-msp-customers.pdf",
+    "productCodes": [
+      "PROD01031"
+    ]
+  },
+  {
+    "name": "sn-edge-encryption",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-edge-encryption.pdf",
+    "productCodes": [
+      "PROD01054",
+      "PROD02925"
+    ]
+  },
+  {
+    "name": "sn-event-management-training",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-event-management-training.pdf",
+    "productCodes": [
+      "PROD02471"
+    ]
+  },
+  {
+    "name": "sn-facilities-service-automation-ff-e12052024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-facilities-service-automation-ff-e12052024.pdf",
+    "productCodes": [
+      "PROD00523"
+    ]
+  },
+  {
+    "name": "sn-facilities-service-management-uu-e12052024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-facilities-service-management-uu-e12052024.pdf",
+    "productCodes": [
+      "PROD03416"
+    ]
+  },
+  {
+    "name": "sn-field-service-management-e05042023",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-field-service-management-e05042023.pdf",
+    "productCodes": [
+      "PROD03432"
+    ]
+  },
+  {
+    "name": "sn-full-disk-encryption",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-full-disk-encryption.pdf",
+    "productCodes": [
+      "PROD03429"
+    ]
+  },
+  {
+    "name": "sn-fundamentals-training",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-fundamentals-training.pdf",
+    "productCodes": [
+      "PROD00122"
+    ]
+  },
+  {
+    "name": "sn-governance-risk-compliance-e06302017",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-governance-risk-compliance-e06302017.pdf",
+    "productCodes": [
+      "PROD03392",
+      "PROD03393",
+      "PROD03394",
+      "PROD03395",
+      "PROD03397",
+      "PROD03398",
+      "PROD03399",
+      "PROD03400",
+      "PROD03401",
+      "PROD03402",
+      "PROD04949",
+      "PROD04950",
+      "PROD04951",
+      "PROD04952",
+      "PROD04953",
+      "PROD04955",
+      "PROD04956",
+      "PROD04957",
+      "PROD04958",
+      "PROD04959"
+    ]
+  },
+  {
+    "name": "sn-governance-risk-compliance-grc-user-e06302017",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-governance-risk-compliance-grc-user-e06302017.pdf",
+    "productCodes": [
+      "PROD03390",
+      "PROD03396",
+      "PROD04948",
+      "PROD04954"
+    ]
+  },
+  {
+    "name": "sn-hr-basic-case-management-e12052024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-hr-basic-case-management-e12052024.pdf",
+    "productCodes": [
+      "PROD03372"
+    ]
+  },
+  {
+    "name": "sn-human-resources-service-delivery-e08032023",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-human-resources-service-delivery-e08032023.pdf",
+    "productCodes": [
+      "PROD01625",
+      "PROD02959"
+    ]
+  },
+  {
+    "name": "sn-included-non-production-instance-e02012024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-included-non-production-instance-e02012024.pdf",
+    "productCodes": [
+      "PROD01218"
+    ]
+  },
+  {
+    "name": "sn-included-production-instance-e02012024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-included-production-instance-e02012024.pdf",
+    "productCodes": [
+      "PROD00889",
+      "PROD00891",
+      "PROD00892",
+      "PROD00893",
+      "PROD00894",
+      "PROD00895",
+      "PROD00896",
+      "PROD00897",
+      "PROD00898",
+      "PROD02076"
+    ]
+  },
+  {
+    "name": "sn-instance-fedramp-data-center",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-instance-fedramp-data-center.pdf",
+    "productCodes": [
+      "PROD00064"
+    ]
+  },
+  {
+    "name": "sn-integrated-risk-management",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-integrated-risk-management.pdf",
+    "productCodes": [
+      "PROD03427"
+    ]
+  },
+  {
+    "name": "sn-iqoq-qualification-non-production-instance-uplift-e08032022",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-iqoq-qualification-non-production-instance-uplift-e08032022.pdf",
+    "productCodes": [
+      "PROD00876"
+    ]
+  },
+  {
+    "name": "sn-iqoq-qualification-production-instance-uplift-e08032022",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-iqoq-qualification-production-instance-uplift-e08032022.pdf",
+    "productCodes": [
+      "PROD00877"
+    ]
+  },
+  {
+    "name": "sn-isv-oem-production-environment-e12182024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-isv-oem-production-environment-e12182024.pdf",
+    "productCodes": [
+      "PROD01219",
+      "PROD01351",
+      "PROD01352",
+      "PROD01353",
+      "PROD01354"
+    ]
+  },
+  {
+    "name": "sn-it-operations-management-e11022023",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-it-operations-management-e11022023.pdf",
+    "productCodes": [
+      "PROD03829"
+    ]
+  },
+  {
+    "name": "sn-it-service-automation-diamond-e12052024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-it-service-automation-diamond-e12052024.pdf",
+    "productCodes": [
+      "PROD00201"
+    ]
+  },
+  {
+    "name": "sn-it-service-automation-uu-e12052024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-it-service-automation-uu-e12052024.pdf",
+    "productCodes": [
+      "PROD00814"
+    ]
+  },
+  {
+    "name": "sn-it-service-management",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-it-service-management.pdf",
+    "productCodes": [
+      "PROD01638",
+      "PROD01639",
+      "PROD03378",
+      "PROD03379",
+      "PROD03380",
+      "PROD03381",
+      "PROD03426"
+    ]
+  },
+  {
+    "name": "sn-itom-training-e12062024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-itom-training-e12062024.pdf",
+    "productCodes": [
+      "PROD01361",
+      "PROD02476",
+      "PROD03890",
+      "PROD05491"
+    ]
+  },
+  {
+    "name": "sn-metricbase-dense",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-metricbase-dense.pdf",
+    "productCodes": [
+      "PROD03425"
+    ]
+  },
+  {
+    "name": "sn-metricbase-medium",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-metricbase-medium.pdf",
+    "productCodes": [
+      "PROD03423"
+    ]
+  },
+  {
+    "name": "sn-metricbase-series-for-itom-health",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-metricbase-series-for-itom-health.pdf",
+    "productCodes": [
+      "PROD03384"
+    ]
+  },
+  {
+    "name": "sn-non-standard-and-unmonitored-instance-access-tunnel-e12062024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-non-standard-and-unmonitored-instance-access-tunnel-e12062024.pdf",
+    "productCodes": [
+      "PROD01027"
+    ]
+  },
+  {
+    "name": "sn-now-platform-custom-app-e12052024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-now-platform-custom-app-e12052024.pdf",
+    "productCodes": [
+      "PROD04076"
+    ]
+  },
+  {
+    "name": "sn-orchestration-configuration-automation-application-e12062024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-orchestration-configuration-automation-application-e12062024.pdf",
+    "productCodes": [
+      "PROD00532"
+    ]
+  },
+  {
+    "name": "sn-pa-for-facilities-service-management-e12052024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-pa-for-facilities-service-management-e12052024.pdf",
+    "productCodes": [
+      "PROD03433"
+    ]
+  },
+  {
+    "name": "sn-pa-for-itbm-e12052024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-pa-for-itbm-e12052024.pdf",
+    "productCodes": [
+      "PROD02229",
+      "PROD02961"
+    ]
+  },
+  {
+    "name": "sn-performance-analytics-enterprise",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-performance-analytics-enterprise.pdf",
+    "productCodes": [
+      "PROD01627",
+      "PROD02918",
+      "PROD02920",
+      "PROD02923",
+      "PROD02954",
+      "PROD02968"
+    ]
+  },
+  {
+    "name": "sn-platform-runtime-uu-e12052024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-platform-runtime-uu-e12052024.pdf",
+    "productCodes": [
+      "PROD01163"
+    ]
+  },
+  {
+    "name": "sn-security-operations",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-security-operations.pdf",
+    "productCodes": [
+      "PROD01623",
+      "PROD02909"
+    ]
+  },
+  {
+    "name": "sn-security-operations-tier-e07072017",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-security-operations-tier-e07072017.pdf",
+    "productCodes": [
+      "PROD03326",
+      "PROD03327",
+      "PROD03328",
+      "PROD03329",
+      "PROD03330",
+      "PROD03332",
+      "PROD03333",
+      "PROD03334",
+      "PROD03335",
+      "PROD03336"
+    ]
+  },
+  {
+    "name": "sn-service-management-suite-v2-pa-e05092024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-service-management-suite-v2-pa-e05092024.pdf",
+    "productCodes": [
+      "PROD01168",
+      "PROD02140",
+      "PROD02951",
+      "PROD02973",
+      "PROD02976"
+    ]
+  },
+  {
+    "name": "sn-services-subject-training-certification-e12052024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-services-subject-training-certification-e12052024.pdf",
+    "productCodes": [
+      "PROD00100",
+      "PROD00109",
+      "PROD00103",
+      "PROD00075",
+      "PROD00076",
+      "PROD00537",
+      "PROD00386",
+      "PROD01358",
+      "PROD01678",
+      "PROD02276",
+      "PROD02370",
+      "PROD02680",
+      "PROD03876",
+      "PROD03884",
+      "PROD03982",
+      "PROD03985",
+      "PROD03988",
+      "PROD03991",
+      "PROD05985",
+      "PROD05992",
+      "PROD05995"
+    ]
+  },
+  {
+    "name": "sn-servicewatch-e12062024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-servicewatch-e12062024.pdf",
+    "productCodes": [
+      "PROD00557",
+      "PROD00826"
+    ]
+  },
+  {
+    "name": "sn-tailored-implementation",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-tailored-implementation.pdf",
+    "productCodes": [
+      "PROD00072",
+      "PROD00073"
+    ]
+  },
+  {
+    "name": "sn-terms-are-subject-e12052024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-terms-are-subject-e12052024.pdf",
+    "productCodes": [
+      "PROD00074"
+    ]
+  }
+]

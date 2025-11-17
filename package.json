@@ -2,14 +2,30 @@
   "name": "servicenow-capability-planner",
   "version": "1.0.0",
   "description": "ServiceNow Capability Planner - Interactive capability planning tool",
+  "type": "module",
   "scripts": {
     "start": "eleventy --serve",
-    "build": "eleventy"
+    "build": "eleventy",
+    "getEntitlements": "node ./scripts/getEntitlements.js",
+    "checkStatus": "node ./scripts/checkStatus.js",
+    "abort": "node ./scripts/abortDownload.js",
+    "getEntitlementSchedules": "node ./scripts/getEntitlementSchedules.js",
+    "checkEntitlementScheduleStatus": "node ./scripts/checkEntitlementScheduleStatus.js",
+    "abortEntitlementSchedule": "node ./scripts/abortEntitlementSchedule.js",
+    "cleanupMarkdown": "node ./scripts/cleanupMarkdown.js"
   },
-  "keywords": ["servicenow", "capability", "planner", "11ty"],
+  "keywords": [
+    "servicenow",
+    "capability",
+    "planner",
+    "11ty"
+  ],
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1"
+    "@11ty/eleventy": "^3.1.2"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.2"
   }
 }

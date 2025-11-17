@@ -1,9 +1,18 @@
-// ServiceNow Capability Planner - Modular Application
-import { storage } from './utils/storage.js';
-import * as StateModule from './modules/state.js';
-import * as FilterModule from './modules/filters.js';
-import * as ProductModule from './modules/products.js';
-import * as EntitlementsModule from './modules/entitlements.js';
+// State cycle order
+const states = [
+    'not-licensed',
+    'licensed-high',
+    'licensed-medium',
+    'licensed-low',
+    'licensed-not-used',
+    'plan-to-adopt'
+];
+
+// Active filters - all states visible by default
+let activeFilters = new Set(states);
+
+// Search filter text
+let searchText = '';
 
 // Initialize the application
 document.addEventListener('DOMContentLoaded', function() {
@@ -58,13 +67,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const scriptCode = document.getElementById('scriptCode');
     
     // Load saved states from localStorage
-    StateModule.loadStates();
+    loadStates();
     
     // Load saved filters
-    FilterModule.loadFilters();
+    loadFilters();
     
     // Render unmatched products
-    ProductModule.renderUnmatchedProducts(attachProductItemHandlers, attachAddProductHandlers);
+    renderUnmatchedProducts();
     
     // Load instance configuration
     loadInstanceConfig();
@@ -134,68 +143,17 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Reset products button
     resetProductsBtn.addEventListener('click', function() {
-        const deletedData = storage.get('deletedProducts');
-        
-        if (!deletedData || Object.keys(deletedData).length === 0) {
-            resetStatus.textContent = 'No deleted products to restore.';
-            resetStatus.style.color = '#666';
-            setTimeout(() => {
-                resetStatus.textContent = '';
-            }, 3000);
-            return;
-        }
-        
-        const count = Object.keys(deletedData).length;
-        
-        if (!confirm(`Restore ${count} deleted product(s)?\n\nThis will reload the page.`)) {
-            return;
-        }
-        
-        ProductModule.resetDeletedProducts();
-        location.reload();
+        resetDeletedProducts();
     });
     
     // Reset all states button
     resetStatesBtn.addEventListener('click', function() {
-        const statusElement = document.getElementById('resetStatesStatus');
-        
-        if (!confirm('Reset ALL product states back to "Not Licensed"?\n\nThis will clear all your capability adoption data. This cannot be undone!')) {
-            return;
-        }
-        
-        StateModule.resetAllStates();
-        
-        statusElement.textContent = 'All states have been reset. Reloading...';
-        statusElement.style.color = '#27ae60';
-        
-        // Reload the page to show all products in default state
-        setTimeout(() => {
-            location.reload();
-        }, 1000);
+        resetAllStates();
     });
     
     // Clear all data button
     clearAllDataBtn.addEventListener('click', function() {
-        const statusElement = document.getElementById('clearAllStatus');
-        
-        if (!confirm('⚠️ COMPLETE RESET ⚠️\n\nThis will DELETE ALL DATA:\n• All product states\n• All deleted products\n• All custom products\n• Instance configuration\n\nThis CANNOT be undone!\n\nAre you absolutely sure?')) {
-            return;
-        }
-        
-        // Double confirmation for destructive action
-        if (!confirm('Last chance! This will permanently delete everything.\n\nClick OK to proceed with complete data wipe.')) {
-            return;
-        }
-        
-        StateModule.clearAllData();
-        
-        statusElement.textContent = 'All data cleared. Reloading...';
-        statusElement.style.color = '#27ae60';
-        
-        // Reload the page to show fresh state
-        setTimeout(() => {
-            location.reload();
-        }, 1000);
+        clearAllData();
     });
     
     // Instance configuration handlers
@@ -221,40 +179,6 @@ document.addEventListener('DOMContentLoaded', function() {
         copyServiceNowScript();
     });
     
-    // Entitlement Schedules search
-    const schedulesSearch = document.getElementById('schedulesSearch');
-    const schedulesSearchClear = document.getElementById('schedulesSearchClear');
-    const scheduleItems = document.querySelectorAll('.schedule-item');
-    const schedulesCount = document.getElementById('schedulesCount');
-    
-    if (schedulesSearch) {
-        schedulesSearch.addEventListener('input', function() {
-            const searchTerm = this.value.toLowerCase().trim();
-            let visibleCount = 0;
-            
-            scheduleItems.forEach(item => {
-                const title = item.getAttribute('data-title') || '';
-                if (title.includes(searchTerm)) {
-                    item.classList.remove('hidden');
-                    visibleCount++;
-                } else {
-                    item.classList.add('hidden');
-                }
-            });
-            
-            if (schedulesCount) {
-                schedulesCount.textContent = visibleCount;
-            }
-        });
-        
-        if (schedulesSearchClear) {
-            schedulesSearchClear.addEventListener('click', function() {
-                schedulesSearch.value = '';
-                schedulesSearch.dispatchEvent(new Event('input'));
-            });
-        }
-    }
-    
     // Add Product modal handlers
     closeAddProductBtn.addEventListener('click', function() {
         addProductModal.style.display = 'none';
@@ -277,22 +201,23 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Search filter handlers
     searchInput.addEventListener('input', function() {
-        const searchValue = this.value.trim();
+        searchText = this.value.toLowerCase().trim();
         
         // Show/hide clear button
-        if (searchValue) {
+        if (searchText) {
             searchClear.style.display = 'block';
         } else {
             searchClear.style.display = 'none';
         }
         
-        FilterModule.updateSearchText(searchValue);
+        applyFilters();
     });
     
     searchClear.addEventListener('click', function() {
         searchInput.value = '';
+        searchText = '';
         searchClear.style.display = 'none';
-        FilterModule.updateSearchText('');
+        applyFilters();
     });
     
     // Entitlements search functionality
@@ -314,7 +239,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             
             // Search entitlements
-            EntitlementsModule.searchEntitlements(query);
+            searchEntitlements(query);
         });
     }
     
@@ -329,7 +254,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add click handlers to legend items for filtering
     legendItems.forEach(item => {
         item.addEventListener('click', function() {
-            FilterModule.toggleFilter(this);
+            toggleFilter(this);
         });
     });
     
@@ -340,7 +265,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (productName) {
             productName.addEventListener('click', function(e) {
                 e.stopPropagation();
-                StateModule.cycleState(item, FilterModule.applyFilters);
+                cycleState(item);
             });
         }
         
@@ -357,7 +282,7 @@ document.addEventListener('DOMContentLoaded', function() {
         item.addEventListener('click', function(e) {
             // Only if not clicking on a button
             if (!e.target.classList.contains('product-info-btn')) {
-                StateModule.cycleState(this, FilterModule.applyFilters);
+                cycleState(this);
             }
         });
     });
@@ -369,11 +294,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Delete product button handler
     deleteProductBtn.addEventListener('click', function() {
-        const modal = document.getElementById('productModal');
-        ProductModule.handleDeleteProduct(modal, () => {
-            // Callback after deletion - reapply filters
-            FilterModule.applyFilters();
-        });
+        handleDeleteProduct();
     });
     
     window.addEventListener('click', function(e) {
@@ -398,8 +319,81 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // Apply initial filter
-    FilterModule.applyFilters();
+    applyFilters();
 });
+
+// Toggle filter state
+function toggleFilter(legendItem) {
+    const filterState = legendItem.getAttribute('data-filter');
+    
+    if (legendItem.classList.contains('active')) {
+        legendItem.classList.remove('active');
+        activeFilters.delete(filterState);
+    } else {
+        legendItem.classList.add('active');
+        activeFilters.add(filterState);
+    }
+    
+    applyFilters();
+    saveFilters();
+}
+
+// Apply filters to product items
+function applyFilters() {
+    const productItems = document.querySelectorAll('.product-item');
+    const categoryCards = document.querySelectorAll('.category-card');
+    
+    productItems.forEach(item => {
+        const itemState = item.getAttribute('data-state');
+        const productName = item.getAttribute('data-product').toLowerCase();
+        
+        // Check state filter
+        const stateMatches = activeFilters.has(itemState);
+        
+        // Check search filter
+        const searchMatches = !searchText || productName.includes(searchText);
+        
+        // Show only if both filters pass
+        if (stateMatches && searchMatches) {
+            item.style.display = '';
+        } else {
+            item.style.display = 'none';
+        }
+    });
+    
+    // Hide category cards that have no visible products
+    categoryCards.forEach(card => {
+        const categoryTitle = card.querySelector('.category-title');
+        const categoryName = categoryTitle ? categoryTitle.textContent.toLowerCase() : '';
+        const visibleProducts = card.querySelectorAll('.product-item:not([style*="display: none"])');
+        
+        // Check if category name matches search (if searching)
+        const categoryMatches = !searchText || categoryName.includes(searchText);
+        
+        // Show category if it has visible products OR if category name matches search
+        if (visibleProducts.length > 0 || (searchText && categoryMatches && visibleProducts.length === 0)) {
+            card.style.display = '';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+}
+
+// Cycle through states
+function cycleState(element) {
+    const currentState = element.getAttribute('data-state');
+    const currentIndex = states.indexOf(currentState);
+    const nextIndex = (currentIndex + 1) % states.length;
+    const nextState = states[nextIndex];
+    
+    element.setAttribute('data-state', nextState);
+    
+    // Save state to localStorage
+    saveStates();
+    
+    // Reapply filters to show/hide based on new state
+    applyFilters();
+}
 
 // Show modal with product details
 function showModal(element) {
@@ -524,6 +518,460 @@ function showModal(element) {
     modal.style.display = 'block';
 }
 
+// Handle product deletion
+function handleDeleteProduct() {
+    const modal = document.getElementById('productModal');
+    const productName = modal.getAttribute('data-current-product');
+    const category = modal.getAttribute('data-current-category');
+    const isCustom = modal.getAttribute('data-current-is-custom') === 'true';
+    
+    if (!productName || !category) {
+        alert('Error: Could not identify product to delete');
+        return;
+    }
+    
+    const confirmMessage = isCustom 
+        ? `Delete custom product "${productName}"?\n\nThis will permanently remove this product.`
+        : `Delete preloaded product "${productName}"?\n\nThis will hide this product from the catalog. You can restore all preloaded products from Settings.`;
+    
+    if (!confirm(confirmMessage)) {
+        return;
+    }
+    
+    if (isCustom) {
+        deleteCustomProduct(category, productName);
+    } else {
+        deletePreloadedProduct(category, productName);
+    }
+    
+    // Close the modal
+    modal.style.display = 'none';
+}
+
+// Delete a custom product
+function deleteCustomProduct(category, productName) {
+    // Remove from unmatched products in localStorage
+    const unmatchedData = localStorage.getItem('unmatchedProducts');
+    if (unmatchedData) {
+        const unmatched = JSON.parse(unmatchedData);
+        const key = category + '::' + productName;
+        delete unmatched[key];
+        localStorage.setItem('unmatchedProducts', JSON.stringify(unmatched));
+    }
+    
+    // Remove from capability states
+    const statesData = localStorage.getItem('capabilityStates');
+    if (statesData) {
+        const states = JSON.parse(statesData);
+        const key = category + '::' + productName;
+        delete states[key];
+        localStorage.setItem('capabilityStates', JSON.stringify(states));
+    }
+    
+    // Remove from DOM - try multiple selectors to ensure we find it
+    let productElement = document.querySelector(
+        `.product-item.custom-product[data-category="${category}"][data-product="${productName}"]`
+    );
+    
+    if (!productElement) {
+        // Try without custom-product class
+        productElement = document.querySelector(
+            `.product-item[data-category="${category}"][data-product="${productName}"]`
+        );
+    }
+    
+    if (productElement) {
+        productElement.remove();
+    }
+    
+    // Re-render unmatched products section
+    renderUnmatchedProducts();
+    
+    // Force a refresh of category visibility
+    setTimeout(() => {
+        applyFilters();
+    }, 0);
+}
+
+// Delete a preloaded product (mark as deleted)
+function deletePreloadedProduct(category, productName) {
+    const key = category + '::' + productName;
+    
+    // Get or create deleted products list
+    const deletedData = localStorage.getItem('deletedProducts');
+    const deleted = deletedData ? JSON.parse(deletedData) : {};
+    
+    deleted[key] = true;
+    
+    localStorage.setItem('deletedProducts', JSON.stringify(deleted));
+    
+    // Remove from DOM - try to find the element
+    let productElement = document.querySelector(
+        `.product-item[data-category="${category}"][data-product="${productName}"]:not(.custom-product)`
+    );
+    
+    if (!productElement) {
+        // Try without the :not selector
+        productElement = document.querySelector(
+            `.product-item[data-category="${category}"][data-product="${productName}"]`
+        );
+    }
+    
+    if (productElement) {
+        productElement.remove();
+    }
+    
+    // Also remove from capability states
+    const statesData = localStorage.getItem('capabilityStates');
+    if (statesData) {
+        const states = JSON.parse(statesData);
+        delete states[key];
+        localStorage.setItem('capabilityStates', JSON.stringify(states));
+    }
+    
+    // Force a refresh of category visibility
+    setTimeout(() => {
+        applyFilters();
+    }, 0);
+}
+
+// Reset deleted products (restore all preloaded products)
+function resetDeletedProducts() {
+    const deletedData = localStorage.getItem('deletedProducts');
+    
+    if (!deletedData) {
+        const resetStatus = document.getElementById('resetStatus');
+        resetStatus.textContent = 'No deleted products to restore.';
+        resetStatus.style.color = '#666';
+        setTimeout(() => {
+            resetStatus.textContent = '';
+        }, 3000);
+        return;
+    }
+    
+    const deleted = JSON.parse(deletedData);
+    const count = Object.keys(deleted).length;
+    
+    if (count === 0) {
+        const resetStatus = document.getElementById('resetStatus');
+        resetStatus.textContent = 'No deleted products to restore.';
+        resetStatus.style.color = '#666';
+        setTimeout(() => {
+            resetStatus.textContent = '';
+        }, 3000);
+        return;
+    }
+    
+    if (!confirm(`Restore ${count} deleted product(s)?\n\nThis will reload the page.`)) {
+        return;
+    }
+    
+    // Clear the deleted products list
+    localStorage.removeItem('deletedProducts');
+    
+    // Reload the page to show all products
+    location.reload();
+}
+
+// Reset all product states to "not-licensed"
+function resetAllStates() {
+    const statusElement = document.getElementById('resetStatesStatus');
+    
+    if (!confirm('Reset ALL product states back to "Not Licensed"?\n\nThis will clear all your capability adoption data. This cannot be undone!')) {
+        return;
+    }
+    
+    // Clear capability states
+    localStorage.removeItem('capabilityStates');
+    
+    statusElement.textContent = 'All states have been reset. Reloading...';
+    statusElement.style.color = '#27ae60';
+    
+    // Reload the page to show all products in default state
+    setTimeout(() => {
+        location.reload();
+    }, 1000);
+}
+
+// Clear all data (complete reset)
+function clearAllData() {
+    const statusElement = document.getElementById('clearAllStatus');
+    
+    if (!confirm('⚠️ COMPLETE RESET ⚠️\n\nThis will DELETE ALL DATA:\n• All product states\n• All deleted products\n• All custom products\n• Instance configuration\n\nThis CANNOT be undone!\n\nAre you absolutely sure?')) {
+        return;
+    }
+    
+    // Double confirmation for destructive action
+    if (!confirm('Last chance! This will permanently delete everything.\n\nClick OK to proceed with complete data wipe.')) {
+        return;
+    }
+    
+    // Clear all localStorage items
+    localStorage.removeItem('capabilityStates');
+    localStorage.removeItem('deletedProducts');
+    localStorage.removeItem('unmatchedProducts');
+    localStorage.removeItem('instanceUrl');
+    localStorage.removeItem('activeFilters');
+    
+    statusElement.textContent = 'All data cleared. Reloading...';
+    statusElement.style.color = '#27ae60';
+    
+    // Reload the page to show fresh state
+    setTimeout(() => {
+        location.reload();
+    }, 1000);
+}
+
+// Save states to localStorage
+function saveStates() {
+    const productItems = document.querySelectorAll('.product-item');
+    const states = {};
+    
+    productItems.forEach(item => {
+        const key = item.getAttribute('data-category') + '::' + item.getAttribute('data-product');
+        const state = item.getAttribute('data-state');
+        states[key] = state;
+    });
+    
+    localStorage.setItem('capabilityStates', JSON.stringify(states));
+}
+
+// Load states from localStorage
+function loadStates() {
+    const savedStates = localStorage.getItem('capabilityStates');
+    const deletedProducts = localStorage.getItem('deletedProducts');
+    const deleted = deletedProducts ? JSON.parse(deletedProducts) : {};
+    
+    if (savedStates) {
+        const states = JSON.parse(savedStates);
+        const productItems = document.querySelectorAll('.product-item');
+        
+        productItems.forEach(item => {
+            const key = item.getAttribute('data-category') + '::' + item.getAttribute('data-product');
+            
+            // Check if this product has been deleted
+            if (deleted[key] && !item.classList.contains('custom-product')) {
+                item.remove();
+                return;
+            }
+            
+            if (states[key]) {
+                item.setAttribute('data-state', states[key]);
+            }
+        });
+    } else {
+        // Even if no states saved, still check for deleted products
+        const deletedProductsList = deletedProducts ? JSON.parse(deletedProducts) : {};
+        if (Object.keys(deletedProductsList).length > 0) {
+            const productItems = document.querySelectorAll('.product-item');
+            productItems.forEach(item => {
+                const key = item.getAttribute('data-category') + '::' + item.getAttribute('data-product');
+                if (deletedProductsList[key] && !item.classList.contains('custom-product')) {
+                    item.remove();
+                }
+            });
+        }
+    }
+}
+
+// Save filters to localStorage
+function saveFilters() {
+    localStorage.setItem('activeFilters', JSON.stringify(Array.from(activeFilters)));
+}
+
+// Load filters from localStorage
+function loadFilters() {
+    const savedFilters = localStorage.getItem('activeFilters');
+    
+    if (savedFilters) {
+        activeFilters = new Set(JSON.parse(savedFilters));
+        
+        // Update legend item states
+        const legendItems = document.querySelectorAll('.legend-item');
+        legendItems.forEach(item => {
+            const filterState = item.getAttribute('data-filter');
+            if (activeFilters.has(filterState)) {
+                item.classList.add('active');
+            } else {
+                item.classList.remove('active');
+            }
+        });
+    }
+}
+
+// Render unmatched products from localStorage
+function renderUnmatchedProducts() {
+    const unmatchedProducts = localStorage.getItem('unmatchedProducts');
+    if (!unmatchedProducts) return;
+    
+    try {
+        const unmatched = JSON.parse(unmatchedProducts);
+        if (unmatched.length === 0) return;
+        
+        // Group unmatched products by category
+        const categorizedProducts = {};
+        unmatched.forEach(product => {
+            if (!categorizedProducts[product.category]) {
+                categorizedProducts[product.category] = [];
+            }
+            categorizedProducts[product.category].push(product);
+        });
+        
+        // Get or create the categories grid
+        const categoriesGrid = document.querySelector('.categories-grid');
+        
+        // Render each category
+        Object.keys(categorizedProducts).forEach(categoryName => {
+            // Check if category card already exists
+            let categoryCard = findCategoryCard(categoryName);
+            
+            if (!categoryCard) {
+                // Create new category card
+                categoryCard = createCategoryCard(categoryName);
+                categoriesGrid.appendChild(categoryCard);
+            }
+            
+            const productsList = categoryCard.querySelector('.products-list');
+            
+            // Add each product
+            categorizedProducts[categoryName].forEach(product => {
+                // Check if product already exists in this category
+                const existingProduct = findProductInCategory(categoryCard, product.product);
+                if (!existingProduct) {
+                    const productItem = createProductItem(product);
+                    productsList.appendChild(productItem);
+                    attachProductItemHandlers(productItem);
+                }
+            });
+        });
+        
+    } catch (e) {
+        console.warn('Error rendering unmatched products:', e);
+    }
+}
+
+// Helper: Find category card by name
+function findCategoryCard(categoryName) {
+    const categoryCards = document.querySelectorAll('.category-card');
+    for (let card of categoryCards) {
+        const title = card.querySelector('.category-title');
+        if (title && title.textContent === categoryName) {
+            return card;
+        }
+    }
+    return null;
+}
+
+// Helper: Find product in category
+function findProductInCategory(categoryCard, productName) {
+    const products = categoryCard.querySelectorAll('.product-item');
+    for (let product of products) {
+        if (product.getAttribute('data-product') === productName) {
+            return product;
+        }
+    }
+    return null;
+}
+
+// Helper: Create category card
+function createCategoryCard(categoryName) {
+    const card = document.createElement('div');
+    card.className = 'category-card';
+    
+    const header = document.createElement('div');
+    header.className = 'category-header';
+    
+    const title = document.createElement('h2');
+    title.className = 'category-title';
+    title.textContent = categoryName;
+    
+    const addBtn = document.createElement('button');
+    addBtn.className = 'add-product-btn';
+    addBtn.textContent = '+';
+    addBtn.title = 'Add product to this category';
+    addBtn.setAttribute('data-category', categoryName);
+    
+    header.appendChild(title);
+    header.appendChild(addBtn);
+    
+    const list = document.createElement('ul');
+    list.className = 'products-list';
+    
+    card.appendChild(header);
+    card.appendChild(list);
+    
+    return card;
+}
+
+// Helper: Create product item
+function createProductItem(product) {
+    const li = document.createElement('li');
+    li.className = 'product-item';
+    li.setAttribute('data-state', product.state || 'not-licensed');
+    li.setAttribute('data-product', product.product);
+    li.setAttribute('data-category', product.category);
+    
+    // Handle tables - could be string or array/object
+    let tablesValue = product.tables || '';
+    if (typeof tablesValue === 'object') {
+        tablesValue = JSON.stringify(tablesValue);
+    }
+    li.setAttribute('data-tables', tablesValue);
+    
+    // Handle entitlements
+    let entitlementsValue = product.entitlements || '';
+    if (typeof entitlementsValue === 'object') {
+        entitlementsValue = JSON.stringify(entitlementsValue);
+    }
+    li.setAttribute('data-entitlements', entitlementsValue);
+    
+    li.setAttribute('data-description', product.description || '');
+    li.setAttribute('data-product-url', product.productURL || '');
+    
+    const span = document.createElement('span');
+    span.className = 'product-name';
+    span.textContent = product.product;
+    
+    const infoBtn = document.createElement('button');
+    infoBtn.className = 'product-info-btn';
+    infoBtn.textContent = 'ℹ';
+    infoBtn.title = 'View details';
+    
+    li.appendChild(span);
+    li.appendChild(infoBtn);
+    
+    return li;
+}
+
+// Helper: Attach handlers to product item
+function attachProductItemHandlers(item) {
+    // Click on product name cycles state
+    const productName = item.querySelector('.product-name');
+    if (productName) {
+        productName.addEventListener('click', function(e) {
+            e.stopPropagation();
+            cycleState(item);
+        });
+    }
+    
+    // Click on info button opens modal
+    const infoBtn = item.querySelector('.product-info-btn');
+    if (infoBtn) {
+        infoBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            showModal(item);
+        });
+    }
+    
+    // Click on the item itself cycles state (fallback)
+    item.addEventListener('click', function(e) {
+        // Only if not clicking on a button
+        if (!e.target.classList.contains('product-info-btn')) {
+            cycleState(this);
+        }
+    });
+}
+
 // Attach handlers to [+] buttons
 function attachAddProductHandlers() {
     const addProductBtns = document.querySelectorAll('.add-product-btn');
@@ -578,9 +1026,9 @@ function handleAddProduct() {
     }
     
     // Check if product already exists
-    const categoryCard = ProductModule.findCategoryCard(categoryName);
+    const categoryCard = findCategoryCard(categoryName);
     if (categoryCard) {
-        const existingProduct = ProductModule.findProductInCategory(categoryCard, productName);
+        const existingProduct = findProductInCategory(categoryCard, productName);
         if (existingProduct) {
             addProductStatus.textContent = 'A product with this name already exists in this category';
             addProductStatus.className = 'form-status error';
@@ -599,16 +1047,16 @@ function handleAddProduct() {
     };
     
     // Add to unmatched products (so it persists)
-    ProductModule.addToUnmatchedProducts(product);
+    addToUnmatchedProducts(product);
     
     // Render it immediately
     renderSingleProduct(product);
     
     // Save states
-    StateModule.saveStates();
+    saveStates();
     
     // Apply filters
-    FilterModule.applyFilters();
+    applyFilters();
     
     // Show success and close
     addProductStatus.textContent = 'Product added successfully!';
@@ -619,14 +1067,34 @@ function handleAddProduct() {
     }, 1000);
 }
 
-// Render a single product (helper for add product feature)
+// Add product to unmatched products storage
+function addToUnmatchedProducts(product) {
+    let unmatchedProducts = [];
+    const stored = localStorage.getItem('unmatchedProducts');
+    
+    if (stored) {
+        try {
+            unmatchedProducts = JSON.parse(stored);
+        } catch (e) {
+            console.warn('Error loading unmatched products:', e);
+        }
+    }
+    
+    // Add new product
+    unmatchedProducts.push(product);
+    
+    // Save back
+    localStorage.setItem('unmatchedProducts', JSON.stringify(unmatchedProducts));
+}
+
+// Render a single product
 function renderSingleProduct(product) {
     const categoriesGrid = document.querySelector('.categories-grid');
-    let categoryCard = ProductModule.findCategoryCard(product.category);
+    let categoryCard = findCategoryCard(product.category);
     
     if (!categoryCard) {
         // Create new category card
-        categoryCard = ProductModule.createCategoryCard(product.category);
+        categoryCard = createCategoryCard(product.category);
         categoriesGrid.appendChild(categoryCard);
         
         // Add [+] button handler to new category
@@ -640,64 +1108,9 @@ function renderSingleProduct(product) {
     }
     
     const productsList = categoryCard.querySelector('.products-list');
-    const productItem = ProductModule.createProductItem(product);
+    const productItem = createProductItem(product);
     productsList.appendChild(productItem);
     attachProductItemHandlers(productItem);
-}
-
-// Attach event handlers to a product item
-function attachProductItemHandlers(item) {
-    // Click on product name cycles state
-    const productName = item.querySelector('.product-name');
-    if (productName) {
-        productName.addEventListener('click', function(e) {
-            e.stopPropagation();
-            StateModule.cycleState(item, FilterModule.applyFilters);
-        });
-    }
-    
-    // Click on info button opens modal
-    const infoBtn = item.querySelector('.product-info-btn');
-    if (infoBtn) {
-        infoBtn.addEventListener('click', function(e) {
-            e.stopPropagation();
-            showModal(item);
-        });
-    }
-    
-    // Click on the item itself cycles state (fallback)
-    item.addEventListener('click', function(e) {
-        // Only if not clicking on a button
-        if (!e.target.classList.contains('product-info-btn')) {
-            StateModule.cycleState(this, FilterModule.applyFilters);
-        }
-    });
-}
-
-// Reset all product states to "not-licensed"
-// Clear all data (complete reset)
-function clearAllData() {
-    const statusElement = document.getElementById('clearAllStatus');
-    
-    if (!confirm('⚠️ COMPLETE RESET ⚠️\n\nThis will DELETE ALL DATA:\n• All product states\n• All deleted products\n• All custom products\n• Instance configuration\n\nThis CANNOT be undone!\n\nAre you absolutely sure?')) {
-        return;
-    }
-    
-    // Double confirmation for destructive action
-    if (!confirm('Last chance! This will permanently delete everything.\n\nClick OK to proceed with complete data wipe.')) {
-        return;
-    }
-    
-    // Clear all localStorage items (using module function)
-    storage.clear();
-    
-    statusElement.textContent = 'All data cleared. Reloading...';
-    statusElement.style.color = '#27ae60';
-    
-    // Reload the page to show fresh state
-    setTimeout(() => {
-        location.reload();
-    }, 1000);
 }
 
 // Export functionality - includes current products and unmatched imported products
@@ -723,7 +1136,7 @@ function exportData() {
     
     // Include unmatched products from previous imports
     // (these are already non-default by definition since they were imported)
-    const unmatchedProducts = storage.get('unmatchedProducts');
+    const unmatchedProducts = localStorage.getItem('unmatchedProducts');
     if (unmatchedProducts) {
         try {
             const unmatched = JSON.parse(unmatchedProducts);
@@ -760,7 +1173,7 @@ function openSettingsModal() {
     jsonViewer.value = JSON.stringify(data, null, 2);
     
     // Show info about unmatched products
-    const unmatchedProducts = storage.get('unmatchedProducts');
+    const unmatchedProducts = localStorage.getItem('unmatchedProducts');
     if (unmatchedProducts) {
         try {
             const unmatched = JSON.parse(unmatchedProducts);
@@ -868,7 +1281,7 @@ function parseInstanceUrl(input) {
 
 // Load instance configuration
 function loadInstanceConfig() {
-    const instanceUrl = storage.get('instanceUrl');
+    const instanceUrl = localStorage.getItem('instanceUrl');
     const currentInstanceDisplay = document.getElementById('currentInstance');
     
     if (instanceUrl) {
@@ -902,7 +1315,7 @@ function saveInstanceConfig() {
     }
     
     // Save to localStorage
-    storage.set('instanceUrl', parsedUrl);
+    localStorage.setItem('instanceUrl', parsedUrl);
     
     // Update display
     currentInstanceDisplay.textContent = parsedUrl;
@@ -925,7 +1338,7 @@ function clearInstanceConfig() {
     const currentInstanceDisplay = document.getElementById('currentInstance');
     
     // Clear from localStorage
-    storage.remove('instanceUrl');
+    localStorage.removeItem('instanceUrl');
     
     // Clear input
     instanceUrlInput.value = '';
@@ -972,7 +1385,7 @@ function updateUrlPreview() {
 
 // Generate instance links for a product
 function generateInstanceLinks(tablesData) {
-    const instanceUrl = storage.get('instanceUrl');
+    const instanceUrl = localStorage.getItem('instanceUrl');
     if (!instanceUrl || !tablesData) return null;
     
     try {
@@ -1107,18 +1520,18 @@ function processImportedData(data) {
         });
         
         // Save matched states to localStorage
-        StateModule.saveStates();
+        saveStates();
         
         // Save unmatched products separately
         if (unmatchedProducts.length > 0) {
-            storage.set('unmatchedProducts', unmatchedProducts);
+            localStorage.setItem('unmatchedProducts', JSON.stringify(unmatchedProducts));
         }
         
         // Render unmatched products on the UI
-        ProductModule.renderUnmatchedProducts(attachProductItemHandlers, attachAddProductHandlers);
+        renderUnmatchedProducts();
         
         // Reapply filters
-        FilterModule.applyFilters();
+        applyFilters();
         
         // Update JSON viewer with merged data (current + unmatched)
         const jsonViewer = document.getElementById('jsonViewer');
@@ -1209,6 +1622,16 @@ function mergeImportedData(currentData, unmatchedProducts) {
 }
 
 // Reset all states
+function resetAllStates() {
+    if (confirm('Are you sure you want to reset all capability states?')) {
+        const productItems = document.querySelectorAll('.product-item');
+        productItems.forEach(item => {
+            item.setAttribute('data-state', 'not-licensed');
+        });
+        localStorage.removeItem('capabilityStates');
+    }
+}
+
 // Add keyboard shortcut for settings modal (Ctrl+E)
 document.addEventListener('keydown', function(e) {
     if ((e.ctrlKey || e.metaKey) && e.key === 'e') {
@@ -1411,4 +1834,60 @@ function copyServiceNowScript() {
     setTimeout(function() {
         copyScriptBtn.textContent = originalText;
     }, 2000);
+}
+
+// Search entitlements function
+function searchEntitlements(query) {
+    const entitlementsResults = document.getElementById('entitlementsResults');
+    
+    if (!window.entitlementsData || !Array.isArray(window.entitlementsData)) {
+        entitlementsResults.innerHTML = '<p class="no-results">Entitlements data not available.</p>';
+        return;
+    }
+    
+    // Filter entitlements by name or product codes
+    const results = window.entitlementsData.filter(ent => {
+        const nameMatch = ent.name && ent.name.toLowerCase().includes(query);
+        const codeMatch = ent.productCodes && ent.productCodes.some(code => code.toLowerCase().includes(query));
+        return nameMatch || codeMatch;
+    });
+    
+    // Display results
+    if (results.length === 0) {
+        entitlementsResults.innerHTML = '<p class="no-results">No entitlements found.</p>';
+        return;
+    }
+    
+    let html = '';
+    results.forEach(ent => {
+        // Build PDF URL from name if source exists
+        const pdfUrl = ent.source || `https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/${ent.name}.pdf`;
+        
+        html += '<details class="entitlement-result">';
+        html += '<summary class="entitlement-summary">';
+        html += `<span class="entitlement-name">${ent.name}</span>`;
+        html += '</summary>';
+        html += '<div class="entitlement-details">';
+        html += `<div class="entitlement-link-section">`;
+        html += `<a href="${pdfUrl}" target="_blank" rel="noopener noreferrer" class="entitlement-pdf-link">📄 View PDF</a>`;
+        html += `</div>`;
+        
+        if (ent.productCodes && ent.productCodes.length > 0) {
+            html += '<div class="product-codes-section">';
+            html += '<strong>Product Codes:</strong>';
+            html += '<div class="product-codes-list">';
+            ent.productCodes.forEach(code => {
+                // Create direct link to the PROD PDF
+                const prodUrl = `https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/${code}.pdf`;
+                html += `<a href="${prodUrl}" target="_blank" rel="noopener noreferrer" class="product-code product-code-link" title="View ${code} entitlement PDF">${code}</a>`;
+            });
+            html += '</div>';
+            html += '</div>';
+        }
+        
+        html += '</div>';
+        html += '</details>';
+    });
+    
+    entitlementsResults.innerHTML = html;
 }

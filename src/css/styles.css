@@ -1068,3 +1068,313 @@ h1 {
 .reset-option .form-status {
     margin-top: 10px;
 }
+
+/* Entitlements Section Styles */
+/* Entitlements Search Section */
+.entitlements-section {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 6px;
+    border: 1px solid #e1e4e8;
+}
+
+.entitlements-section h3 {
+    margin: 0 0 12px 0;
+    font-size: 1rem;
+    color: #1a1a1a;
+}
+
+.entitlements-search {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.entitlements-search input {
+    width: 100%;
+    padding: 8px 32px 8px 12px;
+    border: 1px solid #d1d5da;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.entitlements-search .search-clear {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #999;
+    display: none;
+}
+
+.entitlements-search .search-clear:hover {
+    color: #333;
+}
+
+.entitlements-results {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.entitlement-result {
+    background-color: #fff;
+    border: 1px solid #d1d5da;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+.entitlement-summary {
+    padding: 10px 12px;
+    cursor: pointer;
+    list-style: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: #24292e;
+    user-select: none;
+}
+
+.entitlement-summary:hover {
+    background-color: #f6f8fa;
+}
+
+.entitlement-summary::-webkit-details-marker {
+    display: none;
+}
+
+.entitlement-details {
+    padding: 0 12px 12px 12px;
+    border-top: 1px solid #e1e4e8;
+}
+
+.entitlement-link-section {
+    margin: 10px 0;
+}
+
+.entitlement-pdf-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 12px;
+    background-color: #dc3545;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+.entitlement-pdf-link:hover {
+    background-color: #c82333;
+}
+
+.product-codes-section {
+    margin-top: 10px;
+}
+
+.product-codes-section strong {
+    display: block;
+    margin-bottom: 6px;
+    color: #24292e;
+    font-size: 0.85rem;
+}
+
+.product-codes-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.product-code {
+    display: inline-block;
+    padding: 3px 8px;
+    background-color: #e1e4e8;
+    border-radius: 3px;
+    font-size: 0.75rem;
+    font-family: monospace;
+    color: #24292e;
+}
+
+.product-code-link {
+    text-decoration: none;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.product-code-link:hover {
+    background-color: #0366d6;
+    color: white;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.no-results {
+    padding: 20px;
+    text-align: center;
+    color: #586069;
+    font-style: italic;
+}
+
+/* Entitlement Schedules Tab Styles */
+.entitlement-schedules-section {
+    padding: 10px 0;
+}
+
+.entitlement-schedules-section h3 {
+    margin-bottom: 8px;
+    color: #1a1a1a;
+    font-size: 1.1rem;
+}
+
+.entitlement-schedules-section > p {
+    margin-bottom: 15px;
+    color: #586069;
+    line-height: 1.5;
+}
+
+.schedules-search {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.schedules-search input {
+    width: 100%;
+    padding: 8px 32px 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 13px;
+    transition: border-color 0.2s ease;
+}
+
+.schedules-search input:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.1);
+}
+
+.schedules-search .search-clear {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #999;
+    font-size: 20px;
+    line-height: 1;
+    padding: 0 4px;
+    display: none;
+}
+
+.schedules-search .search-clear:hover {
+    color: #333;
+}
+
+.schedules-search input:not(:placeholder-shown) ~ .search-clear {
+    display: block;
+}
+
+.schedules-list {
+    max-height: 400px;
+    overflow-y: auto;
+    border: 1px solid #e1e4e8;
+    border-radius: 4px;
+    background: white;
+}
+
+.schedules-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.schedule-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    border-bottom: 1px solid #e1e4e8;
+    transition: background-color 0.2s ease;
+}
+
+.schedule-item:last-child {
+    border-bottom: none;
+}
+
+.schedule-item:hover {
+    background-color: #f6f8fa;
+}
+
+.schedule-item.hidden {
+    display: none;
+}
+
+.schedule-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.schedule-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: #24292e;
+    margin: 0;
+}
+
+.schedule-pdf-link {
+    font-size: 12px;
+    color: #0366d6;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    transition: color 0.2s ease;
+}
+
+.schedule-pdf-link:hover {
+    color: #0256c5;
+    text-decoration: underline;
+}
+
+.schedule-view-link {
+    font-size: 12px;
+    color: #0366d6;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 6px 12px;
+    border: 1px solid #0366d6;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.schedule-view-link:hover {
+    background-color: #0366d6;
+    color: white;
+}
+
+.schedules-count {
+    padding: 10px 15px;
+    margin: 0;
+    font-size: 12px;
+    color: #586069;
+    background-color: #f6f8fa;
+    border-top: 1px solid #e1e4e8;
+}
+
+.no-schedules {
+    padding: 30px 20px;
+    text-align: center;
+    color: #586069;
+    font-size: 13px;
+}
+
+.no-schedules code {
+    background-color: #f6f8fa;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: 'Monaco', 'Menlo', monospace;
+    font-size: 12px;
+}

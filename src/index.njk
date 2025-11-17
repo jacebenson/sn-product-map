@@ -65,7 +65,8 @@ title: ServiceNow Capability Planner
                             data-category="{{ category.name }}"
                             data-tables='{{ product.tables | dump | safe }}'
                             data-description="{{ product.description }}"
-                            data-product-url="{{ product.productURL }}">
+                            data-product-url="{{ product.productURL }}"
+>
                             <span class="product-name">{{ product.name }}</span>
                             <button class="product-info-btn" title="View details">ℹ</button>
                         </li>
@@ -87,6 +88,16 @@ title: ServiceNow Capability Planner
             <p id="modalProductURL"></p>
             <div id="modalInstanceLinks" class="instance-links-section">
                 <!-- Instance links will be dynamically added here -->
+            </div>
+            <div id="modalEntitlements" class="entitlements-section">
+                <h3>Search Entitlements</h3>
+                <div class="entitlements-search">
+                    <input type="text" id="entitlementsSearch" placeholder="Search by name or product code...">
+                    <span id="entitlementsSearchClear" class="search-clear" title="Clear search">×</span>
+                </div>
+                <div id="entitlementsResults" class="entitlements-results">
+                    <!-- Search results will appear here -->
+                </div>
             </div>
             <div id="modalTables">
                 <h3>Related Tables:</h3>
@@ -111,6 +122,7 @@ title: ServiceNow Capability Planner
                 <button class="tab-btn" data-tab="reset">Reset</button>
                 <button class="tab-btn" data-tab="instance">Instance</button>
                 <button class="tab-btn" data-tab="sn-script">ServiceNow Script</button>
+                <button class="tab-btn" data-tab="entitlement-schedules">Entitlement Schedules</button>
             </div>
             
             <!-- Export Tab -->
@@ -245,6 +257,43 @@ title: ServiceNow Capability Planner
                     </div>
                 </div>
             </div>
+            
+            <!-- Entitlement Schedules Tab -->
+            <div id="entitlement-schedules-tab" class="tab-content">
+                <div class="entitlement-schedules-section">
+                    <h3>ServiceNow Entitlement Schedules</h3>
+                    <p>Browse official ServiceNow entitlement schedule documentation. These documents define subscription units, managed resource types, and usage ratios for various ServiceNow products.</p>
+                    
+                    <div class="schedules-search">
+                        <input type="text" id="schedulesSearch" placeholder="Search schedules by title...">
+                        <span id="schedulesSearchClear" class="search-clear" title="Clear search">×</span>
+                    </div>
+                    
+                    <div class="schedules-list">
+                        {% set schedules = collections.entitlementSchedules %}
+                        {% if schedules.length > 0 %}
+                        <ul class="schedules-items">
+                            {% for schedule in schedules %}
+                            <li class="schedule-item" data-title="{{ schedule.data.title | lower }}">
+                                <div class="schedule-info">
+                                    <h4 class="schedule-title">{{ schedule.data.title }}</h4>
+                                    {% if schedule.data.pdfUrl %}
+                                    <a href="{{ schedule.data.pdfUrl }}" target="_blank" class="schedule-pdf-link" title="Download PDF">
+                                        📥 Download PDF
+                                    </a>
+                                    {% endif %}
+                                </div>
+                                <a href="{{ schedule.url }}" target="_blank" class="schedule-view-link">View Details →</a>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                        <p class="schedules-count">Showing <span id="schedulesCount">{{ schedules.length }}</span> of {{ schedules.length }} schedules</p>
+                        {% else %}
+                        <p class="no-schedules">No entitlement schedules available. Run <code>npm run getEntitlementSchedules</code> to download them.</p>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -294,6 +343,10 @@ title: ServiceNow Capability Planner
         </div>
     </div>
 
-    <script src="/js/app.js"></script>
+    <script>
+        // Make entitlements data available to the app
+        window.entitlementsData = {{ entitlements | dump | safe }};
+    </script>
+    <script type="module" src="/js/app.js"></script>
 </body>
 </html>
