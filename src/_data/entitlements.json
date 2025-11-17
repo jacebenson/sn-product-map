@@ -222,6 +222,14 @@
     ]
   },
   {
+    "name": "sn-assure",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-assure.pdf",
+    "productCodes": [
+      "PROD15069",
+      "PROD15070"
+    ]
+  },
+  {
     "name": "sn-automation-engine-e11072024",
     "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-automation-engine-e11072024.pdf",
     "productCodes": [
@@ -266,10 +274,24 @@
     ]
   },
   {
+    "name": "sn-business-stakeholder",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-business-stakeholder.pdf",
+    "productCodes": [
+      "PROD15028"
+    ]
+  },
+  {
     "name": "sn-business-stakeholder-e09182024",
     "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-business-stakeholder-e09182024.pdf",
     "productCodes": [
       "PROD13158"
+    ]
+  },
+  {
+    "name": "sn-column-level-encryption-enterprise",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-column-level-encryption-enterprise.pdf",
+    "productCodes": [
+      "PROD15032"
     ]
   },
   {
@@ -352,7 +374,13 @@
       "PROD14339",
       "PROD14340",
       "PROD14391",
-      "PROD14392"
+      "PROD14392",
+      "PROD15047",
+      "PROD15062",
+      "PROD15063",
+      "PROD15064",
+      "PROD15153",
+      "PROD15171"
     ]
   },
   {
@@ -388,7 +416,8 @@
       "PROD12431",
       "PROD12432",
       "PROD12433",
-      "PROD14838"
+      "PROD14838",
+      "PROD15091"
     ]
   },
   {
@@ -416,7 +445,8 @@
       "PROD12425",
       "PROD12427",
       "PROD12428",
-      "PROD14839"
+      "PROD14839",
+      "PROD15092"
     ]
   },
   {
@@ -525,6 +555,13 @@
     ]
   },
   {
+    "name": "sn-enterprise-success",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-enterprise-success.pdf",
+    "productCodes": [
+      "PROD15094"
+    ]
+  },
+  {
     "name": "sn-enterprise-success-upgrade-e12052024",
     "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-enterprise-success-upgrade-e12052024.pdf",
     "productCodes": [
@@ -603,7 +640,8 @@
     "name": "sn-fundamentals-training",
     "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-fundamentals-training.pdf",
     "productCodes": [
-      "PROD00122"
+      "PROD00122",
+      "PROD15180"
     ]
   },
   {
@@ -699,7 +737,9 @@
       "PROD13194",
       "PROD13196",
       "PROD14061",
-      "PROD14599"
+      "PROD14599",
+      "PROD15131",
+      "PROD15136"
     ]
   },
   {
@@ -949,7 +989,9 @@
     "name": "sn-it-operations-management",
     "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-it-operations-management.pdf",
     "productCodes": [
-      "PROD14995"
+      "PROD14995",
+      "PROD15149",
+      "PROD15150"
     ]
   },
   {
@@ -960,7 +1002,8 @@
       "PROD12027",
       "PROD12564",
       "PROD12565",
-      "PROD14996"
+      "PROD14996",
+      "PROD15145"
     ]
   },
   {
@@ -972,7 +1015,11 @@
       "PROD14997",
       "PROD14998",
       "PROD14999",
-      "PROD15000"
+      "PROD15000",
+      "PROD15002",
+      "PROD15144",
+      "PROD15147",
+      "PROD15148"
     ]
   },
   {
@@ -1252,6 +1299,13 @@
     ]
   },
   {
+    "name": "sn-private-course",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-private-course.pdf",
+    "productCodes": [
+      "PROD15186"
+    ]
+  },
+  {
     "name": "sn-procurement-service-management-e02022023",
     "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-procurement-service-management-e02022023.pdf",
     "productCodes": [
@@ -1263,7 +1317,9 @@
     "name": "sn-safe-workplace-for-wsd-migration-only-e08012024",
     "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-safe-workplace-for-wsd-migration-only-e08012024.pdf",
     "productCodes": [
-      "PROD13575"
+      "PROD13575",
+      "PROD15073",
+      "PROD15103"
     ]
   },
   {
@@ -1410,7 +1466,11 @@
       "PROD14840",
       "PROD14841",
       "PROD14861",
-      "PROD14862"
+      "PROD14862",
+      "PROD15179",
+      "PROD15181",
+      "PROD15184",
+      "PROD15185"
     ]
   },
   {
@@ -1419,6 +1479,17 @@
     "productCodes": [
       "PROD00557",
       "PROD00826"
+    ]
+  },
+  {
+    "name": "sn-software-asset-management",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-software-asset-management.pdf",
+    "productCodes": [
+      "PROD15033",
+      "PROD15034",
+      "PROD15043",
+      "PROD15058",
+      "PROD15059"
     ]
   },
   {
@@ -1472,7 +1543,9 @@
       "PROD13853",
       "PROD13857",
       "PROD14947",
-      "PROD14949"
+      "PROD14949",
+      "PROD15138",
+      "PROD15139"
     ]
   }
 ]
