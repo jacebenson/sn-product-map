@@ -63,6 +63,27 @@
     ]
   },
   {
+    "name": "PROD09657",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/PROD09657.pdf",
+    "productCodes": [
+      "PROD09657"
+    ]
+  },
+  {
+    "name": "PROD09869",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/PROD09869.pdf",
+    "productCodes": [
+      "PROD09869"
+    ]
+  },
+  {
+    "name": "sn-additional-1tb-storage",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-additional-1tb-storage.pdf",
+    "productCodes": [
+      "PROD09002"
+    ]
+  },
+  {
     "name": "sn-additional-application-penetration-test",
     "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-additional-application-penetration-test.pdf",
     "productCodes": [
@@ -102,7 +123,8 @@
       "PROD00833",
       "PROD00835",
       "PROD01637",
-      "PROD02075"
+      "PROD02075",
+      "PROD08721"
     ]
   },
   {
@@ -131,20 +153,55 @@
     ]
   },
   {
+    "name": "sn-customer-performance-testing-instance-e02012024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-customer-performance-testing-instance-e02012024.pdf",
+    "productCodes": [
+      "PROD08549",
+      "PROD08550",
+      "PROD08552",
+      "PROD08554",
+      "PROD08556",
+      "PROD08557",
+      "PROD08558",
+      "PROD08560",
+      "PROD08561"
+    ]
+  },
+  {
     "name": "sn-customer-service-management",
     "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-customer-service-management.pdf",
     "productCodes": [
       "PROD01177",
       "PROD01178",
       "PROD01624",
-      "PROD02957"
+      "PROD02957",
+      "PROD09219",
+      "PROD09274",
+      "PROD09822"
+    ]
+  },
+  {
+    "name": "sn-database-encryption",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-database-encryption.pdf",
+    "productCodes": [
+      "PROD08358",
+      "PROD08359"
     ]
   },
   {
     "name": "sn-dedicated-environment-e02012024",
     "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-dedicated-environment-e02012024.pdf",
     "productCodes": [
-      "PROD00055"
+      "PROD00055",
+      "PROD08722",
+      "PROD08993",
+      "PROD08995",
+      "PROD08996",
+      "PROD08997",
+      "PROD08998",
+      "PROD08999",
+      "PROD09000",
+      "PROD09001"
     ]
   },
   {
@@ -234,7 +291,17 @@
       "PROD04956",
       "PROD04957",
       "PROD04958",
-      "PROD04959"
+      "PROD04959",
+      "PROD09224",
+      "PROD09225",
+      "PROD09228",
+      "PROD09229",
+      "PROD09230",
+      "PROD09232",
+      "PROD09233",
+      "PROD09234",
+      "PROD09235",
+      "PROD09236"
     ]
   },
   {
@@ -244,7 +311,9 @@
       "PROD03390",
       "PROD03396",
       "PROD04948",
-      "PROD04954"
+      "PROD04954",
+      "PROD09222",
+      "PROD09231"
     ]
   },
   {
@@ -355,7 +424,12 @@
       "PROD03379",
       "PROD03380",
       "PROD03381",
-      "PROD03426"
+      "PROD03426",
+      "PROD09215",
+      "PROD09216",
+      "PROD09218",
+      "PROD09816",
+      "PROD09817"
     ]
   },
   {
@@ -423,6 +497,21 @@
     "productCodes": [
       "PROD02229",
       "PROD02961"
+    ]
+  },
+  {
+    "name": "sn-partner-performance-testing-instance-e02012024",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-partner-performance-testing-instance-e02012024.pdf",
+    "productCodes": [
+      "PROD08548",
+      "PROD08551",
+      "PROD08553",
+      "PROD08555",
+      "PROD08559",
+      "PROD08562",
+      "PROD08563",
+      "PROD08564",
+      "PROD08565"
     ]
   },
   {
@@ -503,7 +592,10 @@
       "PROD03991",
       "PROD05985",
       "PROD05992",
-      "PROD05995"
+      "PROD05995",
+      "PROD07916",
+      "PROD09871",
+      "PROD09872"
     ]
   },
   {
@@ -527,6 +619,15 @@
     "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-terms-are-subject-e12052024.pdf",
     "productCodes": [
       "PROD00074"
+    ]
+  },
+  {
+    "name": "sn-us-citizen-us-soil-customer-support",
+    "source": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/other-document/entitlements/sn-us-citizen-us-soil-customer-support.pdf",
+    "productCodes": [
+      "PROD09546",
+      "PROD09547",
+      "PROD09875"
     ]
   }
 ]
