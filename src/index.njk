@@ -121,7 +121,6 @@ title: ServiceNow Capability Planner
                 <button class="tab-btn" data-tab="import">Import</button>
                 <button class="tab-btn" data-tab="reset">Reset</button>
                 <button class="tab-btn" data-tab="instance">Instance</button>
-                <button class="tab-btn" data-tab="sn-script">ServiceNow Script</button>
                 <button class="tab-btn" data-tab="entitlement-schedules">Entitlement Schedules</button>
             </div>
             
@@ -230,30 +229,6 @@ title: ServiceNow Capability Planner
                             <li><code>acme.servicenowservices.com</code> → https://acme.servicenowservices.com</li>
                             <li><code>www.acme.service-now.com</code> → https://acme.service-now.com</li>
                         </ul>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- ServiceNow Script Tab -->
-            <div id="sn-script-tab" class="tab-content">
-                <div class="sn-script-section">
-                    <h3>ServiceNow Usage Analysis Script</h3>
-                    <p>Copy and run this script in your ServiceNow instance (Scripts - Background) to analyze table usage and generate import data.</p>
-                    <p class="help-text"><strong>Note:</strong> This script uses GlideAggregate to count records in each table. It categorizes usage as:
-                        <span class="usage-category">High (>100 records)</span>,
-                        <span class="usage-category">Medium (50-100 records)</span>,
-                        <span class="usage-category">Low (1-49 records)</span>, or
-                        <span class="usage-category">Not Used (0 records)</span>.
-                    </p>
-                    
-                    <div class="script-actions">
-                        <button id="generateScriptBtn" class="action-btn">Generate Script</button>
-                        <button id="copyScriptBtn" class="action-btn" style="display: none;">Copy Script</button>
-                    </div>
-                    
-                    <div id="scriptOutput" style="display: none;">
-                        <h4>Generated Script:</h4>
-                        <pre id="scriptCode" class="script-code"></pre>
                     </div>
                 </div>
             </div>
